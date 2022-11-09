@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _3309___Term_Project___Jeopardy
 {
-    public partial class Form1 : Form
+    public partial class titleForm : Form
     {
-        public Form1()
+        public titleForm()
         {
             InitializeComponent();
         }

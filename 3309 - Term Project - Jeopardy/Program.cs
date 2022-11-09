@@ -16,7 +16,7 @@ namespace _3309___Term_Project___Jeopardy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new titleForm());
         }
     }
 }
