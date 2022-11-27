@@ -1,0 +1,13 @@
+C:\Users\jenny\OneDrive\Desktop\CIS3309\3309---Term-Project---Jeopardy-main\3309 - Term Project - Jeopardy\bin\Debug\3309 - Term Project - Jeopardy.exe.config
+C:\Users\jenny\OneDrive\Desktop\CIS3309\3309---Term-Project---Jeopardy-main\3309 - Term Project - Jeopardy\bin\Debug\3309 - Term Project - Jeopardy.exe
+C:\Users\jenny\OneDrive\Desktop\CIS3309\3309---Term-Project---Jeopardy-main\3309 - Term Project - Jeopardy\bin\Debug\3309 - Term Project - Jeopardy.pdb
+C:\Users\jenny\OneDrive\Desktop\CIS3309\3309---Term-Project---Jeopardy-main\3309 - Term Project - Jeopardy\obj\Debug\3309 - Term Project - Jeopardy.csproj.AssemblyReference.cache
+C:\Users\jenny\OneDrive\Desktop\CIS3309\3309---Term-Project---Jeopardy-main\3309 - Term Project - Jeopardy\obj\Debug\3309 - Term Project - Jeopardy.csproj.SuggestedBindingRedirects.cache
+C:\Users\jenny\OneDrive\Desktop\CIS3309\3309---Term-Project---Jeopardy-main\3309 - Term Project - Jeopardy\obj\Debug\_3309___Term_Project___Jeopardy.frmStarter.resources
+C:\Users\jenny\OneDrive\Desktop\CIS3309\3309---Term-Project---Jeopardy-main\3309 - Term Project - Jeopardy\obj\Debug\_3309___Term_Project___Jeopardy.frmWinner.resources
+C:\Users\jenny\OneDrive\Desktop\CIS3309\3309---Term-Project---Jeopardy-main\3309 - Term Project - Jeopardy\obj\Debug\_3309___Term_Project___Jeopardy.Properties.Resources.resources
+C:\Users\jenny\OneDrive\Desktop\CIS3309\3309---Term-Project---Jeopardy-main\3309 - Term Project - Jeopardy\obj\Debug\_3309___Term_Project___Jeopardy.frmGame.resources
+C:\Users\jenny\OneDrive\Desktop\CIS3309\3309---Term-Project---Jeopardy-main\3309 - Term Project - Jeopardy\obj\Debug\3309 - Term Project - Jeopardy.csproj.GenerateResource.cache
+C:\Users\jenny\OneDrive\Desktop\CIS3309\3309---Term-Project---Jeopardy-main\3309 - Term Project - Jeopardy\obj\Debug\3309 - Term Project - Jeopardy.csproj.CoreCompileInputs.cache
+C:\Users\jenny\OneDrive\Desktop\CIS3309\3309---Term-Project---Jeopardy-main\3309 - Term Project - Jeopardy\obj\Debug\3309 - Term Project - Jeopardy.exe
+C:\Users\jenny\OneDrive\Desktop\CIS3309\3309---Term-Project---Jeopardy-main\3309 - Term Project - Jeopardy\obj\Debug\3309 - Term Project - Jeopardy.pdb
