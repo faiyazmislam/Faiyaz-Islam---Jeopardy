@@ -15,6 +15,7 @@ namespace _3309___Term_Project___Jeopardy
     {
         List<Player> playerList = new List<Player>();
         CategoryList categoryList = new CategoryList();
+        GameBoard gameBoard;
 
         public frmStarter()
         {
@@ -39,7 +40,7 @@ namespace _3309___Term_Project___Jeopardy
         {
             if(playerList.Count >= 2)
             {
-                GameBoard gameBoard = new GameBoard(categoryList, playerList);
+                gameBoard = new GameBoard(categoryList, playerList);
                 frmGame gameForm = new frmGame(this);
                 gameForm.gameBoard = gameBoard;
                 gameForm.ShowDialog();
