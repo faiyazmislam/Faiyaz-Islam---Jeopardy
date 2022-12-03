@@ -39,7 +39,7 @@ namespace _3309___Term_Project___Jeopardy
 
             if (Categories.Contains(chosenCategory))
             {
-                return chosenCategory.FindQuestion(100);
+                return chosenCategory.FindQuestion(point);
             }
 
 

@@ -85,7 +85,7 @@ namespace _3309___Term_Project___Jeopardy
 
             foreach(Question question in movieQuestions)
             {
-                MessageBox.Show("" + question.Query + " - " + question.Point + " - " + question.Answer);
+                //MessageBox.Show("" + question.Query + " - " + question.Point + " - " + question.Answer);
             }
             /////
 
@@ -195,7 +195,12 @@ namespace _3309___Term_Project___Jeopardy
             MessageBox.Show("" + movieQuestions.Count + musicQuestions.Count + gamesQuestions.Count + 
                 showsQuestions.Count + sportsQuestions.Count + templeQuestions.Count);
 
-            
+                MessageBox.Show("" + categoryList.GetQuestion(moviesCategory, 500).Query);
+
+                MessageBox.Show("" + categoryList.GetQuestion(gamesCategory, 300).Query);
+
+                MessageBox.Show("" + categoryList.GetQuestion(showsCategory, 100).Query);
+
 
             //CREATE CATEGORIES AND QUESTIONS HERE
             //--------------School Questions and Category------------------------
