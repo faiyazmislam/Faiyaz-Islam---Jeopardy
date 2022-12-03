@@ -13,9 +13,14 @@ namespace _3309___Term_Project___Jeopardy
     public partial class frmGame : Form
     {
         internal GameBoard gameBoard;
+        internal frmStarter myOwnerForm;
 
-        public frmGame()
+        public frmGame(frmStarter frmThatOpenedMe)
         {
+            myOwnerForm = frmThatOpenedMe;
+
+            
+
             InitializeComponent();
         }
 
