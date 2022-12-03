@@ -64,6 +64,7 @@ namespace _3309___Term_Project___Jeopardy
             DataTable dataTable = dataSet.Tables["JeopardyQuestionsTable"];
 
             //hii
+            //this prohect sucsk
 
             //CREATE CATEGORIES AND QUESTIONS HERE
             //--------------School Questions and Category------------------------
