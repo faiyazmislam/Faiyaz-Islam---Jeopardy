@@ -19,7 +19,7 @@ namespace _3309___Term_Project___Jeopardy
         {
             myOwnerForm = frmThatOpenedMe;
 
-            
+            gameBoard = frmThatOpenedMe.gameBoard;
 
             InitializeComponent();
         }

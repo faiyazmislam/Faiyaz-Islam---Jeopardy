@@ -15,7 +15,7 @@ namespace _3309___Term_Project___Jeopardy
     {
         List<Player> playerList = new List<Player>();
         CategoryList categoryList = new CategoryList();
-        GameBoard gameBoard;
+        internal GameBoard gameBoard;
 
         public frmStarter()
         {
