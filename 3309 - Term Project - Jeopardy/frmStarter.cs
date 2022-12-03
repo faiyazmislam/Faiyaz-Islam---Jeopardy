@@ -63,6 +63,8 @@ namespace _3309___Term_Project___Jeopardy
             myDataAdapter.Fill(dataSet, "JeopardyQuestionsTable");
             DataTable dataTable = dataSet.Tables["JeopardyQuestionsTable"];
 
+            //hii
+
             //CREATE CATEGORIES AND QUESTIONS HERE
             //--------------School Questions and Category------------------------
             //String query = "Which Ivy League School is at PA?"; //these r just examples
