@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32802.440
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3309 - Term Project - Jeopardy", "3309 - Term Project - Jeopardy\3309 - Term Project - Jeopardy.csproj", "{0E1B1DD4-A6A1-4813-A7E0-4A6490BB5DC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jeopardy - Unit Testing", "Jeopardy - Unit Testing\Jeopardy - Unit Testing.csproj", "{A79A9CE4-A987-4C46-AE68-BB23676063EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0E1B1DD4-A6A1-4813-A7E0-4A6490BB5DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E1B1DD4-A6A1-4813-A7E0-4A6490BB5DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E1B1DD4-A6A1-4813-A7E0-4A6490BB5DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A79A9CE4-A987-4C46-AE68-BB23676063EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A79A9CE4-A987-4C46-AE68-BB23676063EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A79A9CE4-A987-4C46-AE68-BB23676063EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A79A9CE4-A987-4C46-AE68-BB23676063EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
