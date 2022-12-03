@@ -104,7 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="JeopardyDatabase.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
