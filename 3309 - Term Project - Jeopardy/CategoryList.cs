@@ -34,5 +34,17 @@ namespace _3309___Term_Project___Jeopardy
             }
             return null;
         }
+
+        public Question GetQuestion(Category chosenCategory, int point) {
+
+            if (Categories.Contains(chosenCategory))
+            {
+                return chosenCategory.FindQuestion(100);
+            }
+
+
+            return null;        
+        }
     }
+
 }
