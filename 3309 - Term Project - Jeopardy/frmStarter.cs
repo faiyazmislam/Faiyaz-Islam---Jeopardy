@@ -32,7 +32,7 @@ namespace _3309___Term_Project___Jeopardy
             {
                 Player player = new Player(int.Parse(mskId.Text), txtPlayerName.Text);
                 playerList.Add(player);
-                MessageBox.Show("Player: " + player.Name + "(" + player.Id + ") is added.");
+                //MessageBox.Show("Player: " + player.Name + "(" + player.Id + ") is added.");
             }
         }
 

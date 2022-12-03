@@ -61,10 +61,10 @@ namespace _3309___Term_Project___Jeopardy
             //if current player is NOT the last player, move to next player
             if (currentIndex != PlayerList.Count - 1) 
             {
-                currentPlayer = PlayerList.ElementAt(currentIndex + 1);
+                CurrentPlayer = PlayerList.ElementAt(currentIndex + 1);
             }
             //current player is the last player, move to 1st player
-            else currentPlayer = PlayerList.First(); 
+            else CurrentPlayer = PlayerList.First(); 
         }
 
         public void CheckGameStatus()
