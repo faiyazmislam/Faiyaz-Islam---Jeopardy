@@ -80,7 +80,13 @@ namespace _3309___Term_Project___Jeopardy
             }
 
             Category moviesCategory = new Category("Movies", movieQuestions);
+            categoryList.AddCategory(moviesCategory);
 
+
+            foreach(Question question in movieQuestions)
+            {
+                MessageBox.Show("" + question.Query + " - " + question.Point + " - " + question.Answer);
+            }
             /////
 
             List<Question> musicQuestions = new List<Question>();
@@ -100,6 +106,7 @@ namespace _3309___Term_Project___Jeopardy
             }
 
             Category musicCategory = new Category("Music", musicQuestions);
+            categoryList.AddCategory(musicCategory);
 
             //////
 
@@ -120,6 +127,7 @@ namespace _3309___Term_Project___Jeopardy
             }
 
             Category gamesCategory = new Category("Games", gamesQuestions);
+            categoryList.AddCategory(gamesCategory);
 
             /////
 
@@ -140,6 +148,7 @@ namespace _3309___Term_Project___Jeopardy
             }
 
             Category showsCategory = new Category("Shows", showsQuestions);
+            categoryList.AddCategory(showsCategory);
 
             //////
 
@@ -160,6 +169,7 @@ namespace _3309___Term_Project___Jeopardy
             }
 
             Category sportsCategory = new Category("Sports", sportsQuestions);
+            categoryList.AddCategory(sportsCategory);
 
             //////
 
@@ -180,7 +190,12 @@ namespace _3309___Term_Project___Jeopardy
             }
 
             Category templeCategory = new Category("Temple", templeQuestions);
+            categoryList.AddCategory(templeCategory);
 
+            MessageBox.Show("" + movieQuestions.Count + musicQuestions.Count + gamesQuestions.Count + 
+                showsQuestions.Count + sportsQuestions.Count + templeQuestions.Count);
+
+            
 
             //CREATE CATEGORIES AND QUESTIONS HERE
             //--------------School Questions and Category------------------------
