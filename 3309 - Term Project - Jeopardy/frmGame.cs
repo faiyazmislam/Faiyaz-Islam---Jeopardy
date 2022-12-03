@@ -24,5 +24,10 @@ namespace _3309___Term_Project___Jeopardy
             List<Player> players = gameBoard.PlayerList;
             foreach(Player p in players) { MessageBox.Show(p.Name + " " + p.Id); }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
