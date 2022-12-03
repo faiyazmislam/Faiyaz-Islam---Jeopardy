@@ -8,22 +8,12 @@ namespace _3309___Term_Project___Jeopardy
 {
     internal class Player
     {
-        int id;
-        String name;
-        int points;
-        String chosenCategory;
-        int chosenPoint;
-        String answer;
-
-        public Player(int id, String name)
-        {
-            this.id = id;  
-            this.name = name;
-            this.points = 0;
-            this.chosenCategory = null;
-            this.chosenPoint = 0;
-            this.answer = null;
-        }
+        //int id;
+        //String name;
+        //int points;
+        //String chosenCategory;
+        //int chosenPoint;
+        //String answer;
 
         public int Id { get; set; }
         public String Name { get; set; }
@@ -31,5 +21,15 @@ namespace _3309___Term_Project___Jeopardy
         public string ChosenCategory { get; set; }
         public int ChosenPoint { get; set; }
         public String Answer { get; set; }
+
+        public Player(int id, String name)
+        {
+            this.Id = id;  
+            this.Name = name;
+            this.Points = 0;
+            this.ChosenCategory = null;
+            this.ChosenPoint = 0;
+            this.Answer = null;
+        }
     }
 }

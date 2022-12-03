@@ -8,28 +8,27 @@ namespace _3309___Term_Project___Jeopardy
 {
     internal class CategoryList
     {
-        List<Category> categories;
+        //List<Category> categories;
+        public List<Category> Categories { get; set; }
 
         public CategoryList()
         {
-            this.categories = new List<Category>();
+            this.Categories = new List<Category>();
         }
 
-        public List<Category> Categories { get; set; }
-
-        public void Add(Category category)
+        public void AddCategory(Category category)
         {
-            categories.Add(category);
+            Categories.Add(category);
         }
 
-        public void Remove(Category category)
+        public void RemoveCategory(Category category)
         {
-            categories.Remove(category);
+            Categories.Remove(category);
         }
 
         public Category FindCategory(String choosenCategory)
         {
-            foreach (Category category in categories)
+            foreach (Category category in Categories)
             {
                 if (choosenCategory.Equals(category.CategoryName)) return category;
             }

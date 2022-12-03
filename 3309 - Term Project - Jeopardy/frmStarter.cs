@@ -13,8 +13,8 @@ namespace _3309___Term_Project___Jeopardy
 {
     public partial class frmStarter : Form
     {
-        List<Player> playerList = new List<Player>();
-        CategoryList categoryList = new CategoryList();
+        internal List<Player> playerList = new List<Player>();
+        internal CategoryList categoryList = new CategoryList();
         internal GameBoard gameBoard;
 
         public frmStarter()
@@ -42,11 +42,11 @@ namespace _3309___Term_Project___Jeopardy
             {
                 gameBoard = new GameBoard(categoryList, playerList);
                 frmGame gameForm = new frmGame(this);
-                gameForm.gameBoard = gameBoard;
+                //gameForm.gameBoard = gameBoard;
                 gameForm.ShowDialog();
 
-                frmStarter starterForm = new frmStarter();
-                starterForm.Close();
+               // frmStarter starterForm = new frmStarter();
+                this.Close();
             }
             else
             {
@@ -69,42 +69,42 @@ namespace _3309___Term_Project___Jeopardy
 
             //CREATE CATEGORIES AND QUESTIONS HERE
             //--------------School Questions and Category------------------------
-            //String query = "Which Ivy League School is at PA?"; //these r just examples
-            //String answer = "University of Pennsylvania";
-            //int point = 100;
-            //Question question = new Question(query, point, answer);
+            String query = "Which Ivy League School is at PA?"; //these r just examples
+            String answer = "University of Pennsylvania";
+            int point = 100;
+            Question question = new Question(query, point, answer);
 
-            //String query2 = "What is Temple University's Mascot?";
-            //String answer2 = "Owl";
-            //int point2 = 200;
-            //Question question2 = new Question(query2, point2, answer2);
+            String query2 = "What is Temple University's Mascot?";
+            String answer2 = "Owl";
+            int point2 = 200;
+            Question question2 = new Question(query2, point2, answer2);
 
-            //List<Question> schoolQuestions = new List<Question>();
-            //schoolQuestions.Add(question);
-            //schoolQuestions.Add(question2);
+            List<Question> schoolQuestions = new List<Question>();
+            schoolQuestions.Add(question);
+            schoolQuestions.Add(question2);
 
-            //Category school = new Category("School", schoolQuestions);
+            Category school = new Category("School", schoolQuestions);
 
             ////--------------Cartoon Questions and Category------------------------
-            //String query3 = "What's the name of the red teletubby?"; //these r just examples
-            //String answer3 = "Po";
-            //int point3 = 100;
-            //Question question3 = new Question(query3, point3, answer3);
+            String query3 = "What's the name of the red teletubby?"; //these r just examples
+            String answer3 = "Po";
+            int point3 = 100;
+            Question question3 = new Question(query3, point3, answer3);
 
-            //String query4 = "What's Kung fu Panda Po's title?";
-            //String answer4 = "Dragon Warrior";
-            //int point4 = 200;
-            //Question question4 = new Question(query4, point4, answer4);
+            String query4 = "What's Kung fu Panda Po's title?";
+            String answer4 = "Dragon Warrior";
+            int point4 = 200;
+            Question question4 = new Question(query4, point4, answer4);
 
-            //List<Question> cartoonQuestions = new List<Question>();
-            //cartoonQuestions.Add(question3);
-            //cartoonQuestions.Add(question4);
+            List<Question> cartoonQuestions = new List<Question>();
+            cartoonQuestions.Add(question3);
+            cartoonQuestions.Add(question4);
 
-            //Category cartoon = new Category("Cartoon", cartoonQuestions);
+            Category cartoon = new Category("Cartoon", cartoonQuestions);
 
             ////------------------Add Categories to categoryList-----------------------
-            //categoryList.Add(school);
-            //categoryList.Add(cartoon);
+            categoryList.AddCategory(school);
+            categoryList.AddCategory(cartoon);
         }
     }
 }

@@ -8,21 +8,20 @@ namespace _3309___Term_Project___Jeopardy
 {
     internal class Category
     {
-        String categoryName;
-        List<Question> questionList;
-
-        public Category(string categoryName, List<Question> questionList)
-        {
-            this.categoryName = categoryName;
-            this.questionList = questionList;
-        }
-
+        //String categoryName;
+        //List<Question> questionList;
         public String CategoryName { get; set; }
         public List<Question> QuestionList { get; set; }
 
+        public Category(string categoryName, List<Question> questionList)
+        {
+            this.CategoryName = categoryName;
+            this.QuestionList = questionList;
+        }
+
         public Question FindQuestion(int point) //note: in a list of question, point is an identification
         {
-            foreach (Question question in questionList)
+            foreach (Question question in QuestionList)
             {
                 if(question.Point == point) { return question; }
             }

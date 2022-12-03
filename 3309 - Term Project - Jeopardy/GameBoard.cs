@@ -8,25 +8,13 @@ namespace _3309___Term_Project___Jeopardy
 {
     internal class GameBoard
     {
-        CategoryList categoryList;
-        List<Player> playerList;
-        Player currentPlayer;
-        String currentPlayerAnswer;
-        Question selectedQuestion; //according to player's chosen category and chosen point
-        bool allQuestionsChosen; 
+        //CategoryList categoryList;
+        //List<Player> playerList;
+        //Player currentPlayer;
+        //String currentPlayerAnswer;
+        //Question selectedQuestion; //according to player's chosen category and chosen point
+        //bool allQuestionsChosen; 
         //int numberQuestions;
-
-        public GameBoard(CategoryList categoryList, List<Player> playerList) //, int numberQuestions)
-        {
-            this.categoryList = categoryList;
-            this.playerList = playerList;
-            this.currentPlayer = playerList.First();
-            this.currentPlayerAnswer = null; //MIGHT NOT NEEDED
-            this.selectedQuestion = null;   //MIGHT NOT NEEDED
-            this.allQuestionsChosen = false;
-            //this.numberQuestions = numberQuestions;
-        }
-
         public CategoryList CategoryList { get; set; }
         public List<Player> PlayerList { get; set; }
         public Player CurrentPlayer { get; set; }
@@ -34,10 +22,21 @@ namespace _3309___Term_Project___Jeopardy
         public Question SelectedQuestion { get; set; }
         public bool AllQuestionsChosen { get; set; }
 
+        public GameBoard(CategoryList categoryList, List<Player> playerList) //, int numberQuestions)
+        {
+            this.CategoryList = categoryList;
+            this.PlayerList = playerList;
+            this.CurrentPlayer = playerList.First();
+            this.CurrentPlayerAnswer = null; //MIGHT NOT NEEDED
+            this.SelectedQuestion = null;   //MIGHT NOT NEEDED
+            this.AllQuestionsChosen = false;
+            //this.numberQuestions = numberQuestions;
+        }
+
         public bool CheckAnswer()
         {
             //NOTE: make sure selectedQuestion is NOT null
-            if (currentPlayer.Answer.Equals(selectedQuestion.Answer)) return true;
+            if (CurrentPlayer.Answer.Equals(SelectedQuestion.Answer)) return true;
             return false;
         }
 
@@ -45,8 +44,8 @@ namespace _3309___Term_Project___Jeopardy
         public int CalculateScore() //UpdateScore() is not needed, faiyaz
         {
             bool isCorrect = CheckAnswer();
-            int playerScore = currentPlayer.Points;
-            int chosenPoint = currentPlayer.ChosenPoint;
+            int playerScore = CurrentPlayer.Points;
+            int chosenPoint = CurrentPlayer.ChosenPoint;
 
             //NOTE: make sure player's chosen point is corret
             if (isCorrect) playerScore += chosenPoint;  //if player's answer is correct, increment score
@@ -57,15 +56,15 @@ namespace _3309___Term_Project___Jeopardy
 
         public void NextPlayer()
         {
-            int currentIndex = playerList.IndexOf(currentPlayer);
+            int currentIndex = PlayerList.IndexOf(CurrentPlayer);
 
             //if current player is NOT the last player, move to next player
-            if (currentIndex != playerList.Count - 1) 
+            if (currentIndex != PlayerList.Count - 1) 
             {
-                currentPlayer = playerList.ElementAt(currentIndex + 1);
+                currentPlayer = PlayerList.ElementAt(currentIndex + 1);
             }
             //current player is the last player, move to 1st player
-            else currentPlayer = playerList.First(); 
+            else currentPlayer = PlayerList.First(); 
         }
 
         public void CheckGameStatus()
@@ -76,13 +75,13 @@ namespace _3309___Term_Project___Jeopardy
         public List<Player> FindWinner() //Note: there can be more than 1 player
         {
             //assuming 1st player is the winner and has the highest score
-            int max = playerList.First().Points;
+            int max = PlayerList.First().Points;
             List<Player> winners = new List<Player>();
-            winners.Add(playerList.First());
+            winners.Add(PlayerList.First());
 
-            for(int i = 1; i < playerList.Count; i++)  
+            for(int i = 1; i < PlayerList.Count; i++)  
             {
-                Player player = playerList.ElementAt(i);
+                Player player = PlayerList.ElementAt(i);
 
                 if (player.Points > max)
                 {
