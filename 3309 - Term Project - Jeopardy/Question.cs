@@ -16,6 +16,8 @@ namespace _3309___Term_Project___Jeopardy
         public int Point { get; set; }
         public String Answer { get; set; }
 
+        public Question() { }
+
         public Question(String query, int point, String answer)
         {
             this.Query = query;
