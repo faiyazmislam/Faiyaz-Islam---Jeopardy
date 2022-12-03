@@ -1,4 +1,3 @@
-
 namespace _3309___Term_Project___Jeopardy
 {
     partial class frmGame
@@ -30,7 +29,7 @@ namespace _3309___Term_Project___Jeopardy
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.gbCategories = new System.Windows.Forms.GroupBox();
+            this.grbCategories = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button14 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -72,13 +71,16 @@ namespace _3309___Term_Project___Jeopardy
             this.txtQuestion = new System.Windows.Forms.TextBox();
             this.lblPlayerAnswer = new System.Windows.Forms.Label();
             this.txtPlayerResponse = new System.Windows.Forms.TextBox();
-            this.gbCategories.SuspendLayout();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.grbAnswerQuestion = new System.Windows.Forms.GroupBox();
+            this.grbCategories.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbShows.SuspendLayout();
             this.gbGames.SuspendLayout();
             this.gbMusic.SuspendLayout();
             this.gbMovies.SuspendLayout();
+            this.grbAnswerQuestion.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -91,23 +93,23 @@ namespace _3309___Term_Project___Jeopardy
             this.label1.Text = "JEOPARDY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gbCategories
+            // grbCategories
             // 
-            this.gbCategories.Controls.Add(this.groupBox2);
-            this.gbCategories.Controls.Add(this.groupBox1);
-            this.gbCategories.Controls.Add(this.gbShows);
-            this.gbCategories.Controls.Add(this.gbGames);
-            this.gbCategories.Controls.Add(this.gbMusic);
-            this.gbCategories.Controls.Add(this.gbMovies);
-            this.gbCategories.Location = new System.Drawing.Point(18, 63);
-            this.gbCategories.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbCategories.Name = "gbCategories";
-            this.gbCategories.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbCategories.Size = new System.Drawing.Size(1236, 408);
-            this.gbCategories.TabIndex = 17;
-            this.gbCategories.TabStop = false;
-            this.gbCategories.Text = "Categories";
-            this.gbCategories.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.grbCategories.Controls.Add(this.groupBox2);
+            this.grbCategories.Controls.Add(this.groupBox1);
+            this.grbCategories.Controls.Add(this.gbShows);
+            this.grbCategories.Controls.Add(this.gbGames);
+            this.grbCategories.Controls.Add(this.gbMusic);
+            this.grbCategories.Controls.Add(this.gbMovies);
+            this.grbCategories.Location = new System.Drawing.Point(18, 63);
+            this.grbCategories.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grbCategories.Name = "grbCategories";
+            this.grbCategories.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grbCategories.Size = new System.Drawing.Size(1236, 408);
+            this.grbCategories.TabIndex = 17;
+            this.grbCategories.TabStop = false;
+            this.grbCategories.Text = "Categories";
+            this.grbCategories.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -520,7 +522,7 @@ namespace _3309___Term_Project___Jeopardy
             // 
             this.lblQuestion.AutoSize = true;
             this.lblQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblQuestion.Location = new System.Drawing.Point(28, 508);
+            this.lblQuestion.Location = new System.Drawing.Point(15, 34);
             this.lblQuestion.Name = "lblQuestion";
             this.lblQuestion.Size = new System.Drawing.Size(97, 25);
             this.lblQuestion.TabIndex = 4;
@@ -529,17 +531,17 @@ namespace _3309___Term_Project___Jeopardy
             // txtQuestion
             // 
             this.txtQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtQuestion.Location = new System.Drawing.Point(32, 536);
+            this.txtQuestion.Location = new System.Drawing.Point(19, 62);
             this.txtQuestion.Name = "txtQuestion";
             this.txtQuestion.ReadOnly = true;
-            this.txtQuestion.Size = new System.Drawing.Size(1171, 30);
+            this.txtQuestion.Size = new System.Drawing.Size(1195, 30);
             this.txtQuestion.TabIndex = 18;
             // 
             // lblPlayerAnswer
             // 
             this.lblPlayerAnswer.AutoSize = true;
             this.lblPlayerAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblPlayerAnswer.Location = new System.Drawing.Point(28, 586);
+            this.lblPlayerAnswer.Location = new System.Drawing.Point(15, 108);
             this.lblPlayerAnswer.Name = "lblPlayerAnswer";
             this.lblPlayerAnswer.Size = new System.Drawing.Size(227, 25);
             this.lblPlayerAnswer.TabIndex = 19;
@@ -548,42 +550,63 @@ namespace _3309___Term_Project___Jeopardy
             // txtPlayerResponse
             // 
             this.txtPlayerResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtPlayerResponse.Location = new System.Drawing.Point(32, 614);
+            this.txtPlayerResponse.Location = new System.Drawing.Point(19, 140);
             this.txtPlayerResponse.Name = "txtPlayerResponse";
-            this.txtPlayerResponse.Size = new System.Drawing.Size(1171, 30);
+            this.txtPlayerResponse.Size = new System.Drawing.Size(1195, 30);
             this.txtPlayerResponse.TabIndex = 20;
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(20, 179);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(156, 38);
+            this.btnSubmit.TabIndex = 21;
+            this.btnSubmit.Text = "Submit Question";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            // 
+            // grbAnswerQuestion
+            // 
+            this.grbAnswerQuestion.Controls.Add(this.btnSubmit);
+            this.grbAnswerQuestion.Controls.Add(this.lblQuestion);
+            this.grbAnswerQuestion.Controls.Add(this.txtPlayerResponse);
+            this.grbAnswerQuestion.Controls.Add(this.txtQuestion);
+            this.grbAnswerQuestion.Controls.Add(this.lblPlayerAnswer);
+            this.grbAnswerQuestion.Location = new System.Drawing.Point(18, 479);
+            this.grbAnswerQuestion.Name = "grbAnswerQuestion";
+            this.grbAnswerQuestion.Size = new System.Drawing.Size(1236, 226);
+            this.grbAnswerQuestion.TabIndex = 22;
+            this.grbAnswerQuestion.TabStop = false;
+            this.grbAnswerQuestion.Text = "Answer the question";
             // 
             // frmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1272, 826);
-            this.Controls.Add(this.txtPlayerResponse);
-            this.Controls.Add(this.lblPlayerAnswer);
-            this.Controls.Add(this.txtQuestion);
-            this.Controls.Add(this.lblQuestion);
-            this.Controls.Add(this.gbCategories);
+            this.Controls.Add(this.grbAnswerQuestion);
+            this.Controls.Add(this.grbCategories);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmGame";
             this.Text = "Jeopardy";
             this.Load += new System.EventHandler(this.frmGame_Load);
-            this.gbCategories.ResumeLayout(false);
+            this.grbCategories.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.gbShows.ResumeLayout(false);
             this.gbGames.ResumeLayout(false);
             this.gbMusic.ResumeLayout(false);
             this.gbMovies.ResumeLayout(false);
+            this.grbAnswerQuestion.ResumeLayout(false);
+            this.grbAnswerQuestion.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox gbCategories;
+        private System.Windows.Forms.GroupBox grbCategories;
         private System.Windows.Forms.GroupBox gbShows;
         private System.Windows.Forms.Button btnShows400;
         private System.Windows.Forms.Button btnShows300;
@@ -625,5 +648,7 @@ namespace _3309___Term_Project___Jeopardy
         private System.Windows.Forms.Button btnGames500;
         private System.Windows.Forms.Button btnMusic500;
         private System.Windows.Forms.Button btnMovies500;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.GroupBox grbAnswerQuestion;
     }
 }
