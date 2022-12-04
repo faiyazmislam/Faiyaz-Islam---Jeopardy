@@ -10,11 +10,29 @@ using System.Windows.Forms;
 
 namespace _3309___Term_Project___Jeopardy
 {
+
     public partial class frmWinner : Form
     {
-        public frmWinner()
+        internal frmGame myOwnerFrm;
+
+        public frmWinner(frmGame frmThatOpenedMe)
         {
+            myOwnerFrm = frmThatOpenedMe;
+
             InitializeComponent();
+        }
+
+        private void frmWinner_Load(object sender, EventArgs e)
+        {
+            string winnersText = "";
+            
+            foreach(Player winner in myOwnerFrm.winners)
+            {
+                winnersText = winner.Name + " - " + winner.PlayerScore + " \n "; 
+            }
+
+            lblWinners.Text = winnersText;
+            //testing
         }
     }
 }

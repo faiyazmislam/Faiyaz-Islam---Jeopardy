@@ -15,12 +15,18 @@ namespace _3309___Term_Project___Jeopardy
     {
         internal GameBoard gameBoard;
         internal frmStarter myOwnerForm;
+        internal List<Player> winners = new List<Player>();
 
         public frmGame(frmStarter frmThatOpenedMe)
         {
             myOwnerForm = frmThatOpenedMe;
 
             gameBoard = frmThatOpenedMe.gameBoard;
+
+            lblCurrentPlayer.Text = "Current Player = " + gameBoard.CurrentPlayer.Name;
+
+            gameBoard.AvailableQuestions = 30;
+            //gameBoard.SetAvailableQuestions(30);
 
             InitializeComponent();
         }
@@ -37,6 +43,7 @@ namespace _3309___Term_Project___Jeopardy
             Category chosenCategory = gameBoard.CategoryList.FindCategory(chosenCategoryName);
 
             gameBoard.SelectedQuestion = chosenCategory.FindQuestion(points);
+            //gameBoard.SetSelectedQuestion();
 
             txtQuestion.Text = gameBoard.SelectedQuestion.Query;
 
@@ -44,14 +51,16 @@ namespace _3309___Term_Project___Jeopardy
 
         private void btnMovies100_Click(object sender, EventArgs e)
         {
-
             SetQuestion("Movies", 100);
+
+            btnMovies100.Enabled = false;
         }
 
         private void btnMovies200_Click(object sender, EventArgs e)
         {
             SetQuestion("Movies", 200);
 
+            btnMovies200.Enabled = false;
         }
 
         private void btnMovies300_Click(object sender, EventArgs e)
@@ -80,12 +89,32 @@ namespace _3309___Term_Project___Jeopardy
 
             bool result = gameBoard.CheckAnswer();
 
-            gameBoard.CalculateScore();
+            gameBoard.CurrentPlayer.PlayerScore += gameBoard.CalculateScore(gameBoard.SelectedQuestion.Point);
 
-            MessageBox.Show("Result: "+ result + " - Player: " + gameBoard.CurrentPlayer.Name + " - Points: " + gameBoard.CurrentPlayer.Points);
+            int playerScore = gameBoard.CurrentPlayer.PlayerScore;
+
+            MessageBox.Show("Result: "+ result + " - Player: " + gameBoard.CurrentPlayer.Name + " - Points: " + playerScore);
+
+            //////
+            if(gameBoard.CheckGameStatus())
+            {
+                gameBoard.NextPlayer();
+
+                lblCurrentPlayer.Text = "Current Player = " + gameBoard.CurrentPlayer.Name;
+            }
+            else
+            {
+                winners = gameBoard.FindWinner();
+
+                frmWinner winnerForm = new frmWinner(this);
+                winnerForm.ShowDialog();
+                this.Close();
+            }
 
 
-            gameBoard.NextPlayer();
+            /////
+            ///
+            
         }
     }
 }
