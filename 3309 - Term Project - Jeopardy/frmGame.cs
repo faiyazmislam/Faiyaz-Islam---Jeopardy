@@ -23,7 +23,7 @@ namespace _3309___Term_Project___Jeopardy
 
             currentGameBoard = frmThatOpenedMe.gameBoard;
 
-            lblCurrentPlayer.Text = "Current Player = " + currentGameBoard.CurrentPlayer.Name;
+            //lblCurrentPlayer.Text = "Current Player = " + currentGameBoard.CurrentPlayer.Name;
 
             currentGameBoard.AvailableQuestions = 30;
             //gameBoard.SetAvailableQuestions(30);
@@ -68,7 +68,7 @@ namespace _3309___Term_Project___Jeopardy
             }
             else
             {
-                currentGameBoard.FindWinner();
+                winners = currentGameBoard.FindWinner();
 
                 frmWinner winnersForm = new frmWinner(this);
                 winnersForm.ShowDialog();

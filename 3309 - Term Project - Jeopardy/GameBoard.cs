@@ -73,11 +73,10 @@ namespace _3309___Term_Project___Jeopardy
         {
             AvailableQuestions -= 1;
 
-            if(AvailableQuestions == 0)
+            while(AvailableQuestions >  0)
             {
                 return false;
             }
-
 
             return true; 
         }

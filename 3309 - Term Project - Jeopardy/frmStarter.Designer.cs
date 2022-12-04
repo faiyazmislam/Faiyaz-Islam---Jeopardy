@@ -84,7 +84,6 @@
             this.lblDirection.Text = "Keep adding players until you\'re ready. \r\n(Max 5 Players)";
             this.lblDirection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblDirection.Visible = false;
-           //this.lblDirection.Click += new System.EventHandler(this.lblDirection_Click);
             // 
             // btnStart
             // 
@@ -132,7 +131,6 @@
             this.gbRules.TabStop = false;
             this.gbRules.Text = "Rules:";
             this.gbRules.Visible = false;
-         //   this.gbRules.Enter += new System.EventHandler(this.gbRules_Enter);
             // 
             // lblRules
             // 
@@ -141,7 +139,6 @@
             this.lblRules.Size = new System.Drawing.Size(486, 106);
             this.lblRules.TabIndex = 0;
             this.lblRules.Text = resources.GetString("lblRules.Text");
-           // this.lblRules.Click += new System.EventHandler(this.lblRules_Click);
             // 
             // gbPlayerAddition
             // 
@@ -171,7 +168,6 @@
             this.btnPlay.TabIndex = 11;
             this.btnPlay.Text = "Play";
             this.btnPlay.UseVisualStyleBackColor = true;
-            this.btnPlay.Visible = false;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // frmStarter
