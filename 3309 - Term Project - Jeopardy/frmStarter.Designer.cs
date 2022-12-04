@@ -81,7 +81,7 @@
             this.lblDirection.Name = "lblDirection";
             this.lblDirection.Size = new System.Drawing.Size(331, 62);
             this.lblDirection.TabIndex = 5;
-            this.lblDirection.Text = "Keep adding players until you\'re ready. \r\n(Max 5 Players)";
+            this.lblDirection.Text = "Keep adding players until you\'re ready. \r\n(Min 2 - Max 4 Players)";
             this.lblDirection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblDirection.Visible = false;
             // 

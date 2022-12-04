@@ -32,7 +32,7 @@ namespace _3309___Term_Project___Jeopardy
         {
             //List<Player> players = currentGameBoard.PlayerList;
             //first player is identified
-            txtbxCurrentPlayer.Text = "Current Player = " + currentGameBoard.CurrentPlayer.Name;
+            txtbxCurrentPlayer.Text = currentGameBoard.CurrentPlayer.Name + " " + currentGameBoard.CurrentPlayer.Id;
 
             //displays the players
             DisplayPlayers(currentGameBoard.PlayerList);
@@ -45,11 +45,11 @@ namespace _3309___Term_Project___Jeopardy
         //function that displays the players in the game
         private void DisplayPlayers(List<Player> players)
         {
-            string playerDisplay = "Players: \n";
+            string playerDisplay = "";
 
             foreach(Player p in players)
             {
-                playerDisplay += p.Name + " - Score: " + p.PlayerScore + "\n";
+                playerDisplay += p.Name + " " + p.Id + " - Score: " + p.PlayerScore + "\n";
             }
 
             lblPlayers.Text = playerDisplay;
@@ -85,7 +85,7 @@ namespace _3309___Term_Project___Jeopardy
 
             int playerScore = currentGameBoard.CurrentPlayer.PlayerScore;
 
-            MessageBox.Show("Result: " + result + " - Player: " + currentGameBoard.CurrentPlayer.Name + " - Total Score: " + playerScore);
+            lblResult.Text = "Result: \n" + result + "\nPlayer: " + currentGameBoard.CurrentPlayer.Name + " - Total Score: " + playerScore;
             
             DisplayPlayers(currentGameBoard.PlayerList);
 
@@ -93,10 +93,11 @@ namespace _3309___Term_Project___Jeopardy
             if (result)
             {
                 grbCategories.Enabled = true;
-                txtPlayerResponse.Text = "";
-                txtQuestion.Text = "";
                 txtPlayerResponse.Enabled = false;
                 btnSubmit.Enabled = false;
+                lblResult.Text = "Result: \n" + result + "\nPlayer: " + currentGameBoard.CurrentPlayer.Name + " - Total Score: " + playerScore;
+                txtPlayerResponse.Text = "";
+                txtQuestion.Text = "";
             }
             //if they are wrong
             else
@@ -111,7 +112,7 @@ namespace _3309___Term_Project___Jeopardy
                     grbCategories.Enabled = true;
                     txtPlayerResponse.Text = "";
                     txtQuestion.Text = "";
-                    txtbxCurrentPlayer.Text = "Current Player = " + currentGameBoard.CurrentPlayer.Name;
+                    txtbxCurrentPlayer.Text = currentGameBoard.CurrentPlayer.Name + " " + currentGameBoard.CurrentPlayer.Id;
                 }
                 else
                 {

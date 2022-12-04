@@ -26,9 +26,9 @@ namespace _3309___Term_Project___Jeopardy
         private void btnAddPlayer_Click(object sender, EventArgs e)
         {
 
-            if (playerList.Count == 5)
+            if (playerList.Count == 4)
             {
-                MessageBox.Show("Max of 5 players reached. No more can be added");
+                MessageBox.Show("Max of 4 players reached. No more can be added");
             }
             else
             {

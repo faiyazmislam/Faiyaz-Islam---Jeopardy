@@ -73,10 +73,11 @@ namespace _3309___Term_Project___Jeopardy
             this.txtPlayerResponse = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.grbAnswerQuestion = new System.Windows.Forms.GroupBox();
-            this.lblCurrentPlayer = new System.Windows.Forms.Label();
             this.txtbxCurrentPlayer = new System.Windows.Forms.TextBox();
             this.gbPlayerDisplay = new System.Windows.Forms.GroupBox();
             this.lblPlayers = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.lblCurrentTurn = new System.Windows.Forms.Label();
             this.grbCategories.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gbSports.SuspendLayout();
@@ -105,6 +106,8 @@ namespace _3309___Term_Project___Jeopardy
             this.grbCategories.Controls.Add(this.gbGames);
             this.grbCategories.Controls.Add(this.gbMusic);
             this.grbCategories.Controls.Add(this.gbMovies);
+            this.grbCategories.Font = new System.Drawing.Font("Lucida Fax", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbCategories.ForeColor = System.Drawing.Color.Cyan;
             this.grbCategories.Location = new System.Drawing.Point(12, 41);
             this.grbCategories.Name = "grbCategories";
             this.grbCategories.Size = new System.Drawing.Size(824, 265);
@@ -119,6 +122,8 @@ namespace _3309___Term_Project___Jeopardy
             this.groupBox2.Controls.Add(this.btnTemple300);
             this.groupBox2.Controls.Add(this.btnTemple200);
             this.groupBox2.Controls.Add(this.btnTemple100);
+            this.groupBox2.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Gold;
             this.groupBox2.Location = new System.Drawing.Point(681, 26);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(124, 228);
@@ -128,52 +133,57 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnTemple400
             // 
+            this.btnTemple400.BackColor = System.Drawing.Color.Navy;
             this.btnTemple400.Location = new System.Drawing.Point(6, 153);
             this.btnTemple400.Name = "btnTemple400";
             this.btnTemple400.Size = new System.Drawing.Size(112, 31);
             this.btnTemple400.TabIndex = 12;
             this.btnTemple400.Text = "400";
-            this.btnTemple400.UseVisualStyleBackColor = true;
+            this.btnTemple400.UseVisualStyleBackColor = false;
             this.btnTemple400.Click += new System.EventHandler(this.btnTemple400_Click);
             // 
             // btnTemple500
             // 
+            this.btnTemple500.BackColor = System.Drawing.Color.Navy;
             this.btnTemple500.Location = new System.Drawing.Point(5, 190);
             this.btnTemple500.Name = "btnTemple500";
             this.btnTemple500.Size = new System.Drawing.Size(112, 31);
             this.btnTemple500.TabIndex = 11;
             this.btnTemple500.Text = "500";
-            this.btnTemple500.UseVisualStyleBackColor = true;
+            this.btnTemple500.UseVisualStyleBackColor = false;
             this.btnTemple500.Click += new System.EventHandler(this.btnTemple500_Click);
             // 
             // btnTemple300
             // 
+            this.btnTemple300.BackColor = System.Drawing.Color.Navy;
             this.btnTemple300.Location = new System.Drawing.Point(6, 112);
             this.btnTemple300.Name = "btnTemple300";
             this.btnTemple300.Size = new System.Drawing.Size(111, 34);
             this.btnTemple300.TabIndex = 10;
             this.btnTemple300.Text = "300";
-            this.btnTemple300.UseVisualStyleBackColor = true;
+            this.btnTemple300.UseVisualStyleBackColor = false;
             this.btnTemple300.Click += new System.EventHandler(this.btnTemple300_Click);
             // 
             // btnTemple200
             // 
+            this.btnTemple200.BackColor = System.Drawing.Color.Navy;
             this.btnTemple200.Location = new System.Drawing.Point(5, 71);
             this.btnTemple200.Name = "btnTemple200";
             this.btnTemple200.Size = new System.Drawing.Size(112, 35);
             this.btnTemple200.TabIndex = 9;
             this.btnTemple200.Text = "200";
-            this.btnTemple200.UseVisualStyleBackColor = true;
+            this.btnTemple200.UseVisualStyleBackColor = false;
             this.btnTemple200.Click += new System.EventHandler(this.btnTemple200_Click);
             // 
             // btnTemple100
             // 
+            this.btnTemple100.BackColor = System.Drawing.Color.Navy;
             this.btnTemple100.Location = new System.Drawing.Point(6, 32);
             this.btnTemple100.Name = "btnTemple100";
             this.btnTemple100.Size = new System.Drawing.Size(113, 32);
             this.btnTemple100.TabIndex = 8;
             this.btnTemple100.Text = "100";
-            this.btnTemple100.UseVisualStyleBackColor = true;
+            this.btnTemple100.UseVisualStyleBackColor = false;
             this.btnTemple100.Click += new System.EventHandler(this.btnTemple100_Click);
             // 
             // gbSports
@@ -184,6 +194,8 @@ namespace _3309___Term_Project___Jeopardy
             this.gbSports.Controls.Add(this.btnSports300);
             this.gbSports.Controls.Add(this.btnSports200);
             this.gbSports.Controls.Add(this.btnSports100);
+            this.gbSports.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbSports.ForeColor = System.Drawing.Color.Gold;
             this.gbSports.Location = new System.Drawing.Point(552, 26);
             this.gbSports.Name = "gbSports";
             this.gbSports.Size = new System.Drawing.Size(123, 228);
@@ -193,12 +205,13 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnSports500
             // 
+            this.btnSports500.BackColor = System.Drawing.Color.Navy;
             this.btnSports500.Location = new System.Drawing.Point(5, 190);
             this.btnSports500.Name = "btnSports500";
             this.btnSports500.Size = new System.Drawing.Size(112, 31);
             this.btnSports500.TabIndex = 12;
             this.btnSports500.Text = "500";
-            this.btnSports500.UseVisualStyleBackColor = true;
+            this.btnSports500.UseVisualStyleBackColor = false;
             this.btnSports500.Click += new System.EventHandler(this.btnSports500_Click);
             // 
             // button5
@@ -212,42 +225,46 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnSports400
             // 
+            this.btnSports400.BackColor = System.Drawing.Color.Navy;
             this.btnSports400.Location = new System.Drawing.Point(5, 153);
             this.btnSports400.Name = "btnSports400";
             this.btnSports400.Size = new System.Drawing.Size(112, 31);
             this.btnSports400.TabIndex = 11;
             this.btnSports400.Text = "400";
-            this.btnSports400.UseVisualStyleBackColor = true;
+            this.btnSports400.UseVisualStyleBackColor = false;
             this.btnSports400.Click += new System.EventHandler(this.btnSports400_Click);
             // 
             // btnSports300
             // 
+            this.btnSports300.BackColor = System.Drawing.Color.Navy;
             this.btnSports300.Location = new System.Drawing.Point(5, 112);
             this.btnSports300.Name = "btnSports300";
             this.btnSports300.Size = new System.Drawing.Size(113, 34);
             this.btnSports300.TabIndex = 10;
             this.btnSports300.Text = "300";
-            this.btnSports300.UseVisualStyleBackColor = true;
+            this.btnSports300.UseVisualStyleBackColor = false;
             this.btnSports300.Click += new System.EventHandler(this.btnSports300_Click);
             // 
             // btnSports200
             // 
+            this.btnSports200.BackColor = System.Drawing.Color.Navy;
             this.btnSports200.Location = new System.Drawing.Point(5, 71);
             this.btnSports200.Name = "btnSports200";
             this.btnSports200.Size = new System.Drawing.Size(113, 35);
             this.btnSports200.TabIndex = 9;
             this.btnSports200.Text = "200";
-            this.btnSports200.UseVisualStyleBackColor = true;
+            this.btnSports200.UseVisualStyleBackColor = false;
             this.btnSports200.Click += new System.EventHandler(this.btnSports200_Click);
             // 
             // btnSports100
             // 
+            this.btnSports100.BackColor = System.Drawing.Color.Navy;
             this.btnSports100.Location = new System.Drawing.Point(6, 32);
             this.btnSports100.Name = "btnSports100";
             this.btnSports100.Size = new System.Drawing.Size(112, 32);
             this.btnSports100.TabIndex = 8;
             this.btnSports100.Text = "100";
-            this.btnSports100.UseVisualStyleBackColor = true;
+            this.btnSports100.UseVisualStyleBackColor = false;
             this.btnSports100.Click += new System.EventHandler(this.btnSports100_Click);
             // 
             // gbShows
@@ -257,6 +274,8 @@ namespace _3309___Term_Project___Jeopardy
             this.gbShows.Controls.Add(this.btnShows300);
             this.gbShows.Controls.Add(this.btnShows200);
             this.gbShows.Controls.Add(this.btnShows100);
+            this.gbShows.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbShows.ForeColor = System.Drawing.Color.Gold;
             this.gbShows.Location = new System.Drawing.Point(417, 26);
             this.gbShows.Name = "gbShows";
             this.gbShows.Size = new System.Drawing.Size(129, 228);
@@ -266,52 +285,57 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnShows400
             // 
+            this.btnShows400.BackColor = System.Drawing.Color.Navy;
             this.btnShows400.Location = new System.Drawing.Point(6, 153);
             this.btnShows400.Name = "btnShows400";
             this.btnShows400.Size = new System.Drawing.Size(118, 32);
             this.btnShows400.TabIndex = 11;
             this.btnShows400.Text = "400";
-            this.btnShows400.UseVisualStyleBackColor = true;
+            this.btnShows400.UseVisualStyleBackColor = false;
             this.btnShows400.Click += new System.EventHandler(this.btnShows400_Click);
             // 
             // btnShows500
             // 
+            this.btnShows500.BackColor = System.Drawing.Color.Navy;
             this.btnShows500.Location = new System.Drawing.Point(5, 190);
             this.btnShows500.Name = "btnShows500";
             this.btnShows500.Size = new System.Drawing.Size(118, 31);
             this.btnShows500.TabIndex = 8;
             this.btnShows500.Text = "500";
-            this.btnShows500.UseVisualStyleBackColor = true;
+            this.btnShows500.UseVisualStyleBackColor = false;
             this.btnShows500.Click += new System.EventHandler(this.btnShows500_Click);
             // 
             // btnShows300
             // 
+            this.btnShows300.BackColor = System.Drawing.Color.Navy;
             this.btnShows300.Location = new System.Drawing.Point(6, 112);
             this.btnShows300.Name = "btnShows300";
             this.btnShows300.Size = new System.Drawing.Size(118, 34);
             this.btnShows300.TabIndex = 10;
             this.btnShows300.Text = "300";
-            this.btnShows300.UseVisualStyleBackColor = true;
+            this.btnShows300.UseVisualStyleBackColor = false;
             this.btnShows300.Click += new System.EventHandler(this.btnShows300_Click);
             // 
             // btnShows200
             // 
+            this.btnShows200.BackColor = System.Drawing.Color.Navy;
             this.btnShows200.Location = new System.Drawing.Point(5, 71);
             this.btnShows200.Name = "btnShows200";
             this.btnShows200.Size = new System.Drawing.Size(119, 35);
             this.btnShows200.TabIndex = 9;
             this.btnShows200.Text = "200";
-            this.btnShows200.UseVisualStyleBackColor = true;
+            this.btnShows200.UseVisualStyleBackColor = false;
             this.btnShows200.Click += new System.EventHandler(this.btnShows200_Click);
             // 
             // btnShows100
             // 
+            this.btnShows100.BackColor = System.Drawing.Color.Navy;
             this.btnShows100.Location = new System.Drawing.Point(6, 32);
             this.btnShows100.Name = "btnShows100";
             this.btnShows100.Size = new System.Drawing.Size(118, 32);
             this.btnShows100.TabIndex = 8;
             this.btnShows100.Text = "100";
-            this.btnShows100.UseVisualStyleBackColor = true;
+            this.btnShows100.UseVisualStyleBackColor = false;
             this.btnShows100.Click += new System.EventHandler(this.btnShows100_Click);
             // 
             // gbGames
@@ -321,6 +345,8 @@ namespace _3309___Term_Project___Jeopardy
             this.gbGames.Controls.Add(this.btnGames300);
             this.gbGames.Controls.Add(this.btnGames200);
             this.gbGames.Controls.Add(this.btnGames100);
+            this.gbGames.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbGames.ForeColor = System.Drawing.Color.Gold;
             this.gbGames.Location = new System.Drawing.Point(282, 26);
             this.gbGames.Name = "gbGames";
             this.gbGames.Size = new System.Drawing.Size(130, 228);
@@ -330,52 +356,57 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnGames400
             // 
+            this.btnGames400.BackColor = System.Drawing.Color.Navy;
             this.btnGames400.Location = new System.Drawing.Point(6, 152);
             this.btnGames400.Name = "btnGames400";
             this.btnGames400.Size = new System.Drawing.Size(119, 31);
             this.btnGames400.TabIndex = 11;
             this.btnGames400.Text = "400";
-            this.btnGames400.UseVisualStyleBackColor = true;
+            this.btnGames400.UseVisualStyleBackColor = false;
             this.btnGames400.Click += new System.EventHandler(this.btnGames400_Click);
             // 
             // btnGames500
             // 
+            this.btnGames500.BackColor = System.Drawing.Color.Navy;
             this.btnGames500.Location = new System.Drawing.Point(6, 189);
             this.btnGames500.Name = "btnGames500";
             this.btnGames500.Size = new System.Drawing.Size(118, 31);
             this.btnGames500.TabIndex = 9;
             this.btnGames500.Text = "500";
-            this.btnGames500.UseVisualStyleBackColor = true;
+            this.btnGames500.UseVisualStyleBackColor = false;
             this.btnGames500.Click += new System.EventHandler(this.btnGames500_Click);
             // 
             // btnGames300
             // 
+            this.btnGames300.BackColor = System.Drawing.Color.Navy;
             this.btnGames300.Location = new System.Drawing.Point(6, 112);
             this.btnGames300.Name = "btnGames300";
             this.btnGames300.Size = new System.Drawing.Size(119, 34);
             this.btnGames300.TabIndex = 10;
             this.btnGames300.Text = "300";
-            this.btnGames300.UseVisualStyleBackColor = true;
+            this.btnGames300.UseVisualStyleBackColor = false;
             this.btnGames300.Click += new System.EventHandler(this.btnGames300_Click);
             // 
             // btnGames200
             // 
+            this.btnGames200.BackColor = System.Drawing.Color.Navy;
             this.btnGames200.Location = new System.Drawing.Point(6, 70);
             this.btnGames200.Name = "btnGames200";
             this.btnGames200.Size = new System.Drawing.Size(119, 35);
             this.btnGames200.TabIndex = 9;
             this.btnGames200.Text = "200";
-            this.btnGames200.UseVisualStyleBackColor = true;
+            this.btnGames200.UseVisualStyleBackColor = false;
             this.btnGames200.Click += new System.EventHandler(this.btnGames200_Click);
             // 
             // btnGames100
             // 
+            this.btnGames100.BackColor = System.Drawing.Color.Navy;
             this.btnGames100.Location = new System.Drawing.Point(6, 32);
             this.btnGames100.Name = "btnGames100";
             this.btnGames100.Size = new System.Drawing.Size(119, 32);
             this.btnGames100.TabIndex = 8;
             this.btnGames100.Text = "100";
-            this.btnGames100.UseVisualStyleBackColor = true;
+            this.btnGames100.UseVisualStyleBackColor = false;
             this.btnGames100.Click += new System.EventHandler(this.btnGames100_Click);
             // 
             // gbMusic
@@ -385,6 +416,8 @@ namespace _3309___Term_Project___Jeopardy
             this.gbMusic.Controls.Add(this.btnMusic300);
             this.gbMusic.Controls.Add(this.btnMusic200);
             this.gbMusic.Controls.Add(this.btnMusic100);
+            this.gbMusic.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbMusic.ForeColor = System.Drawing.Color.Gold;
             this.gbMusic.Location = new System.Drawing.Point(159, 26);
             this.gbMusic.Name = "gbMusic";
             this.gbMusic.Size = new System.Drawing.Size(124, 228);
@@ -394,52 +427,57 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnMusic500
             // 
+            this.btnMusic500.BackColor = System.Drawing.Color.Navy;
             this.btnMusic500.Location = new System.Drawing.Point(5, 190);
             this.btnMusic500.Name = "btnMusic500";
             this.btnMusic500.Size = new System.Drawing.Size(113, 31);
             this.btnMusic500.TabIndex = 10;
             this.btnMusic500.Text = "500";
-            this.btnMusic500.UseVisualStyleBackColor = true;
+            this.btnMusic500.UseVisualStyleBackColor = false;
             this.btnMusic500.Click += new System.EventHandler(this.btnMusic500_Click);
             // 
             // btnMusic400
             // 
+            this.btnMusic400.BackColor = System.Drawing.Color.Navy;
             this.btnMusic400.Location = new System.Drawing.Point(5, 152);
             this.btnMusic400.Name = "btnMusic400";
             this.btnMusic400.Size = new System.Drawing.Size(113, 31);
             this.btnMusic400.TabIndex = 7;
             this.btnMusic400.Text = "400";
-            this.btnMusic400.UseVisualStyleBackColor = true;
+            this.btnMusic400.UseVisualStyleBackColor = false;
             this.btnMusic400.Click += new System.EventHandler(this.btnMusic400_Click);
             // 
             // btnMusic300
             // 
+            this.btnMusic300.BackColor = System.Drawing.Color.Navy;
             this.btnMusic300.Location = new System.Drawing.Point(5, 112);
             this.btnMusic300.Name = "btnMusic300";
             this.btnMusic300.Size = new System.Drawing.Size(113, 34);
             this.btnMusic300.TabIndex = 6;
             this.btnMusic300.Text = "300";
-            this.btnMusic300.UseVisualStyleBackColor = true;
+            this.btnMusic300.UseVisualStyleBackColor = false;
             this.btnMusic300.Click += new System.EventHandler(this.btnMusic300_Click);
             // 
             // btnMusic200
             // 
+            this.btnMusic200.BackColor = System.Drawing.Color.Navy;
             this.btnMusic200.Location = new System.Drawing.Point(5, 71);
             this.btnMusic200.Name = "btnMusic200";
             this.btnMusic200.Size = new System.Drawing.Size(113, 35);
             this.btnMusic200.TabIndex = 5;
             this.btnMusic200.Text = "200";
-            this.btnMusic200.UseVisualStyleBackColor = true;
+            this.btnMusic200.UseVisualStyleBackColor = false;
             this.btnMusic200.Click += new System.EventHandler(this.btnMusic200_Click);
             // 
             // btnMusic100
             // 
+            this.btnMusic100.BackColor = System.Drawing.Color.Navy;
             this.btnMusic100.Location = new System.Drawing.Point(5, 32);
             this.btnMusic100.Name = "btnMusic100";
             this.btnMusic100.Size = new System.Drawing.Size(112, 32);
             this.btnMusic100.TabIndex = 4;
             this.btnMusic100.Text = "100";
-            this.btnMusic100.UseVisualStyleBackColor = true;
+            this.btnMusic100.UseVisualStyleBackColor = false;
             this.btnMusic100.Click += new System.EventHandler(this.btnMusic100_Click);
             // 
             // gbMovies
@@ -449,6 +487,8 @@ namespace _3309___Term_Project___Jeopardy
             this.gbMovies.Controls.Add(this.btnMovies300);
             this.gbMovies.Controls.Add(this.btnMovies200);
             this.gbMovies.Controls.Add(this.btnMovies100);
+            this.gbMovies.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbMovies.ForeColor = System.Drawing.Color.Gold;
             this.gbMovies.Location = new System.Drawing.Point(18, 26);
             this.gbMovies.Name = "gbMovies";
             this.gbMovies.Size = new System.Drawing.Size(129, 228);
@@ -458,52 +498,58 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnMovies500
             // 
+            this.btnMovies500.BackColor = System.Drawing.Color.Navy;
             this.btnMovies500.Location = new System.Drawing.Point(6, 191);
             this.btnMovies500.Name = "btnMovies500";
             this.btnMovies500.Size = new System.Drawing.Size(118, 31);
             this.btnMovies500.TabIndex = 4;
             this.btnMovies500.Text = "500";
-            this.btnMovies500.UseVisualStyleBackColor = true;
+            this.btnMovies500.UseVisualStyleBackColor = false;
             this.btnMovies500.Click += new System.EventHandler(this.btnMovies500_Click);
             // 
             // btnMovies400
             // 
+            this.btnMovies400.BackColor = System.Drawing.Color.Navy;
             this.btnMovies400.Location = new System.Drawing.Point(6, 153);
             this.btnMovies400.Name = "btnMovies400";
             this.btnMovies400.Size = new System.Drawing.Size(118, 31);
             this.btnMovies400.TabIndex = 3;
             this.btnMovies400.Text = "400";
-            this.btnMovies400.UseVisualStyleBackColor = true;
+            this.btnMovies400.UseVisualStyleBackColor = false;
             this.btnMovies400.Click += new System.EventHandler(this.btnMovies400_Click);
             // 
             // btnMovies300
             // 
+            this.btnMovies300.BackColor = System.Drawing.Color.Navy;
             this.btnMovies300.Location = new System.Drawing.Point(6, 112);
             this.btnMovies300.Name = "btnMovies300";
             this.btnMovies300.Size = new System.Drawing.Size(118, 34);
             this.btnMovies300.TabIndex = 2;
             this.btnMovies300.Text = "300";
-            this.btnMovies300.UseVisualStyleBackColor = true;
+            this.btnMovies300.UseVisualStyleBackColor = false;
             this.btnMovies300.Click += new System.EventHandler(this.btnMovies300_Click);
             // 
             // btnMovies200
             // 
+            this.btnMovies200.BackColor = System.Drawing.Color.Navy;
             this.btnMovies200.Location = new System.Drawing.Point(6, 71);
             this.btnMovies200.Name = "btnMovies200";
             this.btnMovies200.Size = new System.Drawing.Size(118, 35);
             this.btnMovies200.TabIndex = 1;
             this.btnMovies200.Text = "200";
-            this.btnMovies200.UseVisualStyleBackColor = true;
+            this.btnMovies200.UseVisualStyleBackColor = false;
             this.btnMovies200.Click += new System.EventHandler(this.btnMovies200_Click);
             // 
             // btnMovies100
             // 
+            this.btnMovies100.BackColor = System.Drawing.Color.Navy;
+            this.btnMovies100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnMovies100.Location = new System.Drawing.Point(6, 32);
             this.btnMovies100.Name = "btnMovies100";
             this.btnMovies100.Size = new System.Drawing.Size(118, 32);
             this.btnMovies100.TabIndex = 0;
             this.btnMovies100.Text = "100";
-            this.btnMovies100.UseVisualStyleBackColor = true;
+            this.btnMovies100.UseVisualStyleBackColor = false;
             this.btnMovies100.Click += new System.EventHandler(this.btnMovies100_Click);
             // 
             // lblQuestion
@@ -549,7 +595,7 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(13, 116);
+            this.btnSubmit.Location = new System.Drawing.Point(380, 118);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(104, 25);
@@ -572,33 +618,27 @@ namespace _3309___Term_Project___Jeopardy
             this.grbAnswerQuestion.Size = new System.Drawing.Size(824, 147);
             this.grbAnswerQuestion.TabIndex = 22;
             this.grbAnswerQuestion.TabStop = false;
-            this.grbAnswerQuestion.Text = "Answer the question";
-            // 
-            // lblCurrentPlayer
-            // 
-            this.lblCurrentPlayer.Location = new System.Drawing.Point(512, 34);
-            this.lblCurrentPlayer.Name = "lblCurrentPlayer";
-            this.lblCurrentPlayer.Size = new System.Drawing.Size(216, 27);
-            this.lblCurrentPlayer.TabIndex = 0;
-            this.lblCurrentPlayer.Text = "Current Player: ";
-            this.lblCurrentPlayer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtbxCurrentPlayer
             // 
-            this.txtbxCurrentPlayer.Location = new System.Drawing.Point(528, 64);
+            this.txtbxCurrentPlayer.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxCurrentPlayer.Location = new System.Drawing.Point(553, 58);
             this.txtbxCurrentPlayer.Name = "txtbxCurrentPlayer";
             this.txtbxCurrentPlayer.ReadOnly = true;
-            this.txtbxCurrentPlayer.Size = new System.Drawing.Size(178, 20);
+            this.txtbxCurrentPlayer.Size = new System.Drawing.Size(178, 33);
             this.txtbxCurrentPlayer.TabIndex = 1;
+            this.txtbxCurrentPlayer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gbPlayerDisplay
             // 
-            this.gbPlayerDisplay.Controls.Add(this.lblPlayers);
             this.gbPlayerDisplay.Controls.Add(this.txtbxCurrentPlayer);
-            this.gbPlayerDisplay.Controls.Add(this.lblCurrentPlayer);
-            this.gbPlayerDisplay.Location = new System.Drawing.Point(36, 464);
+            this.gbPlayerDisplay.Controls.Add(this.lblCurrentTurn);
+            this.gbPlayerDisplay.Controls.Add(this.lblResult);
+            this.gbPlayerDisplay.Controls.Add(this.lblPlayers);
+            this.gbPlayerDisplay.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbPlayerDisplay.Location = new System.Drawing.Point(36, 463);
             this.gbPlayerDisplay.Name = "gbPlayerDisplay";
-            this.gbPlayerDisplay.Size = new System.Drawing.Size(774, 127);
+            this.gbPlayerDisplay.Size = new System.Drawing.Size(774, 128);
             this.gbPlayerDisplay.TabIndex = 23;
             this.gbPlayerDisplay.TabStop = false;
             this.gbPlayerDisplay.Text = "Player Info";
@@ -606,17 +646,36 @@ namespace _3309___Term_Project___Jeopardy
             // lblPlayers
             // 
             this.lblPlayers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblPlayers.Location = new System.Drawing.Point(19, 20);
+            this.lblPlayers.Location = new System.Drawing.Point(19, 22);
             this.lblPlayers.Name = "lblPlayers";
-            this.lblPlayers.Size = new System.Drawing.Size(351, 88);
+            this.lblPlayers.Size = new System.Drawing.Size(240, 93);
             this.lblPlayers.TabIndex = 2;
-            this.lblPlayers.Text = "Players:";
+            this.lblPlayers.Text = "Player 1\r\nPlayer 2\r\nPlayer 3\r\nPlayer 4";
+            // 
+            // lblResult
+            // 
+            this.lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblResult.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.Location = new System.Drawing.Point(276, 22);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(230, 93);
+            this.lblResult.TabIndex = 3;
+            this.lblResult.Text = "Result:";
+            // 
+            // lblCurrentTurn
+            // 
+            this.lblCurrentTurn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCurrentTurn.Location = new System.Drawing.Point(528, 21);
+            this.lblCurrentTurn.Name = "lblCurrentTurn";
+            this.lblCurrentTurn.Size = new System.Drawing.Size(230, 94);
+            this.lblCurrentTurn.TabIndex = 4;
+            this.lblCurrentTurn.Text = "Current Turn:";
             // 
             // frmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 603);
+            this.ClientSize = new System.Drawing.Size(848, 600);
             this.Controls.Add(this.gbPlayerDisplay);
             this.Controls.Add(this.grbAnswerQuestion);
             this.Controls.Add(this.grbCategories);
@@ -686,9 +745,10 @@ namespace _3309___Term_Project___Jeopardy
         private System.Windows.Forms.Button btnMovies500;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.GroupBox grbAnswerQuestion;
-        private System.Windows.Forms.Label lblCurrentPlayer;
         private System.Windows.Forms.TextBox txtbxCurrentPlayer;
         private System.Windows.Forms.GroupBox gbPlayerDisplay;
         private System.Windows.Forms.Label lblPlayers;
+        private System.Windows.Forms.Label lblCurrentTurn;
+        private System.Windows.Forms.Label lblResult;
     }
 }
