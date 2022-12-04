@@ -15,6 +15,7 @@ namespace _3309___Term_Project___Jeopardy
     {
         internal GameBoard gameBoard;
         internal frmStarter myOwnerForm;
+        internal List<Player> winners = new List<Player>();
 
         public frmGame(frmStarter frmThatOpenedMe)
         {
@@ -23,6 +24,8 @@ namespace _3309___Term_Project___Jeopardy
             gameBoard = frmThatOpenedMe.gameBoard;
 
             lblCurrentPlayer.Text = "Current Player = " + gameBoard.CurrentPlayer.Name;
+
+            gameBoard.AvailableQuestions = 30;
 
             InitializeComponent();
         }
@@ -92,10 +95,26 @@ namespace _3309___Term_Project___Jeopardy
 
             MessageBox.Show("Result: "+ result + " - Player: " + gameBoard.CurrentPlayer.Name + " - Points: " + playerScore);
 
+            //////
+            if(gameBoard.CheckGameStatus())
+            {
+                gameBoard.NextPlayer();
 
-            gameBoard.NextPlayer();
+                lblCurrentPlayer.Text = "Current Player = " + gameBoard.CurrentPlayer.Name;
+            }
+            else
+            {
+                winners = gameBoard.FindWinner();
 
-            lblCurrentPlayer.Text = "Current Player = " + gameBoard.CurrentPlayer.Name;
+                frmWinner winnerForm = new frmWinner(this);
+                winnerForm.ShowDialog();
+                this.Close();
+            }
+
+
+            /////
+            ///
+            
         }
     }
 }

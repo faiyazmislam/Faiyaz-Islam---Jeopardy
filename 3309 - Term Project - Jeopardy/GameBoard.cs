@@ -22,6 +22,8 @@ namespace _3309___Term_Project___Jeopardy
         public Question SelectedQuestion { get; set; }
         public bool AllQuestionsChosen { get; set; }
 
+        public int AvailableQuestions { get; set; }
+
         public GameBoard(CategoryList categoryList, List<Player> playerList) //, int numberQuestions)
         {
             this.CategoryList = categoryList;
@@ -67,9 +69,17 @@ namespace _3309___Term_Project___Jeopardy
             else CurrentPlayer = PlayerList.First(); 
         }
 
-        public void CheckGameStatus()
+        public Boolean CheckGameStatus()
         {
-            
+            AvailableQuestions -= 1;
+
+            if(AvailableQuestions == 0)
+            {
+                return false;
+            }
+
+
+            return true; 
         }
 
         public List<Player> FindWinner() //Note: there can be more than 1 player
@@ -98,5 +108,7 @@ namespace _3309___Term_Project___Jeopardy
         //{
         //    return selectedQuestion.Query;
         //}
+
+        
     }
 }
