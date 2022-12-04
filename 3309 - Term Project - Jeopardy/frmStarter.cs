@@ -25,16 +25,26 @@ namespace _3309___Term_Project___Jeopardy
 
         private void btnAddPlayer_Click(object sender, EventArgs e)
         {
-            if (txtPlayerName.Text.Trim().Equals("") || !mskId.MaskCompleted)
+
+            if (playerList.Count == 5)
             {
-                MessageBox.Show("You must enter your name AND a unique number.");
+                MessageBox.Show("Max of 5 players reached. No more can be added");
             }
             else
             {
-                Player player = new Player(int.Parse(mskId.Text), txtPlayerName.Text);
-                playerList.Add(player);
-                //MessageBox.Show("Player: " + player.Name + " ( " + player.Id + " ) has been added.");
+                if (txtPlayerName.Text.Trim().Equals("") || !mskId.MaskCompleted)
+                {
+                    MessageBox.Show("You must enter your name AND a unique number.");
+                }
+                else
+                {
+                    Player player = new Player(int.Parse(mskId.Text), txtPlayerName.Text);
+                    playerList.Add(player);
+                    MessageBox.Show("Player: " + player.Name + " ( " + player.Id + " ) has been added to the game.");
+                }
             }
+
+            
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -165,6 +175,7 @@ namespace _3309___Term_Project___Jeopardy
         {
             btnStart.Visible = true;
             gbPlayerAddition.Visible = true;
+            lblDirection.Visible = true;
             gbRules.Visible = true;
             btnPlay.Visible = false;
         }

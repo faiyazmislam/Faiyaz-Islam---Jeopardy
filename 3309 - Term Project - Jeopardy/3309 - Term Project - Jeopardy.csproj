@@ -85,6 +85,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="frmGame.resx">
       <DependentUpon>frmGame.cs</DependentUpon>
@@ -106,6 +107,7 @@
     <Content Include="JeopardyDatabase.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Jeopardy.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\" />

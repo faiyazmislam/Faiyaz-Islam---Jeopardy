@@ -126,7 +126,7 @@
             this.gbRules.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbRules.Location = new System.Drawing.Point(40, 12);
             this.gbRules.Name = "gbRules";
-            this.gbRules.Size = new System.Drawing.Size(542, 146);
+            this.gbRules.Size = new System.Drawing.Size(542, 150);
             this.gbRules.TabIndex = 9;
             this.gbRules.TabStop = false;
             this.gbRules.Text = "Rules:";
@@ -134,9 +134,10 @@
             // 
             // lblRules
             // 
-            this.lblRules.Location = new System.Drawing.Point(28, 26);
+            this.lblRules.Font = new System.Drawing.Font("Microsoft Uighur", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRules.Location = new System.Drawing.Point(22, 26);
             this.lblRules.Name = "lblRules";
-            this.lblRules.Size = new System.Drawing.Size(486, 106);
+            this.lblRules.Size = new System.Drawing.Size(516, 121);
             this.lblRules.TabIndex = 0;
             this.lblRules.Text = resources.GetString("lblRules.Text");
             // 
@@ -174,6 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::_3309___Term_Project___Jeopardy.Properties.Resources.Jeopardy;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(625, 436);
             this.Controls.Add(this.btnPlay);

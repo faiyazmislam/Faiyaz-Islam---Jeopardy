@@ -120,7 +120,8 @@
   <data name="lblRules.Text" xml:space="preserve">
     <value>1. Each player must choose a question from a category
 2. You must enter your answers in the form of a question
-3. Players will take turns regardless of whether they get the question right
-4. Game will end once all the questions on the board have been chosen</value>
+3. Answers are not case sensitive, but you must enter numbers (123) and use '?'
+4. If answer is correct, player will have another turn, else next player will go
+5. Game will end once all the questions on the board have been chosen</value>
   </data>
 </root>

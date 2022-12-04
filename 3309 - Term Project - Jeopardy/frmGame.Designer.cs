@@ -73,8 +73,10 @@ namespace _3309___Term_Project___Jeopardy
             this.txtPlayerResponse = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.grbAnswerQuestion = new System.Windows.Forms.GroupBox();
-            this.gbCurrentPlayer = new System.Windows.Forms.GroupBox();
             this.lblCurrentPlayer = new System.Windows.Forms.Label();
+            this.txtbxCurrentPlayer = new System.Windows.Forms.TextBox();
+            this.gbPlayerDisplay = new System.Windows.Forms.GroupBox();
+            this.lblPlayers = new System.Windows.Forms.Label();
             this.grbCategories.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gbSports.SuspendLayout();
@@ -83,7 +85,7 @@ namespace _3309___Term_Project___Jeopardy
             this.gbMusic.SuspendLayout();
             this.gbMovies.SuspendLayout();
             this.grbAnswerQuestion.SuspendLayout();
-            this.gbCurrentPlayer.SuspendLayout();
+            this.gbPlayerDisplay.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -328,7 +330,7 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnGames400
             // 
-            this.btnGames400.Location = new System.Drawing.Point(5, 153);
+            this.btnGames400.Location = new System.Drawing.Point(6, 152);
             this.btnGames400.Name = "btnGames400";
             this.btnGames400.Size = new System.Drawing.Size(119, 31);
             this.btnGames400.TabIndex = 11;
@@ -338,7 +340,7 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnGames500
             // 
-            this.btnGames500.Location = new System.Drawing.Point(6, 190);
+            this.btnGames500.Location = new System.Drawing.Point(6, 189);
             this.btnGames500.Name = "btnGames500";
             this.btnGames500.Size = new System.Drawing.Size(118, 31);
             this.btnGames500.TabIndex = 9;
@@ -348,7 +350,7 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnGames300
             // 
-            this.btnGames300.Location = new System.Drawing.Point(5, 112);
+            this.btnGames300.Location = new System.Drawing.Point(6, 112);
             this.btnGames300.Name = "btnGames300";
             this.btnGames300.Size = new System.Drawing.Size(119, 34);
             this.btnGames300.TabIndex = 10;
@@ -358,7 +360,7 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnGames200
             // 
-            this.btnGames200.Location = new System.Drawing.Point(6, 71);
+            this.btnGames200.Location = new System.Drawing.Point(6, 70);
             this.btnGames200.Name = "btnGames200";
             this.btnGames200.Size = new System.Drawing.Size(119, 35);
             this.btnGames200.TabIndex = 9;
@@ -392,9 +394,9 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnMusic500
             // 
-            this.btnMusic500.Location = new System.Drawing.Point(3, 190);
+            this.btnMusic500.Location = new System.Drawing.Point(5, 190);
             this.btnMusic500.Name = "btnMusic500";
-            this.btnMusic500.Size = new System.Drawing.Size(118, 31);
+            this.btnMusic500.Size = new System.Drawing.Size(113, 31);
             this.btnMusic500.TabIndex = 10;
             this.btnMusic500.Text = "500";
             this.btnMusic500.UseVisualStyleBackColor = true;
@@ -402,7 +404,7 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnMusic400
             // 
-            this.btnMusic400.Location = new System.Drawing.Point(3, 153);
+            this.btnMusic400.Location = new System.Drawing.Point(5, 152);
             this.btnMusic400.Name = "btnMusic400";
             this.btnMusic400.Size = new System.Drawing.Size(113, 31);
             this.btnMusic400.TabIndex = 7;
@@ -432,7 +434,7 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnMusic100
             // 
-            this.btnMusic100.Location = new System.Drawing.Point(6, 32);
+            this.btnMusic100.Location = new System.Drawing.Point(5, 32);
             this.btnMusic100.Name = "btnMusic100";
             this.btnMusic100.Size = new System.Drawing.Size(112, 32);
             this.btnMusic100.TabIndex = 4;
@@ -456,7 +458,7 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnMovies500
             // 
-            this.btnMovies500.Location = new System.Drawing.Point(5, 190);
+            this.btnMovies500.Location = new System.Drawing.Point(6, 191);
             this.btnMovies500.Name = "btnMovies500";
             this.btnMovies500.Size = new System.Drawing.Size(118, 31);
             this.btnMovies500.TabIndex = 4;
@@ -572,30 +574,50 @@ namespace _3309___Term_Project___Jeopardy
             this.grbAnswerQuestion.TabStop = false;
             this.grbAnswerQuestion.Text = "Answer the question";
             // 
-            // gbCurrentPlayer
-            // 
-            this.gbCurrentPlayer.Controls.Add(this.lblCurrentPlayer);
-            this.gbCurrentPlayer.Location = new System.Drawing.Point(547, 472);
-            this.gbCurrentPlayer.Name = "gbCurrentPlayer";
-            this.gbCurrentPlayer.Size = new System.Drawing.Size(224, 65);
-            this.gbCurrentPlayer.TabIndex = 0;
-            this.gbCurrentPlayer.TabStop = false;
-            // 
             // lblCurrentPlayer
             // 
-            this.lblCurrentPlayer.Location = new System.Drawing.Point(6, 16);
+            this.lblCurrentPlayer.Location = new System.Drawing.Point(512, 34);
             this.lblCurrentPlayer.Name = "lblCurrentPlayer";
             this.lblCurrentPlayer.Size = new System.Drawing.Size(216, 27);
             this.lblCurrentPlayer.TabIndex = 0;
             this.lblCurrentPlayer.Text = "Current Player: ";
             this.lblCurrentPlayer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtbxCurrentPlayer
+            // 
+            this.txtbxCurrentPlayer.Location = new System.Drawing.Point(528, 64);
+            this.txtbxCurrentPlayer.Name = "txtbxCurrentPlayer";
+            this.txtbxCurrentPlayer.ReadOnly = true;
+            this.txtbxCurrentPlayer.Size = new System.Drawing.Size(178, 20);
+            this.txtbxCurrentPlayer.TabIndex = 1;
+            // 
+            // gbPlayerDisplay
+            // 
+            this.gbPlayerDisplay.Controls.Add(this.lblPlayers);
+            this.gbPlayerDisplay.Controls.Add(this.txtbxCurrentPlayer);
+            this.gbPlayerDisplay.Controls.Add(this.lblCurrentPlayer);
+            this.gbPlayerDisplay.Location = new System.Drawing.Point(36, 464);
+            this.gbPlayerDisplay.Name = "gbPlayerDisplay";
+            this.gbPlayerDisplay.Size = new System.Drawing.Size(774, 127);
+            this.gbPlayerDisplay.TabIndex = 23;
+            this.gbPlayerDisplay.TabStop = false;
+            this.gbPlayerDisplay.Text = "Player Info";
+            // 
+            // lblPlayers
+            // 
+            this.lblPlayers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblPlayers.Location = new System.Drawing.Point(19, 20);
+            this.lblPlayers.Name = "lblPlayers";
+            this.lblPlayers.Size = new System.Drawing.Size(351, 88);
+            this.lblPlayers.TabIndex = 2;
+            this.lblPlayers.Text = "Players:";
+            // 
             // frmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 584);
-            this.Controls.Add(this.gbCurrentPlayer);
+            this.ClientSize = new System.Drawing.Size(848, 603);
+            this.Controls.Add(this.gbPlayerDisplay);
             this.Controls.Add(this.grbAnswerQuestion);
             this.Controls.Add(this.grbCategories);
             this.Controls.Add(this.label1);
@@ -611,7 +633,8 @@ namespace _3309___Term_Project___Jeopardy
             this.gbMovies.ResumeLayout(false);
             this.grbAnswerQuestion.ResumeLayout(false);
             this.grbAnswerQuestion.PerformLayout();
-            this.gbCurrentPlayer.ResumeLayout(false);
+            this.gbPlayerDisplay.ResumeLayout(false);
+            this.gbPlayerDisplay.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -663,7 +686,9 @@ namespace _3309___Term_Project___Jeopardy
         private System.Windows.Forms.Button btnMovies500;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.GroupBox grbAnswerQuestion;
-        private System.Windows.Forms.GroupBox gbCurrentPlayer;
         private System.Windows.Forms.Label lblCurrentPlayer;
+        private System.Windows.Forms.TextBox txtbxCurrentPlayer;
+        private System.Windows.Forms.GroupBox gbPlayerDisplay;
+        private System.Windows.Forms.Label lblPlayers;
     }
 }

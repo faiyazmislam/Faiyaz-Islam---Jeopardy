@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,6 +28,7 @@ namespace _3309___Term_Project___Jeopardy
             this.AllQuestionsChosen = false;
             //this.numberQuestions = numberQuestions;
         }
+
 
         public bool CheckAnswer()
         {
@@ -68,10 +70,10 @@ namespace _3309___Term_Project___Jeopardy
 
             while(AvailableQuestions >  0)
             {
-                return false;
+                return true;
             }
 
-            return true; 
+            return false; 
         }
 
         public List<Player> FindWinner() //Note: there can be more than 1 player
