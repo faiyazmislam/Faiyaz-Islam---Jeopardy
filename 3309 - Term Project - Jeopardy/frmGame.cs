@@ -22,6 +22,8 @@ namespace _3309___Term_Project___Jeopardy
 
             gameBoard = frmThatOpenedMe.gameBoard;
 
+            lblCurrentPlayer.Text = "Current Player = " + gameBoard.CurrentPlayer.Name;
+
             InitializeComponent();
         }
 
@@ -46,14 +48,16 @@ namespace _3309___Term_Project___Jeopardy
 
         private void btnMovies100_Click(object sender, EventArgs e)
         {
-
             SetQuestion("Movies", 100);
+
+            btnMovies100.Enabled = false;
         }
 
         private void btnMovies200_Click(object sender, EventArgs e)
         {
             SetQuestion("Movies", 200);
 
+            btnMovies200.Enabled = false;
         }
 
         private void btnMovies300_Click(object sender, EventArgs e)
@@ -82,12 +86,16 @@ namespace _3309___Term_Project___Jeopardy
 
             bool result = gameBoard.CheckAnswer();
 
-            gameBoard.CalculateScore();
+            gameBoard.CurrentPlayer.PlayerScore += gameBoard.CalculateScore(gameBoard.SelectedQuestion.Point);
 
-            MessageBox.Show("Result: "+ result + " - Player: " + gameBoard.CurrentPlayer.Name + " - Points: " + gameBoard.CurrentPlayer.Points);
+            int playerScore = gameBoard.CurrentPlayer.PlayerScore;
+
+            MessageBox.Show("Result: "+ result + " - Player: " + gameBoard.CurrentPlayer.Name + " - Points: " + playerScore);
 
 
             gameBoard.NextPlayer();
+
+            lblCurrentPlayer.Text = "Current Player = " + gameBoard.CurrentPlayer.Name;
         }
     }
 }

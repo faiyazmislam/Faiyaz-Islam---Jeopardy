@@ -41,17 +41,17 @@ namespace _3309___Term_Project___Jeopardy
         }
 
         //calculate player's score according to the result of CheckAnswer() 
-        public int CalculateScore() //UpdateScore() is not needed, faiyaz
+        public int CalculateScore(int points) //UpdateScore() is not needed, faiyaz
         {
             bool isCorrect = CheckAnswer();
-            int playerScore = CurrentPlayer.Points;
-            int chosenPoint = CurrentPlayer.ChosenPoint;
+            //int playerScore = CurrentPlayer.Points;
+            //int chosenPoint = CurrentPlayer.ChosenPoint;
 
             //NOTE: make sure player's chosen point is corret
-            if (isCorrect) playerScore += chosenPoint;  //if player's answer is correct, increment score
-            else playerScore -= chosenPoint;            //if player's answer is incorrect, decrement score
+            if (isCorrect) return points;  //if player's answer is correct, increment score
+            else return (-1) * points;            //if player's answer is incorrect, decrement score
 
-            return playerScore;
+            //return playerScore;
         }
 
         public void NextPlayer()
@@ -75,7 +75,7 @@ namespace _3309___Term_Project___Jeopardy
         public List<Player> FindWinner() //Note: there can be more than 1 player
         {
             //assuming 1st player is the winner and has the highest score
-            int max = PlayerList.First().Points;
+            int max = PlayerList.First().PlayerScore;
             List<Player> winners = new List<Player>();
             winners.Add(PlayerList.First());
 
@@ -83,13 +83,13 @@ namespace _3309___Term_Project___Jeopardy
             {
                 Player player = PlayerList.ElementAt(i);
 
-                if (player.Points > max)
+                if (player.PlayerScore > max)
                 {
-                    max = player.Points;
+                    max = player.PlayerScore;
                     winners.Clear(); //remove all players in the winner list (in case there's more than 1 winner)
                     winners.Add(player);
                 }
-                else if(player.Points == max) { winners.Add(player); }
+                else if(player.PlayerScore == max) { winners.Add(player); }
             }
 
             return winners;

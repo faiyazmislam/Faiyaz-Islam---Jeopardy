@@ -17,7 +17,7 @@ namespace _3309___Term_Project___Jeopardy
 
         public int Id { get; set; }
         public String Name { get; set; }
-        public int Points { get; set; } 
+        public int PlayerScore { get; set; } 
         public string ChosenCategory { get; set; }
         public int ChosenPoint { get; set; }
         public String Answer { get; set; }
@@ -26,7 +26,7 @@ namespace _3309___Term_Project___Jeopardy
         {
             this.Id = id;  
             this.Name = name;
-            this.Points = 0;
+            this.PlayerScore = 0;
             this.ChosenCategory = null;
             this.ChosenPoint = 0;
             this.Answer = null;
