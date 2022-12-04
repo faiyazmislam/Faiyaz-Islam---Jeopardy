@@ -132,6 +132,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnTemple400.TabIndex = 12;
             this.btnTemple400.Text = "400";
             this.btnTemple400.UseVisualStyleBackColor = true;
+            this.btnTemple400.Click += new System.EventHandler(this.btnTemple400_Click);
             // 
             // btnTemple500
             // 
@@ -141,6 +142,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnTemple500.TabIndex = 11;
             this.btnTemple500.Text = "500";
             this.btnTemple500.UseVisualStyleBackColor = true;
+            this.btnTemple500.Click += new System.EventHandler(this.btnTemple500_Click);
             // 
             // btnTemple300
             // 
@@ -150,6 +152,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnTemple300.TabIndex = 10;
             this.btnTemple300.Text = "300";
             this.btnTemple300.UseVisualStyleBackColor = true;
+            this.btnTemple300.Click += new System.EventHandler(this.btnTemple300_Click);
             // 
             // btnTemple200
             // 
@@ -159,6 +162,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnTemple200.TabIndex = 9;
             this.btnTemple200.Text = "200";
             this.btnTemple200.UseVisualStyleBackColor = true;
+            this.btnTemple200.Click += new System.EventHandler(this.btnTemple200_Click);
             // 
             // btnTemple100
             // 
@@ -168,6 +172,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnTemple100.TabIndex = 8;
             this.btnTemple100.Text = "100";
             this.btnTemple100.UseVisualStyleBackColor = true;
+            this.btnTemple100.Click += new System.EventHandler(this.btnTemple100_Click);
             // 
             // gbSports
             // 
@@ -192,6 +197,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnSports500.TabIndex = 12;
             this.btnSports500.Text = "500";
             this.btnSports500.UseVisualStyleBackColor = true;
+            this.btnSports500.Click += new System.EventHandler(this.btnSports500_Click);
             // 
             // button5
             // 
@@ -210,6 +216,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnSports400.TabIndex = 11;
             this.btnSports400.Text = "400";
             this.btnSports400.UseVisualStyleBackColor = true;
+            this.btnSports400.Click += new System.EventHandler(this.btnSports400_Click);
             // 
             // btnSports300
             // 
@@ -219,6 +226,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnSports300.TabIndex = 10;
             this.btnSports300.Text = "300";
             this.btnSports300.UseVisualStyleBackColor = true;
+            this.btnSports300.Click += new System.EventHandler(this.btnSports300_Click);
             // 
             // btnSports200
             // 
@@ -228,6 +236,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnSports200.TabIndex = 9;
             this.btnSports200.Text = "200";
             this.btnSports200.UseVisualStyleBackColor = true;
+            this.btnSports200.Click += new System.EventHandler(this.btnSports200_Click);
             // 
             // btnSports100
             // 
@@ -237,6 +246,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnSports100.TabIndex = 8;
             this.btnSports100.Text = "100";
             this.btnSports100.UseVisualStyleBackColor = true;
+            this.btnSports100.Click += new System.EventHandler(this.btnSports100_Click);
             // 
             // gbShows
             // 
@@ -260,6 +270,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnShows400.TabIndex = 11;
             this.btnShows400.Text = "400";
             this.btnShows400.UseVisualStyleBackColor = true;
+            this.btnShows400.Click += new System.EventHandler(this.btnShows400_Click);
             // 
             // btnShows500
             // 
@@ -269,6 +280,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnShows500.TabIndex = 8;
             this.btnShows500.Text = "500";
             this.btnShows500.UseVisualStyleBackColor = true;
+            this.btnShows500.Click += new System.EventHandler(this.btnShows500_Click);
             // 
             // btnShows300
             // 
@@ -278,6 +290,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnShows300.TabIndex = 10;
             this.btnShows300.Text = "300";
             this.btnShows300.UseVisualStyleBackColor = true;
+            this.btnShows300.Click += new System.EventHandler(this.btnShows300_Click);
             // 
             // btnShows200
             // 
@@ -287,6 +300,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnShows200.TabIndex = 9;
             this.btnShows200.Text = "200";
             this.btnShows200.UseVisualStyleBackColor = true;
+            this.btnShows200.Click += new System.EventHandler(this.btnShows200_Click);
             // 
             // btnShows100
             // 
@@ -296,6 +310,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnShows100.TabIndex = 8;
             this.btnShows100.Text = "100";
             this.btnShows100.UseVisualStyleBackColor = true;
+            this.btnShows100.Click += new System.EventHandler(this.btnShows100_Click);
             // 
             // gbGames
             // 
@@ -319,6 +334,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnGames400.TabIndex = 11;
             this.btnGames400.Text = "400";
             this.btnGames400.UseVisualStyleBackColor = true;
+            this.btnGames400.Click += new System.EventHandler(this.btnGames400_Click);
             // 
             // btnGames500
             // 
@@ -328,6 +344,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnGames500.TabIndex = 9;
             this.btnGames500.Text = "500";
             this.btnGames500.UseVisualStyleBackColor = true;
+            this.btnGames500.Click += new System.EventHandler(this.btnGames500_Click);
             // 
             // btnGames300
             // 
@@ -337,6 +354,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnGames300.TabIndex = 10;
             this.btnGames300.Text = "300";
             this.btnGames300.UseVisualStyleBackColor = true;
+            this.btnGames300.Click += new System.EventHandler(this.btnGames300_Click);
             // 
             // btnGames200
             // 
@@ -346,6 +364,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnGames200.TabIndex = 9;
             this.btnGames200.Text = "200";
             this.btnGames200.UseVisualStyleBackColor = true;
+            this.btnGames200.Click += new System.EventHandler(this.btnGames200_Click);
             // 
             // btnGames100
             // 
@@ -355,6 +374,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnGames100.TabIndex = 8;
             this.btnGames100.Text = "100";
             this.btnGames100.UseVisualStyleBackColor = true;
+            this.btnGames100.Click += new System.EventHandler(this.btnGames100_Click);
             // 
             // gbMusic
             // 
@@ -378,6 +398,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnMusic500.TabIndex = 10;
             this.btnMusic500.Text = "500";
             this.btnMusic500.UseVisualStyleBackColor = true;
+            this.btnMusic500.Click += new System.EventHandler(this.btnMusic500_Click);
             // 
             // btnMusic400
             // 
@@ -387,6 +408,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnMusic400.TabIndex = 7;
             this.btnMusic400.Text = "400";
             this.btnMusic400.UseVisualStyleBackColor = true;
+            this.btnMusic400.Click += new System.EventHandler(this.btnMusic400_Click);
             // 
             // btnMusic300
             // 
@@ -396,6 +418,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnMusic300.TabIndex = 6;
             this.btnMusic300.Text = "300";
             this.btnMusic300.UseVisualStyleBackColor = true;
+            this.btnMusic300.Click += new System.EventHandler(this.btnMusic300_Click);
             // 
             // btnMusic200
             // 
@@ -405,6 +428,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnMusic200.TabIndex = 5;
             this.btnMusic200.Text = "200";
             this.btnMusic200.UseVisualStyleBackColor = true;
+            this.btnMusic200.Click += new System.EventHandler(this.btnMusic200_Click);
             // 
             // btnMusic100
             // 
