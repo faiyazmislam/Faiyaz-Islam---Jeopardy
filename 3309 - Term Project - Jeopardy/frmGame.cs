@@ -99,7 +99,7 @@ namespace _3309___Term_Project___Jeopardy
                 txtPlayerResponse.Text = "";
                 txtQuestion.Text = "";
             }
-            //if they are wrong
+            //if they are wrong (Note: they can enter 'nothing' for answer, but it'll be considered as wrong)
             else
             {
                 //gameboard checks if there are questions left
