@@ -160,19 +160,13 @@ namespace _3309___Term_Project___Jeopardy
 
         }
 
-        private void lblDirection_Click(object sender, EventArgs e)
+
+        private void btnPlay_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void gbRules_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblRules_Click(object sender, EventArgs e)
-        {
-
+            btnStart.Visible = true;
+            gbPlayerAddition.Visible = true;
+            gbRules.Visible = true;
+            btnPlay.Visible = false;
         }
     }
 }

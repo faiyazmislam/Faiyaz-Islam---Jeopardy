@@ -63,6 +63,7 @@ namespace _3309___Term_Project___Jeopardy
 
             if (currentGameBoard.CheckGameStatus())
             {
+
                 currentGameBoard.NextPlayer();
             }
             else

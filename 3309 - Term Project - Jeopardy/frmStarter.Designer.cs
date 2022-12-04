@@ -39,6 +39,7 @@
             this.gbRules = new System.Windows.Forms.GroupBox();
             this.lblRules = new System.Windows.Forms.Label();
             this.gbPlayerAddition = new System.Windows.Forms.GroupBox();
+            this.btnPlay = new System.Windows.Forms.Button();
             this.gbRules.SuspendLayout();
             this.gbPlayerAddition.SuspendLayout();
             this.SuspendLayout();
@@ -83,7 +84,7 @@
             this.lblDirection.Text = "Keep adding players until you\'re ready. \r\n(Max 5 Players)";
             this.lblDirection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblDirection.Visible = false;
-            this.lblDirection.Click += new System.EventHandler(this.lblDirection_Click);
+           //this.lblDirection.Click += new System.EventHandler(this.lblDirection_Click);
             // 
             // btnStart
             // 
@@ -131,7 +132,7 @@
             this.gbRules.TabStop = false;
             this.gbRules.Text = "Rules:";
             this.gbRules.Visible = false;
-            this.gbRules.Enter += new System.EventHandler(this.gbRules_Enter);
+         //   this.gbRules.Enter += new System.EventHandler(this.gbRules_Enter);
             // 
             // lblRules
             // 
@@ -140,7 +141,7 @@
             this.lblRules.Size = new System.Drawing.Size(486, 106);
             this.lblRules.TabIndex = 0;
             this.lblRules.Text = resources.GetString("lblRules.Text");
-            this.lblRules.Click += new System.EventHandler(this.lblRules_Click);
+           // this.lblRules.Click += new System.EventHandler(this.lblRules_Click);
             // 
             // gbPlayerAddition
             // 
@@ -160,12 +161,26 @@
             this.gbPlayerAddition.Text = "Add Players";
             this.gbPlayerAddition.Visible = false;
             // 
+            // btnPlay
+            // 
+            this.btnPlay.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.Location = new System.Drawing.Point(223, 349);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(178, 47);
+            this.btnPlay.TabIndex = 11;
+            this.btnPlay.Text = "Play";
+            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Visible = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
             // frmStarter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(625, 436);
+            this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.gbPlayerAddition);
             this.Controls.Add(this.gbRules);
             this.Controls.Add(this.btnStart);
@@ -192,5 +207,6 @@
         private System.Windows.Forms.GroupBox gbRules;
         private System.Windows.Forms.Label lblRules;
         private System.Windows.Forms.GroupBox gbPlayerAddition;
+        private System.Windows.Forms.Button btnPlay;
     }
 }
