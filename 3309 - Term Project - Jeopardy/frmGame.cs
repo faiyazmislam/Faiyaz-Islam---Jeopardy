@@ -26,6 +26,7 @@ namespace _3309___Term_Project___Jeopardy
             lblCurrentPlayer.Text = "Current Player = " + gameBoard.CurrentPlayer.Name;
 
             gameBoard.AvailableQuestions = 30;
+            //gameBoard.SetAvailableQuestions(30);
 
             InitializeComponent();
         }
@@ -42,6 +43,7 @@ namespace _3309___Term_Project___Jeopardy
             Category chosenCategory = gameBoard.CategoryList.FindCategory(chosenCategoryName);
 
             gameBoard.SelectedQuestion = chosenCategory.FindQuestion(points);
+            //gameBoard.SetSelectedQuestion();
 
             txtQuestion.Text = gameBoard.SelectedQuestion.Query;
 
