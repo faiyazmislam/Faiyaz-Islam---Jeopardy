@@ -42,8 +42,6 @@ namespace _3309___Term_Project___Jeopardy
 
         }
 
-        
-
         private void btnMovies100_Click(object sender, EventArgs e)
         {
 
