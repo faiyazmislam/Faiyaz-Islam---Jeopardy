@@ -25,7 +25,7 @@ namespace _3309___Term_Project___Jeopardy
 
         private void btnAddPlayer_Click(object sender, EventArgs e)
         {
-
+            //CHECK FOR DUPLICATE PLAYER ID??......................
             if (playerList.Count == 4)
             {
                 MessageBox.Show("Max of 4 players reached. No more can be added");
@@ -43,8 +43,6 @@ namespace _3309___Term_Project___Jeopardy
                     MessageBox.Show("Player: " + player.Name + " ( " + player.Id + " ) has been added to the game.");
                 }
             }
-
-            
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -167,7 +165,6 @@ namespace _3309___Term_Project___Jeopardy
 
             Category templeCategory = new Category("Temple", templeQuestions);
             categoryList.AddCategory(templeCategory);
-
         }
 
 
