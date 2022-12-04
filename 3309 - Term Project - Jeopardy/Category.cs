@@ -13,6 +13,8 @@ namespace _3309___Term_Project___Jeopardy
         public String CategoryName { get; set; }
         public List<Question> QuestionList { get; set; }
 
+        public Category() { }
+
         public Category(string categoryName, List<Question> questionList)
         {
             this.CategoryName = categoryName;

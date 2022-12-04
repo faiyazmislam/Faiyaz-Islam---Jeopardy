@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,9 +31,19 @@ namespace _3309___Term_Project___Jeopardy
             foreach(Player p in players) { MessageBox.Show(p.Name + " " + p.Id); }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void SetQuestion(Category chosenCategory, int points)
         {
+            gameBoard.SelectedQuestion = gameBoard.CategoryList.GetQuestion(chosenCategory, points);
 
+            txtQuestion.Text = gameBoard.SelectedQuestion.Query;
+
+        }
+
+        private void btnMovies100_Click(object sender, EventArgs e)
+        {
+            Category moviesCategory = new Category(); 
+
+            SetQuestion(moviesCategory, 100);
         }
     }
 }

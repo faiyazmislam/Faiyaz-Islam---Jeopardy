@@ -109,7 +109,7 @@ namespace _3309___Term_Project___Jeopardy
             this.grbCategories.TabIndex = 17;
             this.grbCategories.TabStop = false;
             this.grbCategories.Text = "Categories";
-            this.grbCategories.Enter += new System.EventHandler(this.groupBox1_Enter);
+            //this.grbCategories.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -474,6 +474,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnMovies100.TabIndex = 0;
             this.btnMovies100.Text = "100";
             this.btnMovies100.UseVisualStyleBackColor = true;
+            this.btnMovies100.Click += new System.EventHandler(this.btnMovies100_Click);
             // 
             // lblQuestion
             // 
