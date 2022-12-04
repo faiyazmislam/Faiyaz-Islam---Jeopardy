@@ -49,7 +49,32 @@ namespace _3309___Term_Project___Jeopardy
 
         }
 
-        
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            currentGameBoard.CurrentPlayerAnswer = txtPlayerResponse.Text;
+
+            bool result = currentGameBoard.CheckAnswer();
+
+            currentGameBoard.CurrentPlayer.PlayerScore += currentGameBoard.CalculateScore(currentGameBoard.SelectedQuestion.PointValue);
+
+            int playerScore = currentGameBoard.CurrentPlayer.PlayerScore;
+
+            MessageBox.Show("Result: " + result + " - Player: " + currentGameBoard.CurrentPlayer.Name + " - Total Score: " + playerScore);
+
+            if (currentGameBoard.CheckGameStatus())
+            {
+                currentGameBoard.NextPlayer();
+            }
+            else
+            {
+                currentGameBoard.FindWinner();
+
+                frmWinner winnersForm = new frmWinner(this);
+                winnersForm.ShowDialog();
+                this.Close();
+            }
+
+        }
 
         private void btnMovies100_Click(object sender, EventArgs e)
         {
