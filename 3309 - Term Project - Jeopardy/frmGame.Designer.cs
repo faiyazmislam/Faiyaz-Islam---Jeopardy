@@ -28,7 +28,7 @@ namespace _3309___Term_Project___Jeopardy
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.grbCategories = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnTemple400 = new System.Windows.Forms.Button();
@@ -75,9 +75,9 @@ namespace _3309___Term_Project___Jeopardy
             this.grbAnswerQuestion = new System.Windows.Forms.GroupBox();
             this.txtbxCurrentPlayer = new System.Windows.Forms.TextBox();
             this.gbPlayerDisplay = new System.Windows.Forms.GroupBox();
-            this.lblPlayers = new System.Windows.Forms.Label();
-            this.lblResult = new System.Windows.Forms.Label();
             this.lblCurrentTurn = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.lblPlayers = new System.Windows.Forms.Label();
             this.grbCategories.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gbSports.SuspendLayout();
@@ -89,17 +89,21 @@ namespace _3309___Term_Project___Jeopardy
             this.gbPlayerDisplay.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.Location = new System.Drawing.Point(271, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "JEOPARDY";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Lucida Bright", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.lblTitle.Location = new System.Drawing.Point(233, -1);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(388, 39);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "JEOPARDY";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // grbCategories
             // 
+            this.grbCategories.BackColor = System.Drawing.Color.Transparent;
             this.grbCategories.Controls.Add(this.groupBox2);
             this.grbCategories.Controls.Add(this.gbSports);
             this.grbCategories.Controls.Add(this.gbShows);
@@ -107,7 +111,7 @@ namespace _3309___Term_Project___Jeopardy
             this.grbCategories.Controls.Add(this.gbMusic);
             this.grbCategories.Controls.Add(this.gbMovies);
             this.grbCategories.Font = new System.Drawing.Font("Lucida Fax", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbCategories.ForeColor = System.Drawing.Color.Cyan;
+            this.grbCategories.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.grbCategories.Location = new System.Drawing.Point(12, 41);
             this.grbCategories.Name = "grbCategories";
             this.grbCategories.Size = new System.Drawing.Size(824, 265);
@@ -134,6 +138,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnTemple400
             // 
             this.btnTemple400.BackColor = System.Drawing.Color.Navy;
+            this.btnTemple400.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTemple400.Location = new System.Drawing.Point(6, 153);
             this.btnTemple400.Name = "btnTemple400";
             this.btnTemple400.Size = new System.Drawing.Size(112, 31);
@@ -145,6 +150,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnTemple500
             // 
             this.btnTemple500.BackColor = System.Drawing.Color.Navy;
+            this.btnTemple500.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTemple500.Location = new System.Drawing.Point(5, 190);
             this.btnTemple500.Name = "btnTemple500";
             this.btnTemple500.Size = new System.Drawing.Size(112, 31);
@@ -156,6 +162,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnTemple300
             // 
             this.btnTemple300.BackColor = System.Drawing.Color.Navy;
+            this.btnTemple300.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTemple300.Location = new System.Drawing.Point(6, 112);
             this.btnTemple300.Name = "btnTemple300";
             this.btnTemple300.Size = new System.Drawing.Size(111, 34);
@@ -167,6 +174,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnTemple200
             // 
             this.btnTemple200.BackColor = System.Drawing.Color.Navy;
+            this.btnTemple200.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTemple200.Location = new System.Drawing.Point(5, 71);
             this.btnTemple200.Name = "btnTemple200";
             this.btnTemple200.Size = new System.Drawing.Size(112, 35);
@@ -178,6 +186,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnTemple100
             // 
             this.btnTemple100.BackColor = System.Drawing.Color.Navy;
+            this.btnTemple100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTemple100.Location = new System.Drawing.Point(6, 32);
             this.btnTemple100.Name = "btnTemple100";
             this.btnTemple100.Size = new System.Drawing.Size(113, 32);
@@ -206,6 +215,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnSports500
             // 
             this.btnSports500.BackColor = System.Drawing.Color.Navy;
+            this.btnSports500.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSports500.Location = new System.Drawing.Point(5, 190);
             this.btnSports500.Name = "btnSports500";
             this.btnSports500.Size = new System.Drawing.Size(112, 31);
@@ -226,6 +236,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnSports400
             // 
             this.btnSports400.BackColor = System.Drawing.Color.Navy;
+            this.btnSports400.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSports400.Location = new System.Drawing.Point(5, 153);
             this.btnSports400.Name = "btnSports400";
             this.btnSports400.Size = new System.Drawing.Size(112, 31);
@@ -237,6 +248,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnSports300
             // 
             this.btnSports300.BackColor = System.Drawing.Color.Navy;
+            this.btnSports300.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSports300.Location = new System.Drawing.Point(5, 112);
             this.btnSports300.Name = "btnSports300";
             this.btnSports300.Size = new System.Drawing.Size(113, 34);
@@ -248,6 +260,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnSports200
             // 
             this.btnSports200.BackColor = System.Drawing.Color.Navy;
+            this.btnSports200.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSports200.Location = new System.Drawing.Point(5, 71);
             this.btnSports200.Name = "btnSports200";
             this.btnSports200.Size = new System.Drawing.Size(113, 35);
@@ -259,6 +272,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnSports100
             // 
             this.btnSports100.BackColor = System.Drawing.Color.Navy;
+            this.btnSports100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSports100.Location = new System.Drawing.Point(6, 32);
             this.btnSports100.Name = "btnSports100";
             this.btnSports100.Size = new System.Drawing.Size(112, 32);
@@ -286,6 +300,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnShows400
             // 
             this.btnShows400.BackColor = System.Drawing.Color.Navy;
+            this.btnShows400.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShows400.Location = new System.Drawing.Point(6, 153);
             this.btnShows400.Name = "btnShows400";
             this.btnShows400.Size = new System.Drawing.Size(118, 32);
@@ -297,6 +312,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnShows500
             // 
             this.btnShows500.BackColor = System.Drawing.Color.Navy;
+            this.btnShows500.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShows500.Location = new System.Drawing.Point(5, 190);
             this.btnShows500.Name = "btnShows500";
             this.btnShows500.Size = new System.Drawing.Size(118, 31);
@@ -308,6 +324,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnShows300
             // 
             this.btnShows300.BackColor = System.Drawing.Color.Navy;
+            this.btnShows300.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShows300.Location = new System.Drawing.Point(6, 112);
             this.btnShows300.Name = "btnShows300";
             this.btnShows300.Size = new System.Drawing.Size(118, 34);
@@ -319,6 +336,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnShows200
             // 
             this.btnShows200.BackColor = System.Drawing.Color.Navy;
+            this.btnShows200.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShows200.Location = new System.Drawing.Point(5, 71);
             this.btnShows200.Name = "btnShows200";
             this.btnShows200.Size = new System.Drawing.Size(119, 35);
@@ -330,6 +348,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnShows100
             // 
             this.btnShows100.BackColor = System.Drawing.Color.Navy;
+            this.btnShows100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShows100.Location = new System.Drawing.Point(6, 32);
             this.btnShows100.Name = "btnShows100";
             this.btnShows100.Size = new System.Drawing.Size(118, 32);
@@ -357,6 +376,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnGames400
             // 
             this.btnGames400.BackColor = System.Drawing.Color.Navy;
+            this.btnGames400.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGames400.Location = new System.Drawing.Point(6, 152);
             this.btnGames400.Name = "btnGames400";
             this.btnGames400.Size = new System.Drawing.Size(119, 31);
@@ -368,6 +388,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnGames500
             // 
             this.btnGames500.BackColor = System.Drawing.Color.Navy;
+            this.btnGames500.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGames500.Location = new System.Drawing.Point(6, 189);
             this.btnGames500.Name = "btnGames500";
             this.btnGames500.Size = new System.Drawing.Size(118, 31);
@@ -379,6 +400,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnGames300
             // 
             this.btnGames300.BackColor = System.Drawing.Color.Navy;
+            this.btnGames300.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGames300.Location = new System.Drawing.Point(6, 112);
             this.btnGames300.Name = "btnGames300";
             this.btnGames300.Size = new System.Drawing.Size(119, 34);
@@ -390,6 +412,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnGames200
             // 
             this.btnGames200.BackColor = System.Drawing.Color.Navy;
+            this.btnGames200.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGames200.Location = new System.Drawing.Point(6, 70);
             this.btnGames200.Name = "btnGames200";
             this.btnGames200.Size = new System.Drawing.Size(119, 35);
@@ -401,6 +424,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnGames100
             // 
             this.btnGames100.BackColor = System.Drawing.Color.Navy;
+            this.btnGames100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGames100.Location = new System.Drawing.Point(6, 32);
             this.btnGames100.Name = "btnGames100";
             this.btnGames100.Size = new System.Drawing.Size(119, 32);
@@ -416,6 +440,7 @@ namespace _3309___Term_Project___Jeopardy
             this.gbMusic.Controls.Add(this.btnMusic300);
             this.gbMusic.Controls.Add(this.btnMusic200);
             this.gbMusic.Controls.Add(this.btnMusic100);
+            this.gbMusic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbMusic.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbMusic.ForeColor = System.Drawing.Color.Gold;
             this.gbMusic.Location = new System.Drawing.Point(159, 26);
@@ -428,6 +453,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnMusic500
             // 
             this.btnMusic500.BackColor = System.Drawing.Color.Navy;
+            this.btnMusic500.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMusic500.Location = new System.Drawing.Point(5, 190);
             this.btnMusic500.Name = "btnMusic500";
             this.btnMusic500.Size = new System.Drawing.Size(113, 31);
@@ -439,6 +465,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnMusic400
             // 
             this.btnMusic400.BackColor = System.Drawing.Color.Navy;
+            this.btnMusic400.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMusic400.Location = new System.Drawing.Point(5, 152);
             this.btnMusic400.Name = "btnMusic400";
             this.btnMusic400.Size = new System.Drawing.Size(113, 31);
@@ -450,6 +477,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnMusic300
             // 
             this.btnMusic300.BackColor = System.Drawing.Color.Navy;
+            this.btnMusic300.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMusic300.Location = new System.Drawing.Point(5, 112);
             this.btnMusic300.Name = "btnMusic300";
             this.btnMusic300.Size = new System.Drawing.Size(113, 34);
@@ -461,6 +489,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnMusic200
             // 
             this.btnMusic200.BackColor = System.Drawing.Color.Navy;
+            this.btnMusic200.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMusic200.Location = new System.Drawing.Point(5, 71);
             this.btnMusic200.Name = "btnMusic200";
             this.btnMusic200.Size = new System.Drawing.Size(113, 35);
@@ -472,6 +501,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnMusic100
             // 
             this.btnMusic100.BackColor = System.Drawing.Color.Navy;
+            this.btnMusic100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMusic100.Location = new System.Drawing.Point(5, 32);
             this.btnMusic100.Name = "btnMusic100";
             this.btnMusic100.Size = new System.Drawing.Size(112, 32);
@@ -499,6 +529,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnMovies500
             // 
             this.btnMovies500.BackColor = System.Drawing.Color.Navy;
+            this.btnMovies500.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMovies500.Location = new System.Drawing.Point(6, 191);
             this.btnMovies500.Name = "btnMovies500";
             this.btnMovies500.Size = new System.Drawing.Size(118, 31);
@@ -510,6 +541,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnMovies400
             // 
             this.btnMovies400.BackColor = System.Drawing.Color.Navy;
+            this.btnMovies400.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMovies400.Location = new System.Drawing.Point(6, 153);
             this.btnMovies400.Name = "btnMovies400";
             this.btnMovies400.Size = new System.Drawing.Size(118, 31);
@@ -521,6 +553,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnMovies300
             // 
             this.btnMovies300.BackColor = System.Drawing.Color.Navy;
+            this.btnMovies300.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMovies300.Location = new System.Drawing.Point(6, 112);
             this.btnMovies300.Name = "btnMovies300";
             this.btnMovies300.Size = new System.Drawing.Size(118, 34);
@@ -532,6 +565,7 @@ namespace _3309___Term_Project___Jeopardy
             // btnMovies200
             // 
             this.btnMovies200.BackColor = System.Drawing.Color.Navy;
+            this.btnMovies200.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMovies200.Location = new System.Drawing.Point(6, 71);
             this.btnMovies200.Name = "btnMovies200";
             this.btnMovies200.Size = new System.Drawing.Size(118, 35);
@@ -544,6 +578,7 @@ namespace _3309___Term_Project___Jeopardy
             // 
             this.btnMovies100.BackColor = System.Drawing.Color.Navy;
             this.btnMovies100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnMovies100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMovies100.Location = new System.Drawing.Point(6, 32);
             this.btnMovies100.Name = "btnMovies100";
             this.btnMovies100.Size = new System.Drawing.Size(118, 32);
@@ -555,11 +590,11 @@ namespace _3309___Term_Project___Jeopardy
             // lblQuestion
             // 
             this.lblQuestion.AutoSize = true;
-            this.lblQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblQuestion.Location = new System.Drawing.Point(10, 22);
+            this.lblQuestion.Font = new System.Drawing.Font("Lucida Bright", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion.Location = new System.Drawing.Point(14, 18);
             this.lblQuestion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(69, 17);
+            this.lblQuestion.Size = new System.Drawing.Size(85, 18);
             this.lblQuestion.TabIndex = 4;
             this.lblQuestion.Text = "Question:";
             // 
@@ -576,13 +611,13 @@ namespace _3309___Term_Project___Jeopardy
             // lblPlayerAnswer
             // 
             this.lblPlayerAnswer.AutoSize = true;
-            this.lblPlayerAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblPlayerAnswer.Location = new System.Drawing.Point(10, 70);
+            this.lblPlayerAnswer.Font = new System.Drawing.Font("Lucida Bright", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerAnswer.Location = new System.Drawing.Point(15, 71);
             this.lblPlayerAnswer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPlayerAnswer.Name = "lblPlayerAnswer";
-            this.lblPlayerAnswer.Size = new System.Drawing.Size(163, 17);
+            this.lblPlayerAnswer.Size = new System.Drawing.Size(118, 18);
             this.lblPlayerAnswer.TabIndex = 19;
-            this.lblPlayerAnswer.Text = "Type Your Answer Here:";
+            this.lblPlayerAnswer.Text = "Type Answer:";
             // 
             // txtPlayerResponse
             // 
@@ -595,22 +630,28 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(380, 118);
+            this.btnSubmit.BackColor = System.Drawing.Color.Gold;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnSubmit.Location = new System.Drawing.Point(333, 118);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(104, 25);
+            this.btnSubmit.Size = new System.Drawing.Size(157, 25);
             this.btnSubmit.TabIndex = 21;
-            this.btnSubmit.Text = "Submit Question";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Text = "Submit Answer";
+            this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // grbAnswerQuestion
             // 
+            this.grbAnswerQuestion.BackColor = System.Drawing.Color.Transparent;
             this.grbAnswerQuestion.Controls.Add(this.btnSubmit);
             this.grbAnswerQuestion.Controls.Add(this.lblQuestion);
             this.grbAnswerQuestion.Controls.Add(this.txtPlayerResponse);
             this.grbAnswerQuestion.Controls.Add(this.txtQuestion);
             this.grbAnswerQuestion.Controls.Add(this.lblPlayerAnswer);
+            this.grbAnswerQuestion.ForeColor = System.Drawing.Color.Navy;
             this.grbAnswerQuestion.Location = new System.Drawing.Point(12, 311);
             this.grbAnswerQuestion.Margin = new System.Windows.Forms.Padding(2);
             this.grbAnswerQuestion.Name = "grbAnswerQuestion";
@@ -621,65 +662,83 @@ namespace _3309___Term_Project___Jeopardy
             // 
             // txtbxCurrentPlayer
             // 
+            this.txtbxCurrentPlayer.BackColor = System.Drawing.Color.Navy;
+            this.txtbxCurrentPlayer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbxCurrentPlayer.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxCurrentPlayer.Location = new System.Drawing.Point(553, 58);
+            this.txtbxCurrentPlayer.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtbxCurrentPlayer.Location = new System.Drawing.Point(593, 62);
             this.txtbxCurrentPlayer.Name = "txtbxCurrentPlayer";
             this.txtbxCurrentPlayer.ReadOnly = true;
-            this.txtbxCurrentPlayer.Size = new System.Drawing.Size(178, 33);
+            this.txtbxCurrentPlayer.Size = new System.Drawing.Size(178, 26);
             this.txtbxCurrentPlayer.TabIndex = 1;
+            this.txtbxCurrentPlayer.Text = "Current Player";
             this.txtbxCurrentPlayer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gbPlayerDisplay
             // 
+            this.gbPlayerDisplay.BackColor = System.Drawing.Color.Transparent;
             this.gbPlayerDisplay.Controls.Add(this.txtbxCurrentPlayer);
             this.gbPlayerDisplay.Controls.Add(this.lblCurrentTurn);
             this.gbPlayerDisplay.Controls.Add(this.lblResult);
             this.gbPlayerDisplay.Controls.Add(this.lblPlayers);
             this.gbPlayerDisplay.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbPlayerDisplay.Location = new System.Drawing.Point(36, 463);
+            this.gbPlayerDisplay.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.gbPlayerDisplay.Location = new System.Drawing.Point(12, 463);
             this.gbPlayerDisplay.Name = "gbPlayerDisplay";
-            this.gbPlayerDisplay.Size = new System.Drawing.Size(774, 128);
+            this.gbPlayerDisplay.Size = new System.Drawing.Size(824, 128);
             this.gbPlayerDisplay.TabIndex = 23;
             this.gbPlayerDisplay.TabStop = false;
             this.gbPlayerDisplay.Text = "Player Info";
             // 
+            // lblCurrentTurn
+            // 
+            this.lblCurrentTurn.BackColor = System.Drawing.Color.Navy;
+            this.lblCurrentTurn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCurrentTurn.Font = new System.Drawing.Font("Microsoft Uighur", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentTurn.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblCurrentTurn.Location = new System.Drawing.Point(568, 22);
+            this.lblCurrentTurn.Name = "lblCurrentTurn";
+            this.lblCurrentTurn.Size = new System.Drawing.Size(230, 94);
+            this.lblCurrentTurn.TabIndex = 4;
+            this.lblCurrentTurn.Text = "Current Turn:";
+            this.lblCurrentTurn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblResult
+            // 
+            this.lblResult.BackColor = System.Drawing.Color.Navy;
+            this.lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblResult.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblResult.Location = new System.Drawing.Point(301, 22);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(230, 93);
+            this.lblResult.TabIndex = 3;
+            this.lblResult.Text = "Result:";
+            this.lblResult.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // lblPlayers
             // 
+            this.lblPlayers.BackColor = System.Drawing.Color.Navy;
             this.lblPlayers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblPlayers.Location = new System.Drawing.Point(19, 22);
+            this.lblPlayers.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblPlayers.Location = new System.Drawing.Point(36, 22);
             this.lblPlayers.Name = "lblPlayers";
             this.lblPlayers.Size = new System.Drawing.Size(240, 93);
             this.lblPlayers.TabIndex = 2;
             this.lblPlayers.Text = "Player 1\r\nPlayer 2\r\nPlayer 3\r\nPlayer 4";
             // 
-            // lblResult
-            // 
-            this.lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblResult.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult.Location = new System.Drawing.Point(276, 22);
-            this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(230, 93);
-            this.lblResult.TabIndex = 3;
-            this.lblResult.Text = "Result:";
-            // 
-            // lblCurrentTurn
-            // 
-            this.lblCurrentTurn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCurrentTurn.Location = new System.Drawing.Point(528, 21);
-            this.lblCurrentTurn.Name = "lblCurrentTurn";
-            this.lblCurrentTurn.Size = new System.Drawing.Size(230, 94);
-            this.lblCurrentTurn.TabIndex = 4;
-            this.lblCurrentTurn.Text = "Current Turn:";
-            // 
             // frmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::_3309___Term_Project___Jeopardy.Properties.Resources.JeopardyBG;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(848, 600);
             this.Controls.Add(this.gbPlayerDisplay);
             this.Controls.Add(this.grbAnswerQuestion);
             this.Controls.Add(this.grbCategories);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitle);
             this.Name = "frmGame";
             this.Text = "Jeopardy";
             this.Load += new System.EventHandler(this.frmGame_Load);
@@ -700,7 +759,7 @@ namespace _3309___Term_Project___Jeopardy
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.GroupBox grbCategories;
         private System.Windows.Forms.GroupBox gbShows;
         private System.Windows.Forms.Button btnShows400;

@@ -107,6 +107,7 @@
     <Content Include="JeopardyDatabase.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\JeopardyBG.png" />
     <None Include="Resources\Jeopardy.png" />
   </ItemGroup>
   <ItemGroup>

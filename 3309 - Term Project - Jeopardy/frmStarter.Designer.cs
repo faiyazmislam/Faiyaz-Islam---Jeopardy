@@ -64,13 +64,15 @@
             // 
             // btnAddPlayer
             // 
+            this.btnAddPlayer.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAddPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPlayer.Location = new System.Drawing.Point(403, 90);
             this.btnAddPlayer.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddPlayer.Name = "btnAddPlayer";
-            this.btnAddPlayer.Size = new System.Drawing.Size(106, 53);
+            this.btnAddPlayer.Size = new System.Drawing.Size(115, 53);
             this.btnAddPlayer.TabIndex = 4;
-            this.btnAddPlayer.Text = "Add Player";
-            this.btnAddPlayer.UseVisualStyleBackColor = true;
+            this.btnAddPlayer.Text = "Add";
+            this.btnAddPlayer.UseVisualStyleBackColor = false;
             this.btnAddPlayer.Click += new System.EventHandler(this.btnAddPlayer_Click);
             // 
             // lblDirection
@@ -87,14 +89,17 @@
             // 
             // btnStart
             // 
+            this.btnStart.BackColor = System.Drawing.Color.Navy;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.ForeColor = System.Drawing.Color.Gold;
             this.btnStart.Location = new System.Drawing.Point(223, 378);
             this.btnStart.Margin = new System.Windows.Forms.Padding(2);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(178, 47);
             this.btnStart.TabIndex = 6;
             this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Visible = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
@@ -120,10 +125,11 @@
             // 
             // gbRules
             // 
-            this.gbRules.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gbRules.BackColor = System.Drawing.Color.Navy;
             this.gbRules.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbRules.Controls.Add(this.lblRules);
             this.gbRules.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbRules.ForeColor = System.Drawing.Color.Gold;
             this.gbRules.Location = new System.Drawing.Point(40, 12);
             this.gbRules.Name = "gbRules";
             this.gbRules.Size = new System.Drawing.Size(542, 150);
@@ -143,7 +149,7 @@
             // 
             // gbPlayerAddition
             // 
-            this.gbPlayerAddition.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gbPlayerAddition.BackColor = System.Drawing.Color.Navy;
             this.gbPlayerAddition.Controls.Add(this.lblDirection);
             this.gbPlayerAddition.Controls.Add(this.txtPlayerName);
             this.gbPlayerAddition.Controls.Add(this.mskId);
@@ -151,6 +157,7 @@
             this.gbPlayerAddition.Controls.Add(this.label1);
             this.gbPlayerAddition.Controls.Add(this.btnAddPlayer);
             this.gbPlayerAddition.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbPlayerAddition.ForeColor = System.Drawing.Color.Gold;
             this.gbPlayerAddition.Location = new System.Drawing.Point(40, 179);
             this.gbPlayerAddition.Name = "gbPlayerAddition";
             this.gbPlayerAddition.Size = new System.Drawing.Size(542, 177);
@@ -161,14 +168,17 @@
             // 
             // btnPlay
             // 
+            this.btnPlay.BackColor = System.Drawing.Color.Navy;
+            this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlay.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.ForeColor = System.Drawing.Color.Gold;
             this.btnPlay.Location = new System.Drawing.Point(223, 349);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(2);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(178, 47);
             this.btnPlay.TabIndex = 11;
             this.btnPlay.Text = "Play";
-            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.UseVisualStyleBackColor = false;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // frmStarter
