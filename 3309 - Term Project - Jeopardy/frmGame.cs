@@ -13,7 +13,7 @@ namespace _3309___Term_Project___Jeopardy
 {
     public partial class frmGame : Form
     {
-        internal GameBoard gameBoard;
+        internal GameBoard currentGameBoard;
         internal frmStarter myOwnerForm;
         internal List<Player> winners = new List<Player>();
 
@@ -21,11 +21,11 @@ namespace _3309___Term_Project___Jeopardy
         {
             myOwnerForm = frmThatOpenedMe;
 
-            gameBoard = frmThatOpenedMe.gameBoard;
+            currentGameBoard = frmThatOpenedMe.gameBoard;
 
-            lblCurrentPlayer.Text = "Current Player = " + gameBoard.CurrentPlayer.Name;
+            lblCurrentPlayer.Text = "Current Player = " + currentGameBoard.CurrentPlayer.Name;
 
-            gameBoard.AvailableQuestions = 30;
+            currentGameBoard.AvailableQuestions = 30;
             //gameBoard.SetAvailableQuestions(30);
 
             InitializeComponent();
@@ -33,21 +33,23 @@ namespace _3309___Term_Project___Jeopardy
 
         private void frmGame_Load(object sender, EventArgs e)
         {
-            List<Player> players = gameBoard.PlayerList;
+            List<Player> players = currentGameBoard.PlayerList;
             //foreach(Player p in players) { MessageBox.Show(p.Name + " " + p.Id); }
 
         }
 
         private void SetQuestion(String chosenCategoryName, int points)
         {
-            Category chosenCategory = gameBoard.CategoryList.FindCategory(chosenCategoryName);
+            Category chosenCategory = currentGameBoard.CategoryList.FindCategory(chosenCategoryName);
 
-            gameBoard.SelectedQuestion = chosenCategory.FindQuestion(points);
+            currentGameBoard.SelectedQuestion = chosenCategory.FindQuestion(points);
             //gameBoard.SetSelectedQuestion();
 
-            txtQuestion.Text = gameBoard.SelectedQuestion.Query;
+            txtQuestion.Text = currentGameBoard.SelectedQuestion.Query;
 
         }
+
+        
 
         private void btnMovies100_Click(object sender, EventArgs e)
         {
@@ -65,56 +67,203 @@ namespace _3309___Term_Project___Jeopardy
 
         private void btnMovies300_Click(object sender, EventArgs e)
         {
+            SetQuestion("Movies", 300);
 
+            btnMovies300.Enabled = false;
         }
 
         private void btnMovies400_Click(object sender, EventArgs e)
         {
+            SetQuestion("Movies", 400);
 
+            btnMovies400.Enabled = false;
         }
 
         private void btnMovies500_Click(object sender, EventArgs e)
         {
+            SetQuestion("Movies", 500);
 
+            btnMovies500.Enabled = false;
         }
 
+        //music category questions
         private void btnMusic100_Click(object sender, EventArgs e)
         {
+            SetQuestion("Music", 100);
 
+            btnMusic100.Enabled = false;
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void btnMusic200_Click(object sender, EventArgs e)
         {
-            gameBoard.CurrentPlayerAnswer = txtPlayerResponse.Text.Trim();
+            SetQuestion("Music", 200);
 
-            bool result = gameBoard.CheckAnswer();
+            btnMusic200.Enabled = false;
+        }
 
-            gameBoard.CurrentPlayer.PlayerScore += gameBoard.CalculateScore(gameBoard.SelectedQuestion.Point);
+        private void btnMusic300_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Music", 300);
 
-            int playerScore = gameBoard.CurrentPlayer.PlayerScore;
+            btnMusic300.Enabled = false;
+        }
 
-            MessageBox.Show("Result: "+ result + " - Player: " + gameBoard.CurrentPlayer.Name + " - Points: " + playerScore);
+        private void btnMusic400_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Music", 400);
 
-            //////
-            if(gameBoard.CheckGameStatus())
-            {
-                gameBoard.NextPlayer();
+            btnMusic400.Enabled = false;
+        }
 
-                lblCurrentPlayer.Text = "Current Player = " + gameBoard.CurrentPlayer.Name;
-            }
-            else
-            {
-                winners = gameBoard.FindWinner();
+        private void btnMusic500_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Music", 500);
 
-                frmWinner winnerForm = new frmWinner(this);
-                winnerForm.ShowDialog();
-                this.Close();
-            }
+            btnMusic500.Enabled = false;
+        }
 
+        //games category questions
+        private void btnGames100_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Games", 100);
 
-            /////
-            ///
-            
+            btnGames100.Enabled = false;
+        }
+
+        private void btnGames200_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Games", 200);
+
+            btnGames200.Enabled = false;
+        }
+
+        private void btnGames300_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Games", 300);
+
+            btnGames300.Enabled = false;
+        }
+
+        private void btnGames400_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Games", 400);
+
+            btnGames400.Enabled = false;
+        }
+
+        private void btnGames500_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Games", 500);
+
+            btnGames500.Enabled = false;
+        }
+
+        //shows category questions
+        private void btnShows100_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Shows", 100);
+
+            btnShows100.Enabled = false;
+        }
+
+        private void btnShows200_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Shows", 200);
+
+            btnShows200.Enabled = false;
+        }
+
+        private void btnShows300_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Shows", 300);
+
+            btnShows300.Enabled = false;
+        }
+
+        private void btnShows400_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Shows", 400);
+
+            btnShows400.Enabled = false;
+        }
+
+        private void btnShows500_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Shows", 500);
+
+            btnShows500.Enabled = false;
+        }
+
+        //sports category questions
+        private void btnSports100_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Sports", 100);
+
+            btnSports100.Enabled = false;
+        }
+
+        private void btnSports200_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Sports", 200);
+
+            btnSports200.Enabled = false;
+        }
+
+        private void btnSports300_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Sports", 300);
+
+            btnSports300.Enabled = false;
+        }
+
+        private void btnSports400_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Sports", 400);
+
+            btnSports400.Enabled = false;
+        }
+
+        private void btnSports500_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Sports", 500);
+
+            btnSports500.Enabled = false;
+        }
+
+        //Temple category questions
+        private void btnTemple100_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Temple", 100);
+
+            btnTemple100.Enabled = false;
+        }
+
+        private void btnTemple200_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Temple", 200);
+
+            btnTemple200.Enabled = false;
+        }
+
+        private void btnTemple300_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Temple", 300);
+
+            btnTemple300.Enabled = false;
+        }
+
+        private void btnTemple400_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Temple", 400);
+
+            btnTemple400.Enabled = false;
+        }
+
+        private void btnTemple500_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Temple", 500);
+
+            btnTemple500.Enabled = false;
         }
     }
 }
