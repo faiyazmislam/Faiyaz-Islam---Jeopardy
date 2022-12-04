@@ -23,7 +23,7 @@ namespace _3309___Term_Project___Jeopardy
         {
             foreach (Question question in QuestionList)
             {
-                if(question.Point == point) { return question; }
+                if(question.PointValue == point) { return question; }
             }
             return null;
         }

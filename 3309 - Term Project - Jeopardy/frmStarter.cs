@@ -159,5 +159,15 @@ namespace _3309___Term_Project___Jeopardy
             categoryList.AddCategory(templeCategory);
 
         }
+
+        private void lblDirection_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbRules_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
