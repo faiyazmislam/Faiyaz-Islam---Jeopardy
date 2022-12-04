@@ -169,5 +169,10 @@ namespace _3309___Term_Project___Jeopardy
         {
 
         }
+
+        private void lblRules_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

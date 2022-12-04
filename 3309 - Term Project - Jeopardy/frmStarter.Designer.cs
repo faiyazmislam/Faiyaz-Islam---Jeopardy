@@ -45,25 +45,25 @@
             // 
             // txtPlayerName
             // 
-            this.txtPlayerName.Location = new System.Drawing.Point(195, 91);
+            this.txtPlayerName.Location = new System.Drawing.Point(240, 89);
             this.txtPlayerName.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlayerName.Name = "txtPlayerName";
-            this.txtPlayerName.Size = new System.Drawing.Size(110, 20);
+            this.txtPlayerName.Size = new System.Drawing.Size(149, 30);
             this.txtPlayerName.TabIndex = 2;
             // 
             // lblPlayerName
             // 
             this.lblPlayerName.AutoSize = true;
-            this.lblPlayerName.Location = new System.Drawing.Point(86, 94);
+            this.lblPlayerName.Location = new System.Drawing.Point(22, 90);
             this.lblPlayerName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPlayerName.Name = "lblPlayerName";
-            this.lblPlayerName.Size = new System.Drawing.Size(105, 13);
+            this.lblPlayerName.Size = new System.Drawing.Size(214, 22);
             this.lblPlayerName.TabIndex = 3;
             this.lblPlayerName.Text = "Enter Player\'s Name:";
             // 
             // btnAddPlayer
             // 
-            this.btnAddPlayer.Location = new System.Drawing.Point(322, 91);
+            this.btnAddPlayer.Location = new System.Drawing.Point(403, 90);
             this.btnAddPlayer.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddPlayer.Name = "btnAddPlayer";
             this.btnAddPlayer.Size = new System.Drawing.Size(106, 53);
@@ -74,10 +74,11 @@
             // 
             // lblDirection
             // 
-            this.lblDirection.Location = new System.Drawing.Point(160, 26);
+            this.lblDirection.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDirection.Location = new System.Drawing.Point(107, 26);
             this.lblDirection.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDirection.Name = "lblDirection";
-            this.lblDirection.Size = new System.Drawing.Size(246, 48);
+            this.lblDirection.Size = new System.Drawing.Size(331, 62);
             this.lblDirection.TabIndex = 5;
             this.lblDirection.Text = "Keep adding players until you\'re ready. \r\n(Max 5 Players)";
             this.lblDirection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,41 +87,46 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(245, 351);
+            this.btnStart.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Location = new System.Drawing.Point(223, 378);
             this.btnStart.Margin = new System.Windows.Forms.Padding(2);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(144, 47);
+            this.btnStart.Size = new System.Drawing.Size(178, 47);
             this.btnStart.TabIndex = 6;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Visible = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 131);
+            this.label1.Location = new System.Drawing.Point(35, 123);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.Size = new System.Drawing.Size(190, 22);
             this.label1.TabIndex = 7;
             this.label1.Text = "Enter a unique ID:";
             // 
             // mskId
             // 
-            this.mskId.Location = new System.Drawing.Point(195, 124);
+            this.mskId.Location = new System.Drawing.Point(240, 123);
             this.mskId.Margin = new System.Windows.Forms.Padding(2);
             this.mskId.Mask = "0";
             this.mskId.Name = "mskId";
-            this.mskId.Size = new System.Drawing.Size(110, 20);
+            this.mskId.Size = new System.Drawing.Size(149, 30);
             this.mskId.TabIndex = 8;
             this.mskId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gbRules
             // 
+            this.gbRules.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gbRules.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbRules.Controls.Add(this.lblRules);
-            this.gbRules.Location = new System.Drawing.Point(48, 48);
+            this.gbRules.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbRules.Location = new System.Drawing.Point(40, 12);
             this.gbRules.Name = "gbRules";
-            this.gbRules.Size = new System.Drawing.Size(520, 96);
+            this.gbRules.Size = new System.Drawing.Size(542, 146);
             this.gbRules.TabIndex = 9;
             this.gbRules.TabStop = false;
             this.gbRules.Text = "Rules:";
@@ -129,25 +135,29 @@
             // 
             // lblRules
             // 
-            this.lblRules.Location = new System.Drawing.Point(28, 16);
+            this.lblRules.Location = new System.Drawing.Point(28, 26);
             this.lblRules.Name = "lblRules";
-            this.lblRules.Size = new System.Drawing.Size(486, 57);
+            this.lblRules.Size = new System.Drawing.Size(486, 106);
             this.lblRules.TabIndex = 0;
-            this.lblRules.Text = "- 1. ";
+            this.lblRules.Text = resources.GetString("lblRules.Text");
+            this.lblRules.Click += new System.EventHandler(this.lblRules_Click);
             // 
             // gbPlayerAddition
             // 
+            this.gbPlayerAddition.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.gbPlayerAddition.Controls.Add(this.lblDirection);
             this.gbPlayerAddition.Controls.Add(this.txtPlayerName);
             this.gbPlayerAddition.Controls.Add(this.mskId);
             this.gbPlayerAddition.Controls.Add(this.lblPlayerName);
             this.gbPlayerAddition.Controls.Add(this.label1);
             this.gbPlayerAddition.Controls.Add(this.btnAddPlayer);
-            this.gbPlayerAddition.Location = new System.Drawing.Point(41, 160);
+            this.gbPlayerAddition.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbPlayerAddition.Location = new System.Drawing.Point(40, 179);
             this.gbPlayerAddition.Name = "gbPlayerAddition";
-            this.gbPlayerAddition.Size = new System.Drawing.Size(547, 173);
+            this.gbPlayerAddition.Size = new System.Drawing.Size(542, 177);
             this.gbPlayerAddition.TabIndex = 10;
             this.gbPlayerAddition.TabStop = false;
+            this.gbPlayerAddition.Text = "Add Players";
             this.gbPlayerAddition.Visible = false;
             // 
             // frmStarter
