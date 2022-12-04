@@ -234,14 +234,14 @@ namespace _3309___Term_Project___Jeopardy
             Category templeCategory = new Category("Temple", templeQuestions);
             categoryList.AddCategory(templeCategory);
 
-            MessageBox.Show("" + movieQuestions.Count + musicQuestions.Count + gamesQuestions.Count + 
-                showsQuestions.Count + sportsQuestions.Count + templeQuestions.Count);
+            //MessageBox.Show("" + movieQuestions.Count + musicQuestions.Count + gamesQuestions.Count + 
+            //    showsQuestions.Count + sportsQuestions.Count + templeQuestions.Count);
 
-                MessageBox.Show("" + categoryList.GetQuestion(moviesCategory, 500).Query);
+            //    MessageBox.Show("" + categoryList.GetQuestion(moviesCategory, 500).Query);
 
-                MessageBox.Show("" + categoryList.GetQuestion(gamesCategory, 300).Query);
+            //    MessageBox.Show("" + categoryList.GetQuestion(gamesCategory, 300).Query);
 
-                MessageBox.Show("" + categoryList.GetQuestion(showsCategory, 100).Query);
+            //    MessageBox.Show("" + categoryList.GetQuestion(showsCategory, 100).Query);
             
 
             //CREATE CATEGORIES AND QUESTIONS HERE

@@ -27,7 +27,7 @@ namespace _3309___Term_Project___Jeopardy
             this.CategoryList = categoryList;
             this.PlayerList = playerList;
             this.CurrentPlayer = playerList.First();
-            this.CurrentPlayerAnswer = null; //MIGHT NOT NEEDED
+            //this.CurrentPlayerAnswer = null; //MIGHT NOT NEEDED
             this.SelectedQuestion = null;   //MIGHT NOT NEEDED
             this.AllQuestionsChosen = false;
             //this.numberQuestions = numberQuestions;
@@ -36,7 +36,7 @@ namespace _3309___Term_Project___Jeopardy
         public bool CheckAnswer()
         {
             //NOTE: make sure selectedQuestion is NOT null
-            if (CurrentPlayer.Answer.Equals(SelectedQuestion.Answer)) return true;
+            if (CurrentPlayerAnswer.Equals(SelectedQuestion.Answer)) return true;
             return false;
         }
 

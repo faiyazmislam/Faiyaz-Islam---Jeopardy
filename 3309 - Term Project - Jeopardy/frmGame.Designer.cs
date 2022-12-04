@@ -109,7 +109,6 @@ namespace _3309___Term_Project___Jeopardy
             this.grbCategories.TabIndex = 17;
             this.grbCategories.TabStop = false;
             this.grbCategories.Text = "Categories";
-            //this.grbCategories.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -415,6 +414,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnMusic100.TabIndex = 4;
             this.btnMusic100.Text = "100";
             this.btnMusic100.UseVisualStyleBackColor = true;
+            this.btnMusic100.Click += new System.EventHandler(this.btnMusic100_Click);
             // 
             // gbMovies
             // 
@@ -438,6 +438,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnMovies500.TabIndex = 4;
             this.btnMovies500.Text = "500";
             this.btnMovies500.UseVisualStyleBackColor = true;
+            this.btnMovies500.Click += new System.EventHandler(this.btnMovies500_Click);
             // 
             // btnMovies400
             // 
@@ -447,6 +448,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnMovies400.TabIndex = 3;
             this.btnMovies400.Text = "400";
             this.btnMovies400.UseVisualStyleBackColor = true;
+            this.btnMovies400.Click += new System.EventHandler(this.btnMovies400_Click);
             // 
             // btnMovies300
             // 
@@ -456,6 +458,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnMovies300.TabIndex = 2;
             this.btnMovies300.Text = "300";
             this.btnMovies300.UseVisualStyleBackColor = true;
+            this.btnMovies300.Click += new System.EventHandler(this.btnMovies300_Click);
             // 
             // btnMovies200
             // 
@@ -465,6 +468,7 @@ namespace _3309___Term_Project___Jeopardy
             this.btnMovies200.TabIndex = 1;
             this.btnMovies200.Text = "200";
             this.btnMovies200.UseVisualStyleBackColor = true;
+            this.btnMovies200.Click += new System.EventHandler(this.btnMovies200_Click);
             // 
             // btnMovies100
             // 
@@ -491,7 +495,7 @@ namespace _3309___Term_Project___Jeopardy
             // 
             this.txtQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtQuestion.Location = new System.Drawing.Point(13, 40);
-            this.txtQuestion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtQuestion.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuestion.Name = "txtQuestion";
             this.txtQuestion.ReadOnly = true;
             this.txtQuestion.Size = new System.Drawing.Size(798, 23);
@@ -512,7 +516,7 @@ namespace _3309___Term_Project___Jeopardy
             // 
             this.txtPlayerResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtPlayerResponse.Location = new System.Drawing.Point(13, 91);
-            this.txtPlayerResponse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPlayerResponse.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlayerResponse.Name = "txtPlayerResponse";
             this.txtPlayerResponse.Size = new System.Drawing.Size(798, 23);
             this.txtPlayerResponse.TabIndex = 20;
@@ -520,12 +524,13 @@ namespace _3309___Term_Project___Jeopardy
             // btnSubmit
             // 
             this.btnSubmit.Location = new System.Drawing.Point(13, 116);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(104, 25);
             this.btnSubmit.TabIndex = 21;
             this.btnSubmit.Text = "Submit Question";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // grbAnswerQuestion
             // 
@@ -535,9 +540,9 @@ namespace _3309___Term_Project___Jeopardy
             this.grbAnswerQuestion.Controls.Add(this.txtQuestion);
             this.grbAnswerQuestion.Controls.Add(this.lblPlayerAnswer);
             this.grbAnswerQuestion.Location = new System.Drawing.Point(12, 311);
-            this.grbAnswerQuestion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbAnswerQuestion.Margin = new System.Windows.Forms.Padding(2);
             this.grbAnswerQuestion.Name = "grbAnswerQuestion";
-            this.grbAnswerQuestion.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbAnswerQuestion.Padding = new System.Windows.Forms.Padding(2);
             this.grbAnswerQuestion.Size = new System.Drawing.Size(824, 147);
             this.grbAnswerQuestion.TabIndex = 22;
             this.grbAnswerQuestion.TabStop = false;
@@ -546,17 +551,17 @@ namespace _3309___Term_Project___Jeopardy
             // gbCurrentPlayer
             // 
             this.gbCurrentPlayer.Controls.Add(this.lblCurrentPlayer);
-            this.gbCurrentPlayer.Location = new System.Drawing.Point(110, 472);
+            this.gbCurrentPlayer.Location = new System.Drawing.Point(547, 472);
             this.gbCurrentPlayer.Name = "gbCurrentPlayer";
-            this.gbCurrentPlayer.Size = new System.Drawing.Size(661, 65);
+            this.gbCurrentPlayer.Size = new System.Drawing.Size(224, 65);
             this.gbCurrentPlayer.TabIndex = 0;
             this.gbCurrentPlayer.TabStop = false;
             // 
             // lblCurrentPlayer
             // 
-            this.lblCurrentPlayer.Location = new System.Drawing.Point(87, 16);
+            this.lblCurrentPlayer.Location = new System.Drawing.Point(6, 16);
             this.lblCurrentPlayer.Name = "lblCurrentPlayer";
-            this.lblCurrentPlayer.Size = new System.Drawing.Size(428, 27);
+            this.lblCurrentPlayer.Size = new System.Drawing.Size(216, 27);
             this.lblCurrentPlayer.TabIndex = 0;
             this.lblCurrentPlayer.Text = "Current Player: ";
             this.lblCurrentPlayer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

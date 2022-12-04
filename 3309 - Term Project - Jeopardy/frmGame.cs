@@ -28,22 +28,66 @@ namespace _3309___Term_Project___Jeopardy
         private void frmGame_Load(object sender, EventArgs e)
         {
             List<Player> players = gameBoard.PlayerList;
-            foreach(Player p in players) { MessageBox.Show(p.Name + " " + p.Id); }
+            //foreach(Player p in players) { MessageBox.Show(p.Name + " " + p.Id); }
+
         }
 
-        private void SetQuestion(Category chosenCategory, int points)
+        private void SetQuestion(String chosenCategoryName, int points)
         {
-            gameBoard.SelectedQuestion = gameBoard.CategoryList.GetQuestion(chosenCategory, points);
+            Category chosenCategory = gameBoard.CategoryList.FindCategory(chosenCategoryName);
+
+            gameBoard.SelectedQuestion = chosenCategory.FindQuestion(points);
 
             txtQuestion.Text = gameBoard.SelectedQuestion.Query;
 
         }
 
+        
+
         private void btnMovies100_Click(object sender, EventArgs e)
         {
-            Category moviesCategory = new Category(); 
 
-            SetQuestion(moviesCategory, 100);
+            SetQuestion("Movies", 100);
+        }
+
+        private void btnMovies200_Click(object sender, EventArgs e)
+        {
+            SetQuestion("Movies", 200);
+
+        }
+
+        private void btnMovies300_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMovies400_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMovies500_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMusic100_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            gameBoard.CurrentPlayerAnswer = txtPlayerResponse.Text.Trim();
+
+            bool result = gameBoard.CheckAnswer();
+
+            gameBoard.CalculateScore();
+
+            MessageBox.Show("Result: "+ result + " - Player: " + gameBoard.CurrentPlayer.Name + " - Points: " + gameBoard.CurrentPlayer.Points);
+
+
+            gameBoard.NextPlayer();
         }
     }
 }
