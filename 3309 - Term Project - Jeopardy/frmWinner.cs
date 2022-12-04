@@ -45,6 +45,7 @@ namespace _3309___Term_Project___Jeopardy
 
         private void btnEndGame_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Thanks for playing!");
             this.Close();
         }
     }
