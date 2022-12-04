@@ -55,7 +55,7 @@ namespace _3309___Term_Project___Jeopardy
 
             bool result = currentGameBoard.CheckAnswer();
 
-            currentGameBoard.CurrentPlayer.PlayerScore += currentGameBoard.CalculateScore(currentGameBoard.SelectedQuestion.Point);
+            currentGameBoard.CurrentPlayer.PlayerScore += currentGameBoard.CalculateScore(currentGameBoard.SelectedQuestion.PointValue);
 
             int playerScore = currentGameBoard.CurrentPlayer.PlayerScore;
 

@@ -8,8 +8,6 @@ namespace _3309___Term_Project___Jeopardy
 {
     internal class Category
     {
-        //String categoryName;
-        //List<Question> questionList;
         public String CategoryName { get; set; }
         public List<Question> QuestionList { get; set; }
 

@@ -53,27 +53,7 @@ namespace _3309___Term_Project___Jeopardy
                 MessageBox.Show("You need to have at least 2 players. Add more players.");
             }
         }
-        /*
-        public void LoadCategoryList(String categoryName, DataTable dataTable)
-        {
-            List<Question> questions = new List<Question>();
-
-            foreach(DataRow record in dataTable.Rows) {
-                if (record["Category"].ToString().Equals(categoryName))
-                {
-                    Question question = new Question();
-                    question.Point = int.Parse(record["Points"].ToString());
-                    question.Query = record["Question"].ToString();
-                    question.Answer = record["Answer"].ToString();
-                   
-                    questions.Add(question);
-                }
-            }
-
-            Category category = new Category(categoryName, questions);
-            categoryList.AddCategory(category);
-        }*/
-
+        
         private void frmStarter_Load(object sender, EventArgs e)
         {
             string strSQL = "SELECT * FROM JeopardyQuestions";
@@ -113,7 +93,7 @@ namespace _3309___Term_Project___Jeopardy
                 if (record["Category"].ToString().Equals("Movies"))
                 {
                     Question question = new Question();
-                    question.Point = int.Parse(record["Points"].ToString());
+                    question.PointValue = int.Parse(record["Points"].ToString());
                     question.Query = record["Question"].ToString();
                     question.Answer = record["Answer"].ToString();
 
@@ -139,7 +119,7 @@ namespace _3309___Term_Project___Jeopardy
                 if (record["Category"].ToString().Equals("Music"))
                 {
                     Question question = new Question();
-                    question.Point = int.Parse(record["Points"].ToString());
+                    question.PointValue = int.Parse(record["Points"].ToString());
                     question.Query = record["Question"].ToString();
                     question.Answer = record["Answer"].ToString();
 
@@ -160,7 +140,7 @@ namespace _3309___Term_Project___Jeopardy
                 if (record["Category"].ToString().Equals("Games"))
                 {
                     Question question = new Question();
-                    question.Point = int.Parse(record["Points"].ToString());
+                    question.PointValue = int.Parse(record["Points"].ToString());
                     question.Query = record["Question"].ToString();
                     question.Answer = record["Answer"].ToString();
 
@@ -181,7 +161,7 @@ namespace _3309___Term_Project___Jeopardy
                 if (record["Category"].ToString().Equals("Shows"))
                 {
                     Question question = new Question();
-                    question.Point = int.Parse(record["Points"].ToString());
+                    question.PointValue = int.Parse(record["Points"].ToString());
                     question.Query = record["Question"].ToString();
                     question.Answer = record["Answer"].ToString();
 
@@ -202,7 +182,7 @@ namespace _3309___Term_Project___Jeopardy
                 if (record["Category"].ToString().Equals("Sports"))
                 {
                     Question question = new Question();
-                    question.Point = int.Parse(record["Points"].ToString());
+                    question.PointValue = int.Parse(record["Points"].ToString());
                     question.Query = record["Question"].ToString();
                     question.Answer = record["Answer"].ToString();
 
@@ -223,7 +203,7 @@ namespace _3309___Term_Project___Jeopardy
                 if (record["Category"].ToString().Equals("Temple"))
                 {
                     Question question = new Question();
-                    question.Point = int.Parse(record["Points"].ToString());
+                    question.PointValue = int.Parse(record["Points"].ToString());
                     question.Query = record["Question"].ToString();
                     question.Answer = record["Answer"].ToString();
 
