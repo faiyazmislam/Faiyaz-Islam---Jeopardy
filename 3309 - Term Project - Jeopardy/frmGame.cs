@@ -49,37 +49,8 @@ namespace _3309___Term_Project___Jeopardy
 
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-            currentGameBoard.CurrentPlayerAnswer = txtPlayerResponse.Text.Trim();
+        
 
-            bool result = currentGameBoard.CheckAnswer();
-
-            currentGameBoard.CurrentPlayer.PlayerScore += currentGameBoard.CalculateScore(currentGameBoard.SelectedQuestion.PointValue);
-
-            int playerScore = currentGameBoard.CurrentPlayer.PlayerScore;
-
-            MessageBox.Show("Result: " + result + " - Player: " + currentGameBoard.CurrentPlayer.Name + " - Points: " + playerScore);
-
-            //////
-            if (currentGameBoard.CheckGameStatus())
-            {
-                currentGameBoard.NextPlayer();
-
-                lblCurrentPlayer.Text = "Current Player = " + currentGameBoard.CurrentPlayer.Name;
-            }
-            else
-            {
-                winners = currentGameBoard.FindWinner();
-
-                frmWinner winnerForm = new frmWinner(this);
-                winnerForm.ShowDialog();
-                this.Close();
-            }
-
-        }
-
-        //movies category questions
         private void btnMovies100_Click(object sender, EventArgs e)
         {
             SetQuestion("Movies", 100);
