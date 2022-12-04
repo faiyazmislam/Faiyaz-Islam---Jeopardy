@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _3309___Term_Project___Jeopardy
 {
-    internal class CategoryList
+    public class CategoryList
     {
         //List<Category> categories;
         public List<Category> Categories { get; set; }

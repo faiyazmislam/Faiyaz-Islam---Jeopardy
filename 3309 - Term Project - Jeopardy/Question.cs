@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _3309___Term_Project___Jeopardy
 {
-    internal class Question
+    public class Question
     {
         //String query;
         //int point;

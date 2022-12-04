@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _3309___Term_Project___Jeopardy
 {
-    internal class Player
+    public class Player
     {
         //int id;
         //String name;

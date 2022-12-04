@@ -6,15 +6,8 @@ using System.Threading.Tasks;
 
 namespace _3309___Term_Project___Jeopardy
 {
-    internal class GameBoard
+    public class GameBoard
     {
-        //CategoryList categoryList;
-        //List<Player> playerList;
-        //Player currentPlayer;
-        //String currentPlayerAnswer;
-        //Question selectedQuestion; //according to player's chosen category and chosen point
-        //bool allQuestionsChosen; 
-        //int numberQuestions;
         public CategoryList CategoryList { get; set; }
         public List<Player> PlayerList { get; set; }
         public Player CurrentPlayer { get; set; }
