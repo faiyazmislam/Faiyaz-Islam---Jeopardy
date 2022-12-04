@@ -53,6 +53,26 @@ namespace _3309___Term_Project___Jeopardy
                 MessageBox.Show("You need to have at least 2 players. Add more players.");
             }
         }
+        /*
+        public void LoadCategoryList(String categoryName, DataTable dataTable)
+        {
+            List<Question> questions = new List<Question>();
+
+            foreach(DataRow record in dataTable.Rows) {
+                if (record["Category"].ToString().Equals(categoryName))
+                {
+                    Question question = new Question();
+                    question.Point = int.Parse(record["Points"].ToString());
+                    question.Query = record["Question"].ToString();
+                    question.Answer = record["Answer"].ToString();
+                   
+                    questions.Add(question);
+                }
+            }
+
+            Category category = new Category(categoryName, questions);
+            categoryList.AddCategory(category);
+        }*/
 
         private void frmStarter_Load(object sender, EventArgs e)
         {
@@ -63,7 +83,29 @@ namespace _3309___Term_Project___Jeopardy
             DataSet dataSet = new DataSet("JeopardyQuestionsTable");
             myDataAdapter.Fill(dataSet, "JeopardyQuestionsTable");
             DataTable dataTable = dataSet.Tables["JeopardyQuestionsTable"];
+            /*
+            LoadCategoryList("Movies", dataTable);
+            LoadCategoryList("Music", dataTable);
+            LoadCategoryList("Games", dataTable);
+            LoadCategoryList("Shows", dataTable);
+            LoadCategoryList("Sports", dataTable);
+            LoadCategoryList("Temple", dataTable);
 
+            String display = "";
+            foreach(Category category in categoryList)
+            {
+                display += "Category: " + category.CategoryName + "\n";
+                List<Question> questionList = category.QuestionList;
+
+                foreach(Question question in questionList)
+                {
+                    display += "\tPoint: " + question.Point + " | Question: " + question.Query + 
+                               "\n\tAnswer: " + question.Answer;
+                }
+            }
+            MessageBox.Show(display);*/
+
+            
             List<Question> movieQuestions = new List<Question> ();
 
             foreach(DataRow record in dataTable.Rows) {
@@ -200,7 +242,7 @@ namespace _3309___Term_Project___Jeopardy
                 MessageBox.Show("" + categoryList.GetQuestion(gamesCategory, 300).Query);
 
                 MessageBox.Show("" + categoryList.GetQuestion(showsCategory, 100).Query);
-
+            
 
             //CREATE CATEGORIES AND QUESTIONS HERE
             //--------------School Questions and Category------------------------
