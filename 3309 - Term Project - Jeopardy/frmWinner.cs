@@ -32,7 +32,20 @@ namespace _3309___Term_Project___Jeopardy
             }
 
             lblWinners.Text = winnersText;
-            //testing
+        }
+
+       
+        private void btnNewGame_Click(object sender, EventArgs e)
+        {
+            frmStarter newGame = new frmStarter();
+            newGame.Show();
+
+            this.Close();
+        }
+
+        private void btnEndGame_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

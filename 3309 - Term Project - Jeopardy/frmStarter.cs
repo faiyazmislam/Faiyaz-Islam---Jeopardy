@@ -53,7 +53,7 @@ namespace _3309___Term_Project___Jeopardy
             {
                 gameBoard = new GameBoard(categoryList, playerList);
                 frmGame gameForm = new frmGame(this);
-                gameForm.ShowDialog();
+                gameForm.Show();
                 this.Close();
             }
             else

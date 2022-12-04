@@ -120,7 +120,7 @@ namespace _3309___Term_Project___Jeopardy
                     winners = currentGameBoard.FindWinner();
 
                     frmWinner winnersForm = new frmWinner(this);
-                    winnersForm.ShowDialog();
+                    winnersForm.Show();
                     this.Close();
                 }
             }

@@ -79,5 +79,15 @@ namespace _3309___Term_Project___Jeopardy.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap JeopardyWinBG {
+            get {
+                object obj = ResourceManager.GetObject("JeopardyWinBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
