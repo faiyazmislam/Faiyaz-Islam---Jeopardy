@@ -14,8 +14,7 @@ namespace _3309___Term_Project___Jeopardy
         public Player CurrentPlayer { get; set; }
         public String CurrentPlayerAnswer { get; set; }
         public Question SelectedQuestion { get; set; }
-        public bool AllQuestionsChosen { get; set; }
-
+        //public bool AllQuestionsChosen { get; set; }
         public int AvailableQuestions { get; set; }
 
         public GameBoard(CategoryList categoryList, List<Player> playerList) //, int numberQuestions)
@@ -23,32 +22,31 @@ namespace _3309___Term_Project___Jeopardy
             this.CategoryList = categoryList;
             this.PlayerList = playerList;
             this.CurrentPlayer = playerList.First();
-            //this.CurrentPlayerAnswer = null; //MIGHT NOT NEEDED
-            this.SelectedQuestion = null;   //MIGHT NOT NEEDED
-            this.AllQuestionsChosen = false;
-            //this.numberQuestions = numberQuestions;
+            this.SelectedQuestion = null;
+            //this.AllQuestionsChosen = false;
         }
 
+        public void SetAvailableQuestions(int availableQuestions)
+        {
+            this.AvailableQuestions = availableQuestions;
+        }
 
         public bool CheckAnswer()
         {
-            //NOTE: make sure selectedQuestion is NOT null
-            if (CurrentPlayerAnswer.Equals(SelectedQuestion.Answer)) return true;
+            if (CurrentPlayerAnswer.ToLower().Equals(SelectedQuestion.Answer.ToLower())) 
+                return true;
             return false;
         }
 
         //calculate player's score according to the result of CheckAnswer() 
-        public int CalculateScore(int points) //UpdateScore() is not needed, faiyaz
+        public int CalculateScore(int points)
         {
             bool isCorrect = CheckAnswer();
-            //int playerScore = CurrentPlayer.Points;
-            //int chosenPoint = CurrentPlayer.ChosenPoint;
 
-            //NOTE: make sure player's chosen point is corret
-            if (isCorrect) return points;  //if player's answer is correct, increment score
-            else return (-1) * points;            //if player's answer is incorrect, decrement score
+            if (isCorrect) 
+                return points;  //if player's answer is correct, increment score
+            else return (-1) * points;     //if player's answer is incorrect, decrement score
 
-            //return playerScore;
         }
 
         public void NextPlayer()
@@ -64,11 +62,14 @@ namespace _3309___Term_Project___Jeopardy
             else CurrentPlayer = PlayerList.First(); 
         }
 
-        public Boolean CheckGameStatus()
+        public void DecreaseAvailableQuestions()
         {
             AvailableQuestions -= 1;
+        }
 
-            while(AvailableQuestions >  0)
+        public Boolean CheckGameStatus()
+        {
+            if(AvailableQuestions >  0)
             {
                 return true;
             }
@@ -98,11 +99,5 @@ namespace _3309___Term_Project___Jeopardy
 
             return winners;
         }
-        //public String DisplayQuestion()
-        //{
-        //    return selectedQuestion.Query;
-        //}
-
-        
     }
 }

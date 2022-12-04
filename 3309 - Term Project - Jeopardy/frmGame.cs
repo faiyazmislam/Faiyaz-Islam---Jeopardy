@@ -23,24 +23,26 @@ namespace _3309___Term_Project___Jeopardy
 
             currentGameBoard = frmThatOpenedMe.gameBoard;
 
-            //lblCurrentPlayer.Text = "Current Player = " + currentGameBoard.CurrentPlayer.Name;
-
-            currentGameBoard.AvailableQuestions = 30;
-            //gameBoard.SetAvailableQuestions(30);
+            currentGameBoard.SetAvailableQuestions(30);
 
             InitializeComponent();
         }
 
         private void frmGame_Load(object sender, EventArgs e)
         {
-            List<Player> players = currentGameBoard.PlayerList;
-            //foreach(Player p in players) { MessageBox.Show(p.Name + " " + p.Id); }
+            //List<Player> players = currentGameBoard.PlayerList;
+            //first player is identified
             txtbxCurrentPlayer.Text = "Current Player = " + currentGameBoard.CurrentPlayer.Name;
 
+            //displays the players
             DisplayPlayers(currentGameBoard.PlayerList);
 
+            //prevents player from entering data before the question has been chosen
+            txtPlayerResponse.Enabled = false;
+            btnSubmit.Enabled = false;
         }
 
+        //function that displays the players in the game
         private void DisplayPlayers(List<Player> players)
         {
             string playerDisplay = "Players: \n";
@@ -55,13 +57,22 @@ namespace _3309___Term_Project___Jeopardy
 
         private void SetQuestion(String chosenCategoryName, int points)
         {
+            //finds the category that has been chosen
             Category chosenCategory = currentGameBoard.CategoryList.FindCategory(chosenCategoryName);
 
+            //finds and stores the question based on the point value
             currentGameBoard.SelectedQuestion = chosenCategory.FindQuestion(points);
-            //gameBoard.SetSelectedQuestion();
-            grbCategories.Enabled = false;
+
+            //reduces the number of available questions
+            currentGameBoard.DecreaseAvailableQuestions();
+
+            //displays the question
             txtQuestion.Text = currentGameBoard.SelectedQuestion.Query;
 
+            //enables controls that allow the player to enter in their answer, disables them from pressing other buttons
+            txtPlayerResponse.Enabled = true;
+            btnSubmit.Enabled = true;
+            grbCategories.Enabled = false;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -82,6 +93,10 @@ namespace _3309___Term_Project___Jeopardy
             if (result)
             {
                 grbCategories.Enabled = true;
+                txtPlayerResponse.Text = "";
+                txtQuestion.Text = "";
+                txtPlayerResponse.Enabled = false;
+                btnSubmit.Enabled = false;
             }
             //if they are wrong
             else
@@ -91,7 +106,11 @@ namespace _3309___Term_Project___Jeopardy
                 {
                     //if yes, next player has their turn
                     currentGameBoard.NextPlayer();
+                    txtPlayerResponse.Enabled = false;
+                    btnSubmit.Enabled = false;
                     grbCategories.Enabled = true;
+                    txtPlayerResponse.Text = "";
+                    txtQuestion.Text = "";
                     txtbxCurrentPlayer.Text = "Current Player = " + currentGameBoard.CurrentPlayer.Name;
                 }
                 else
@@ -104,9 +123,6 @@ namespace _3309___Term_Project___Jeopardy
                     this.Close();
                 }
             }
-
-            
-
         }
 
 
