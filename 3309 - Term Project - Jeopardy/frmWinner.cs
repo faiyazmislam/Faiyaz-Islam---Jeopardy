@@ -33,7 +33,6 @@ namespace _3309___Term_Project___Jeopardy
 
             lblWinners.Text = winnersText;
         }
-
        
         private void btnNewGame_Click(object sender, EventArgs e)
         {
