@@ -45,9 +45,9 @@ namespace Jeopardy___Unit_Testing
             Assert.AreEqual(3, gameBoard.PlayerList.Count); //after change
             Assert.AreEqual("Chris", gameBoard.PlayerList.ElementAt(2).Name);
 
-            Assert.AreEqual(0, gameBoard.AvailableQuestions); //before change
-            gameBoard.AvailableQuestions = 30;
-            Assert.AreEqual(30, gameBoard.AvailableQuestions); //after change
+            Assert.AreEqual(30, gameBoard.AvailableQuestions); //before change
+            gameBoard.AvailableQuestions = 40;
+            Assert.AreEqual(40, gameBoard.AvailableQuestions); //after change
 
             //Testing 2 GameBoard objects
             GameBoard gameBoard2 = null;
@@ -109,7 +109,9 @@ namespace Jeopardy___Unit_Testing
         {
             List<Player> players = new List<Player>();
             Player player1 = new Player(1, "Jenny");
+            players.Add(player1);
             GameBoard gameBoard = new GameBoard(new CategoryList(), players, 30);
+            gameBoard.SelectedQuestion = new Question();
 
             //player's score is 0
             gameBoard.SelectedQuestion.Answer = "What is nothing?";
@@ -127,7 +129,8 @@ namespace Jeopardy___Unit_Testing
             //player's answer is false, therefore they will lose 100 pts
             gameBoard.CurrentPlayerAnswer = "What is something?";
             scoreTest = gameBoard.CalculateScore(100);
-            Assert.AreEqual(0, scoreTest);
+            Assert.AreEqual(-100, scoreTest);
+            Assert.AreNotEqual(0, scoreTest);
             Assert.AreNotEqual(100, scoreTest);
 
             //test - player's answer is true, therefore they will get 300 pts
@@ -143,7 +146,7 @@ namespace Jeopardy___Unit_Testing
             //player's answer is false, therefore they will lose 300 pts
             gameBoard.CurrentPlayerAnswer = "What is something?";
             scoreTest = gameBoard.CalculateScore(300);
-            Assert.AreEqual(0, scoreTest);
+            Assert.AreEqual(-300, scoreTest);
             Assert.AreNotEqual(300, scoreTest);
             Assert.AreNotEqual(100, scoreTest);
             Assert.AreNotEqual(-100, scoreTest);
