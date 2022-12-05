@@ -14,21 +14,15 @@ namespace _3309___Term_Project___Jeopardy
         public Player CurrentPlayer { get; set; }
         public String CurrentPlayerAnswer { get; set; }
         public Question SelectedQuestion { get; set; }
-        //public bool AllQuestionsChosen { get; set; }
         public int AvailableQuestions { get; set; }
 
-        public GameBoard(CategoryList categoryList, List<Player> playerList) //, int numberQuestions)
+        public GameBoard(CategoryList categoryList, List<Player> playerList, int numberQuestions) 
         {
             this.CategoryList = categoryList;
             this.PlayerList = playerList;
             this.CurrentPlayer = playerList.First();
             this.SelectedQuestion = null;
-            //this.AllQuestionsChosen = false;
-        }
-
-        public void SetAvailableQuestions(int availableQuestions)
-        {
-            this.AvailableQuestions = availableQuestions;
+            this.AvailableQuestions = numberQuestions;
         }
 
         public bool CheckAnswer()

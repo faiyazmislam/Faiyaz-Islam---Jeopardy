@@ -25,7 +25,6 @@ namespace _3309___Term_Project___Jeopardy
 
         private void btnAddPlayer_Click(object sender, EventArgs e)
         {
-            //CHECK FOR DUPLICATE PLAYER ID??......................
             if (playerList.Count == 4)
             {
                 MessageBox.Show("Max of 4 players reached. No more can be added");
@@ -67,7 +66,7 @@ namespace _3309___Term_Project___Jeopardy
         {
             if(playerList.Count >= 2)
             {
-                gameBoard = new GameBoard(categoryList, playerList);
+                gameBoard = new GameBoard(categoryList, playerList, 30);
                 frmGame gameForm = new frmGame(this);
                 this.Hide();
                 gameForm.ShowDialog();

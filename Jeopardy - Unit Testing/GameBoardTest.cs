@@ -66,52 +66,6 @@ namespace Jeopardy___Unit_Testing
         }
 
         [TestMethod]
-        public void TestSetAvailableQuestions()
-        {
-            CategoryList categoryList = new CategoryList();
-            List<Player> players = new List<Player>();
-            Player player1 = new Player(1, "Jenny");
-            Player player2 = new Player(2, "Faiyaz");
-            players.Add(player1);
-            players.Add(player2);
-            GameBoard gameBoard = new GameBoard(categoryList, players);
-            Assert.AreEqual(0, gameBoard.AvailableQuestions); //before change
-
-            //test 0 and positive #
-            for (int i = 0; i < 30; i++)
-            {
-                gameBoard.SetAvailableQuestions(i);
-                if (i != 0)
-                { //make sure not = to previous assigned value
-                    Assert.AreNotEqual(i - 1, gameBoard.AvailableQuestions);
-                }
-                Assert.AreEqual(i, gameBoard.AvailableQuestions);
-            }
-
-            //test between negative and positive #
-            for (int i = -100; i < 100; i++)
-            {
-                gameBoard.SetAvailableQuestions(i);
-                if (i != 0)
-                { //make sure not = to previous assigned value
-                    Assert.AreNotEqual(i - 1, gameBoard.AvailableQuestions);
-                }
-                Assert.AreEqual(i, gameBoard.AvailableQuestions);
-            }
-
-            //test negative # only
-            for (int i = -100; i < -50; i++)
-            {
-                gameBoard.SetAvailableQuestions(i);
-                if (i != 0)
-                { //make sure not = to previous assigned value
-                    Assert.AreNotEqual(i - 1, gameBoard.AvailableQuestions);
-                }
-                Assert.AreEqual(i, gameBoard.AvailableQuestions);
-            }
-        }
-
-        [TestMethod]
         public void TestCheckAnswer()
         {
             CategoryList categoryList = new CategoryList();

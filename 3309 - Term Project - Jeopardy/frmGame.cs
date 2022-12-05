@@ -23,7 +23,7 @@ namespace _3309___Term_Project___Jeopardy
 
             currentGameBoard = frmThatOpenedMe.gameBoard;
 
-            currentGameBoard.SetAvailableQuestions(30);
+            //currentGameBoard.SetAvailableQuestions(30);
 
             InitializeComponent();
         }
