@@ -20,7 +20,7 @@ namespace Jeopardy___Unit_Testing
             players.Add(player2);
 
             //test initiated GameBoard object
-            GameBoard gameBoard = new GameBoard(categoryList, players);
+            GameBoard gameBoard = new GameBoard(categoryList, players, 30);
             Assert.IsNotNull(gameBoard);
             Assert.AreSame(categoryList, gameBoard.CategoryList);
             Assert.AreSame(players, gameBoard.PlayerList);
@@ -74,7 +74,7 @@ namespace Jeopardy___Unit_Testing
             Player player2 = new Player(2, "Faiyaz");
             players.Add(player1);
             players.Add(player2);
-            GameBoard gameBoard = new GameBoard(categoryList, players);
+            GameBoard gameBoard = new GameBoard(categoryList, players, 30);
             gameBoard.CurrentPlayerAnswer = "What is anything?";
             gameBoard.SelectedQuestion = new Question("Opposite of something", 100, "What is nothing?");
 
@@ -109,7 +109,7 @@ namespace Jeopardy___Unit_Testing
         {
             List<Player> players = new List<Player>();
             Player player1 = new Player(1, "Jenny");
-            GameBoard gameBoard = new GameBoard(new CategoryList(), players);
+            GameBoard gameBoard = new GameBoard(new CategoryList(), players, 30);
 
             //player's score is 0
             gameBoard.SelectedQuestion.Answer = "What is nothing?";
@@ -158,7 +158,7 @@ namespace Jeopardy___Unit_Testing
             players.Add(new Player(1, "Jenny"));
             players.Add(new Player(2, "Faiyaz"));
             players.Add(new Player(3, "Chris"));
-            GameBoard gameBoard = new GameBoard(new CategoryList(), players);
+            GameBoard gameBoard = new GameBoard(new CategoryList(), players, 30);
 
             Assert.AreSame("Jenny", gameBoard.CurrentPlayer.Name);
             gameBoard.NextPlayer();
@@ -186,8 +186,7 @@ namespace Jeopardy___Unit_Testing
             Player player2 = new Player(2, "Faiyaz");
             players.Add(player1);
             players.Add(player2);
-            GameBoard gameBoard = new GameBoard(new CategoryList(), players);
-            gameBoard.SetAvailableQuestions(70);
+            GameBoard gameBoard = new GameBoard(new CategoryList(), players, 70);
             Assert.AreEqual(70, gameBoard.AvailableQuestions);
 
             gameBoard.DecreaseAvailableQuestions();
@@ -211,8 +210,7 @@ namespace Jeopardy___Unit_Testing
             Player player2 = new Player(2, "Faiyaz");
             players.Add(player1);
             players.Add(player2);
-            GameBoard gameBoard = new GameBoard(new CategoryList(), players);
-            gameBoard.SetAvailableQuestions(3);
+            GameBoard gameBoard = new GameBoard(new CategoryList(), players, 3);
 
             Assert.AreEqual(3, gameBoard.AvailableQuestions);
             bool continueGame = gameBoard.CheckGameStatus();
@@ -250,7 +248,7 @@ namespace Jeopardy___Unit_Testing
             players.Add(player1);
             players.Add(player2);
             players.Add(player3);
-            GameBoard gameBoard = new GameBoard(new CategoryList(), players);
+            GameBoard gameBoard = new GameBoard(new CategoryList(), players, 30);
 
             //test - 3rd player wins
             List<Player> theWinners = gameBoard.FindWinner();
