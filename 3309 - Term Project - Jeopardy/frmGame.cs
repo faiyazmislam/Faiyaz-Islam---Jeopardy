@@ -77,36 +77,85 @@ namespace _3309___Term_Project___Jeopardy
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            currentGameBoard.CurrentPlayerAnswer = txtPlayerResponse.Text;
+            //currentGameBoard.CurrentPlayerAnswer = txtPlayerResponse.Text;
 
-            bool result = currentGameBoard.CheckAnswer();
+            //bool result = currentGameBoard.CheckAnswer();
 
-            currentGameBoard.CurrentPlayer.PlayerScore += currentGameBoard.CalculateScore(currentGameBoard.SelectedQuestion.PointValue);
+            //currentGameBoard.CurrentPlayer.PlayerScore += currentGameBoard.CalculateScore(currentGameBoard.SelectedQuestion.PointValue);
 
-            int playerScore = currentGameBoard.CurrentPlayer.PlayerScore;
+            //int playerScore = currentGameBoard.CurrentPlayer.PlayerScore;
 
-            lblResult.Text = "Result: \n" + result + "\nPlayer: " + currentGameBoard.CurrentPlayer.Name + " - Total Score: " + playerScore;
+            //lblResult.Text = "Result: \n" + result + "\nPlayer: " + currentGameBoard.CurrentPlayer.Name + " - Total Score: " + playerScore;
             
-            DisplayPlayers(currentGameBoard.PlayerList);
+            //DisplayPlayers(currentGameBoard.PlayerList);
 
             //if player gets the answer right, then they have another turn
-            if (result)
-            {
-                grbCategories.Enabled = true;
-                txtPlayerResponse.Enabled = false;
-                btnSubmit.Enabled = false;
-                lblResult.Text = "Result: \n" + result + "\nPlayer: " + currentGameBoard.CurrentPlayer.Name + " - Total Score: " + playerScore;
-                txtPlayerResponse.Text = "";
-                txtQuestion.Text = "";
-            }
+            //if (result)
+            //{
+            //    grbCategories.Enabled = true;
+            //    txtPlayerResponse.Enabled = false;
+            //    btnSubmit.Enabled = false;
+            //   lblResult.Text = "Result: \n" + result + "\nPlayer: " + currentGameBoard.CurrentPlayer.Name + " - Total Score: " + playerScore;
+            //   txtPlayerResponse.Text = "";
+            //    txtQuestion.Text = "";
+            //}
             //if they are wrong (Note: they can enter 'nothing' for answer, but it'll be considered as wrong)
-            else
-            {
-                MessageBox.Show("Answer was: " + currentGameBoard.SelectedQuestion.Answer);
+            //else
+            //{
+            //    MessageBox.Show("Answer was: " + currentGameBoard.SelectedQuestion.Answer);
                 //gameboard checks if there are questions left
-                if (currentGameBoard.CheckGameStatus())
-                {
+            //    if (currentGameBoard.CheckGameStatus())
+            //    {
                     //if yes, next player has their turn
+              //      currentGameBoard.NextPlayer();
+                //    txtPlayerResponse.Enabled = false;
+                  //  btnSubmit.Enabled = false;
+                    //grbCategories.Enabled = true;
+                //    txtPlayerResponse.Text = "";
+                 //   txtQuestion.Text = "";
+                 //   txtbxCurrentPlayer.Text = currentGameBoard.CurrentPlayer.Name + " " + currentGameBoard.CurrentPlayer.Id;
+                //}
+                //else
+                //{
+                    //if no more questions, the winner is chosen
+                  //  winners = currentGameBoard.FindWinner();
+
+//                    frmWinner winnersForm = new frmWinner(this);
+ //                   this.Hide();
+  //                  winnersForm.ShowDialog();
+   //                 this.Close();
+     //           }
+       //     }
+
+
+            if (currentGameBoard.CheckGameStatus()) //while not all availble questions are answered
+            {
+                currentGameBoard.CurrentPlayerAnswer = txtPlayerResponse.Text; 
+
+                bool result = currentGameBoard.CheckAnswer();
+
+                //faiyaz, i changed the calculateScore() in gameBoard.cs
+                currentGameBoard.CurrentPlayer.PlayerScore = currentGameBoard.CalculateScore(currentGameBoard.SelectedQuestion.PointValue);
+
+                int playerScore = currentGameBoard.CurrentPlayer.PlayerScore;
+
+                lblResult.Text = "Result: \n" + result + "\nPlayer: " + currentGameBoard.CurrentPlayer.Name + " - Total Score: " + playerScore;
+
+                DisplayPlayers(currentGameBoard.PlayerList);
+
+                //if player gets the answer right, then they have another turn
+                if (result)
+                {
+                    grbCategories.Enabled = true;
+                    txtPlayerResponse.Enabled = false;
+                    btnSubmit.Enabled = false;
+                    lblResult.Text = "Result: \n" + result + "\nPlayer: " + currentGameBoard.CurrentPlayer.Name + " - Total Score: " + playerScore;
+                    txtPlayerResponse.Text = "";
+                    txtQuestion.Text = "";
+                }
+                //if they are wrong (Note: they can enter 'nothing' for answer, but it'll be considered as wrong)
+                else
+                {
                     currentGameBoard.NextPlayer();
                     txtPlayerResponse.Enabled = false;
                     btnSubmit.Enabled = false;
@@ -115,8 +164,9 @@ namespace _3309___Term_Project___Jeopardy
                     txtQuestion.Text = "";
                     txtbxCurrentPlayer.Text = currentGameBoard.CurrentPlayer.Name + " " + currentGameBoard.CurrentPlayer.Id;
                 }
-                else
-                {
+            }
+            else
+            {
                     //if no more questions, the winner is chosen
                     winners = currentGameBoard.FindWinner();
 
@@ -124,8 +174,9 @@ namespace _3309___Term_Project___Jeopardy
                     this.Hide();
                     winnersForm.ShowDialog();
                     this.Close();
-                }
             }
+
+
         }
 
 

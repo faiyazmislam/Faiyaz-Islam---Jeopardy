@@ -38,8 +38,8 @@ namespace _3309___Term_Project___Jeopardy
         private void btnNewGame_Click(object sender, EventArgs e)
         {
             frmStarter newGame = new frmStarter();
+            this.Hide();
             newGame.ShowDialog();
-
             this.Close();
         }
 

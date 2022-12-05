@@ -44,8 +44,8 @@ namespace _3309___Term_Project___Jeopardy
             bool isCorrect = CheckAnswer();
 
             if (isCorrect) 
-                return points;  //if player's answer is correct, increment score
-            else return (-1) * points;     //if player's answer is incorrect, decrement score
+                return CurrentPlayer.PlayerScore + points;//points;  //if player's answer is correct, increment score
+            else return CurrentPlayer.PlayerScore - points; //(-1) * points;     //if player's answer is incorrect, decrement score
 
         }
 
