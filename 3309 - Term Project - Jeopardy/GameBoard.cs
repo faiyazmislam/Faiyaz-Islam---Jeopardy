@@ -25,6 +25,7 @@ namespace _3309___Term_Project___Jeopardy
             this.AvailableQuestions = numberQuestions;
         }
 
+        //checks the player's answer with the chosen question's answer
         public bool CheckAnswer()
         {
             if (CurrentPlayerAnswer.ToLower().Equals(SelectedQuestion.Answer.ToLower())) 
@@ -43,6 +44,7 @@ namespace _3309___Term_Project___Jeopardy
 
         }
 
+        //next player is set
         public void NextPlayer()
         {
             int currentIndex = PlayerList.IndexOf(CurrentPlayer);
@@ -56,11 +58,13 @@ namespace _3309___Term_Project___Jeopardy
             else CurrentPlayer = PlayerList.First(); 
         }
 
+        //everytime a question is chosen, the total available questions decrements
         public void DecreaseAvailableQuestions()
         {
             AvailableQuestions -= 1;
         }
 
+        //checks to see if there are questions left in the game
         public Boolean CheckGameStatus()
         {
             if(AvailableQuestions >  0)
@@ -71,6 +75,7 @@ namespace _3309___Term_Project___Jeopardy
             return false; 
         }
 
+        //once all questions have been chosen, the game will search for the player(s) with most pts
         public List<Player> FindWinner() //Note: there can be more than 1 player
         {
             //assuming 1st player is the winner and has the highest score

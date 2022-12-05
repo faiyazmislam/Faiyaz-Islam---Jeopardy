@@ -62,6 +62,7 @@ namespace _3309___Term_Project___Jeopardy
             }
         }
 
+        //starts the game form and sends the gameboard data 
         private void btnStart_Click(object sender, EventArgs e)
         {
             if(playerList.Count >= 2)
@@ -78,7 +79,8 @@ namespace _3309___Term_Project___Jeopardy
             }
         }
         
-        //frm extracts data from the database and adds them to the category list for the gameboard to be initialized with
+        //frm extracts data from the database and creates categories with them
+        //they are then added to the category list for the gameboard to be initialized with
         private void frmStarter_Load(object sender, EventArgs e)
         {
             string strSQL = "SELECT * FROM JeopardyQuestions";

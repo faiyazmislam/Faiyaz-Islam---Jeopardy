@@ -22,6 +22,7 @@ namespace _3309___Term_Project___Jeopardy
             InitializeComponent();
         }
 
+        //displays the winner(s)
         private void frmWinner_Load(object sender, EventArgs e)
         {
             string winnersText = "";
@@ -34,6 +35,7 @@ namespace _3309___Term_Project___Jeopardy
             lblWinners.Text = winnersText;
         }
        
+        //starts a new starter form for a new round of the game
         private void btnNewGame_Click(object sender, EventArgs e)
         {
             frmStarter newGame = new frmStarter();
@@ -42,6 +44,7 @@ namespace _3309___Term_Project___Jeopardy
             this.Close();
         }
 
+        //ends the program
         private void btnEndGame_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Thanks for playing!");

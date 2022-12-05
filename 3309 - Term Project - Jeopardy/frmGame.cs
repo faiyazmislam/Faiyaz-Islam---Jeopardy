@@ -28,7 +28,6 @@ namespace _3309___Term_Project___Jeopardy
 
         private void frmGame_Load(object sender, EventArgs e)
         {
-            //List<Player> players = currentGameBoard.PlayerList;
             //first player is identified
             txtbxCurrentPlayer.Text = currentGameBoard.CurrentPlayer.Name + " " + currentGameBoard.CurrentPlayer.Id;
 

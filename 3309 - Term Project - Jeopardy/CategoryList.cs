@@ -25,6 +25,7 @@ namespace _3309___Term_Project___Jeopardy
             Categories.Remove(category);
         }
 
+        //finds the desired category
         public Category FindCategory(String choosenCategory)
         {
             foreach (Category category in Categories)
@@ -34,16 +35,6 @@ namespace _3309___Term_Project___Jeopardy
             return null;
         }
 
-        public Question GetQuestion(Category chosenCategory, int point) {
-
-            if (Categories.Contains(chosenCategory))
-            {
-                return chosenCategory.FindQuestion(point);
-            }
-
-
-            return null;        
-        }
     }
 
 }
