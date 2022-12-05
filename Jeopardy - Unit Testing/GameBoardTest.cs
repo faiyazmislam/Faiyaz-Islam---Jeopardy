@@ -129,7 +129,7 @@ namespace Jeopardy___Unit_Testing
 
             //player's answer is false, therefore they will lose 100 pts
             gameBoard.CurrentPlayerAnswer = "What is something?";
-            gameBoard.CurrentPlayer.PlayerScore = gameBoard.CalculateScore(-100);
+            gameBoard.CurrentPlayer.PlayerScore = gameBoard.CalculateScore(100);
             scoreTest = gameBoard.CurrentPlayer.PlayerScore;
             Assert.AreEqual(0, scoreTest);
             Assert.AreNotEqual(-100, scoreTest);
@@ -148,7 +148,7 @@ namespace Jeopardy___Unit_Testing
 
             //player's answer is false, therefore they will lose 300 pts
             gameBoard.CurrentPlayerAnswer = "What is something?";
-            gameBoard.CurrentPlayer.PlayerScore = gameBoard.CalculateScore(-300);
+            gameBoard.CurrentPlayer.PlayerScore = gameBoard.CalculateScore(300);
             scoreTest = gameBoard.CurrentPlayer.PlayerScore;
             Assert.AreEqual(0, scoreTest);
             Assert.AreNotEqual(-300, scoreTest);
