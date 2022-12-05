@@ -28,7 +28,7 @@ namespace _3309___Term_Project___Jeopardy
             
             foreach(Player winner in myOwnerFrm.winners)
             {
-                winnersText = winner.Name + "(" + winner.Id + ") = " + winner.PlayerScore + " \n "; 
+                winnersText += winner.Name + "(" + winner.Id + ") = " + winner.PlayerScore + " \n "; 
             }
 
             lblWinners.Text = winnersText;
