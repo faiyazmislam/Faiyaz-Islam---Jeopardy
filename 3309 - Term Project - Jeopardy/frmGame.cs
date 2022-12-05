@@ -164,7 +164,7 @@ namespace _3309___Term_Project___Jeopardy
                 txtbxCurrentPlayer.Text = currentGameBoard.CurrentPlayer.Name + " " + currentGameBoard.CurrentPlayer.Id;
             }
 
-            if (!currentGameBoard.CheckGameStatus()) //while not all availble questions are answered
+            if (!currentGameBoard.CheckGameStatus()) //if no more availble questions, move to winner form
             {
                 //if no more questions, the winner is chosen
                 winners = currentGameBoard.FindWinner();
