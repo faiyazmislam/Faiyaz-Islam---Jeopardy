@@ -128,16 +128,18 @@ namespace Jeopardy___Unit_Testing
 
             //player's answer is false, therefore they will lose 100 pts
             gameBoard.CurrentPlayerAnswer = "What is something?";
-            scoreTest = gameBoard.CalculateScore(100);
-            Assert.AreEqual(-100, scoreTest);
-            Assert.AreNotEqual(0, scoreTest);
+            gameBoard.CurrentPlayer.PlayerScore = gameBoard.CalculateScore(100);
+            scoreTest = gameBoard.CurrentPlayer.PlayerScore;
+            Assert.AreEqual(0, scoreTest);
+            Assert.AreNotEqual(-100, scoreTest);
             Assert.AreNotEqual(100, scoreTest);
 
             //test - player's answer is true, therefore they will get 300 pts
             gameBoard.SelectedQuestion.Answer = "What is Temple?";
 
             gameBoard.CurrentPlayerAnswer = "What is temple?";
-            scoreTest = gameBoard.CalculateScore(300);
+            gameBoard.CurrentPlayer.PlayerScore = gameBoard.CalculateScore(300);
+            scoreTest = gameBoard.CurrentPlayer.PlayerScore;
             Assert.AreEqual(300, scoreTest);
             Assert.AreNotEqual(100, scoreTest);
             Assert.AreNotEqual(-100, scoreTest);
@@ -145,8 +147,10 @@ namespace Jeopardy___Unit_Testing
 
             //player's answer is false, therefore they will lose 300 pts
             gameBoard.CurrentPlayerAnswer = "What is something?";
-            scoreTest = gameBoard.CalculateScore(300);
-            Assert.AreEqual(-300, scoreTest);
+            gameBoard.CurrentPlayer.PlayerScore = gameBoard.CalculateScore(-300);
+            scoreTest = gameBoard.CurrentPlayer.PlayerScore;
+            Assert.AreEqual(0, scoreTest);
+            Assert.AreNotEqual(-300, scoreTest);
             Assert.AreNotEqual(300, scoreTest);
             Assert.AreNotEqual(100, scoreTest);
             Assert.AreNotEqual(-100, scoreTest);
