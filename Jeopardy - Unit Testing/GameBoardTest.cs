@@ -120,7 +120,7 @@ namespace Jeopardy___Unit_Testing
             Player player2 = new Player(2, "Faiyaz");
             players.Add(player1);
             players.Add(player2);
-            GameBoard gameBoard = new GameBoard(categoryList, players;
+            GameBoard gameBoard = new GameBoard(categoryList, players);
             gameBoard.CurrentPlayerAnswer = "What is anything?";
             gameBoard.SelectedQuestion = new Question("Opposite of something", 100, "What is nothing?");
 
