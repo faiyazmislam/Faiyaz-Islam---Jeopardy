@@ -181,7 +181,6 @@ namespace Jeopardy___Unit_Testing
             Category category2 = new Category("Animal", new List<Question>());
             categoryList.AddCategory(category1);
             categoryList.AddCategory(category2);
-            //categoryList.AddCategory(category3);
 
             //test 1
             Category result = categoryList.FindCategory("Music");

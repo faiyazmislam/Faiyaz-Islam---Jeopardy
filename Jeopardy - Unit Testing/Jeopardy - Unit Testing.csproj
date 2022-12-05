@@ -55,7 +55,6 @@
     <Compile Include="CategoryListTest.cs" />
     <Compile Include="GameBoardTest.cs" />
     <Compile Include="PlayerTest.cs" />
-    <Compile Include="ProgramTest.cs" />
     <Compile Include="QuestionTest.cs" />
   </ItemGroup>
   <ItemGroup>

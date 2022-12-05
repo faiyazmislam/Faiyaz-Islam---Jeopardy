@@ -108,16 +108,12 @@ namespace Jeopardy___Unit_Testing
             Assert.AreNotEqual(null, category);
             category = null;
             Assert.AreEqual(null, category);
-            //Assert.AreEqual(null, category.CategoryName);
-            //Assert.AreEqual(null, category.QuestionList);
             Assert.AreNotEqual(null, category2); //category2 shouldn't be null (only the 1st Category object is set to null)
 
             //Testing reassigning the 2nd Category object to nothing (null)
             Assert.AreNotEqual(null, category2);
             category2 = null;
             Assert.AreEqual(null, category2);
-            //Assert.AreEqual(null, category2.CategoryName);
-            //Assert.AreEqual(null, category2.QuestionList);
         }
 
         [TestMethod]
@@ -197,16 +193,12 @@ namespace Jeopardy___Unit_Testing
             Assert.AreNotEqual(null, category);
             category = null;
             Assert.AreEqual(null, category);
-            //Assert.AreEqual(null, category.CategoryName);
-            //Assert.AreEqual(null, category.QuestionList);
             Assert.AreNotEqual(null, category2); //category2 shouldn't be null (only the 1st Category object is set to null)
 
             //Testing reassigning the 2nd Category object to nothing (null)
             Assert.AreNotEqual(null, category2);
             category2 = null;
             Assert.AreEqual(null, category2);
-            //Assert.AreEqual(null, category2.CategoryName);
-            //Assert.AreEqual(null, category2.QuestionList);
         }
 
         [TestMethod]

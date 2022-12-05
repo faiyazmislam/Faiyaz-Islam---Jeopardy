@@ -8,7 +8,6 @@ namespace _3309___Term_Project___Jeopardy
 {
     public class Player
     {
-
         public int Id { get; set; }
         public String Name { get; set; }
         public int PlayerScore { get; set; } 

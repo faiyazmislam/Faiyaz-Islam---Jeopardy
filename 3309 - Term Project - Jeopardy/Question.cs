@@ -8,10 +8,6 @@ namespace _3309___Term_Project___Jeopardy
 {
     public class Question
     {
-        //String query;
-        //int point;
-        //String answer;
-
         public String Query { get; set; }
         public int PointValue { get; set; }
         public String Answer { get; set; }

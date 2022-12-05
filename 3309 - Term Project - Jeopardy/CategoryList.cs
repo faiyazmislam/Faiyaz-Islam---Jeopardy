@@ -8,7 +8,6 @@ namespace _3309___Term_Project___Jeopardy
 {
     public class CategoryList
     {
-        //List<Category> categories;
         public List<Category> Categories { get; set; }
 
         public CategoryList()

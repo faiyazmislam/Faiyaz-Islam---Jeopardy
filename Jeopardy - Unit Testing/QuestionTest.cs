@@ -93,9 +93,6 @@ namespace Jeopardy___Unit_Testing
             Assert.AreNotEqual(null, question);
             question = null;
             Assert.AreEqual(null, question);
-            //Assert.AreEqual(null, question.Query);
-            //Assert.AreEqual(null, question.Answer);
-            //Assert.AreEqual(null, question.PointValue);
             Assert.AreNotEqual(null, question2); //question2 shouldn't be null (only the 1st Question object is set to null)
 
             //Testing reassigning the 2nd Question object to a new default empty Question object 
@@ -192,16 +189,10 @@ namespace Jeopardy___Unit_Testing
             Assert.AreNotEqual(null, question);
             question = null;
             Assert.AreEqual(null, question);
-            //Assert.AreEqual(null, question.Query);
-            //Assert.AreEqual(null, question.Answer);
-            //Assert.AreEqual(null, question.PointValue);
 
             Assert.AreNotEqual(null, question2); //question2 shouldn't be null (only the 1st Question object is set to null)
             question2 = null;
             Assert.AreEqual(null, question2);
-            //Assert.AreEqual(null, question2.Query);
-            //Assert.AreEqual(null, question2.Answer);
-            //Assert.AreEqual(null, question2.PointValue);
         }
     }
 }
