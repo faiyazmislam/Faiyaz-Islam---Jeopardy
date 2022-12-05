@@ -154,13 +154,40 @@ namespace Jeopardy___Unit_Testing
         public void TestCalculateScore()
         {
             List<Player> players = new List<Player>();
-            players.Add(new Player(1, "Jenny"));
-            players.Add(new Player(2, "Faiyaz"));
-            players.Add(new Player(3, "Chris"));
             GameBoard gameBoard = new GameBoard(new CategoryList(), players);
 
+            //test - player's answer is true, therefore they will get 100 pts
+            gameBoard.SelectedQuestion.Answer = "What is nothing?";
 
-            
+            gameBoard.CurrentPlayerAnswer = "What is nothing?";
+            int result = gameBoard.CalculateScore(100);
+            Assert.AreEqual(100, result);
+            Assert.AreNotEqual(-100, result);
+
+            //player's answer is false, therefore they will get -100 pts
+            gameBoard.CurrentPlayerAnswer = "What is something?";
+            result = gameBoard.CalculateScore(100);
+            Assert.AreEqual(-100, result);
+            Assert.AreNotEqual(100, result);
+
+            //test - player's answer is true, therefore they will get 300 pts
+            gameBoard.SelectedQuestion.Answer = "What is Temple?";
+
+            gameBoard.CurrentPlayerAnswer = "What is temple?";
+            result = gameBoard.CalculateScore(300);
+            Assert.AreEqual(300, result);
+            Assert.AreNotEqual(100, result);
+            Assert.AreNotEqual(-100, result);
+
+            //player's answer is false, therefore they will get -100 pts
+            gameBoard.CurrentPlayerAnswer = "What is something?";
+            result = gameBoard.CalculateScore(300);
+            Assert.AreEqual(-300, result);
+            Assert.AreNotEqual(300, result);
+            Assert.AreNotEqual(100, result);
+            Assert.AreNotEqual(-100, result);
+
+
         }
 
         [TestMethod]
