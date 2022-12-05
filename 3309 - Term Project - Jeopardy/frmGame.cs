@@ -99,6 +99,7 @@ namespace _3309___Term_Project___Jeopardy
             //if they are wrong (Note: they can enter 'nothing' for answer, but it'll be considered as wrong)
             else
             {
+                MessageBox.Show("Answer: \n" + currentGameBoard.SelectedQuestion.Answer);
                 currentGameBoard.NextPlayer();
                 txtPlayerResponse.Enabled = false;
                 btnSubmit.Enabled = false;
