@@ -30,6 +30,7 @@ namespace Jeopardy___Unit_Testing
             theQuestionList.Add(question);
             Assert.AreEqual(1, category.QuestionList.Count);
 
+
             Question question2 = new Question("Who is the most popular Korean boy band?", 200, "BTS");
             theQuestionList.Add(question2);
             Assert.AreEqual(2, category.QuestionList.Count);
@@ -58,11 +59,11 @@ namespace Jeopardy___Unit_Testing
 
             Question question4 = new Question("What animal has a long nose?", 400, "Elephant");
             theQuestionList2.Add(question4);
-            Assert.AreEqual(1, category.QuestionList.Count);
+            Assert.AreEqual(1, category2.QuestionList.Count);
 
             Question question5 = new Question("What animal has long ears?", 500, "Rabbit");
             theQuestionList2.Add(question5);
-            Assert.AreEqual(2, category.QuestionList.Count);
+            Assert.AreEqual(2, category2.QuestionList.Count);
             Assert.AreNotEqual(0, category2.QuestionList.Count);
             Assert.AreNotEqual(-1, category2.QuestionList.Count);
             Assert.AreNotEqual(-2, category2.QuestionList.Count);
@@ -107,16 +108,16 @@ namespace Jeopardy___Unit_Testing
             Assert.AreNotEqual(null, category);
             category = null;
             Assert.AreEqual(null, category);
-            Assert.AreEqual(null, category.CategoryName);
-            Assert.AreEqual(null, category.QuestionList);
+            //Assert.AreEqual(null, category.CategoryName);
+            //Assert.AreEqual(null, category.QuestionList);
             Assert.AreNotEqual(null, category2); //category2 shouldn't be null (only the 1st Category object is set to null)
 
             //Testing reassigning the 2nd Category object to nothing (null)
             Assert.AreNotEqual(null, category2);
             category2 = null;
             Assert.AreEqual(null, category2);
-            Assert.AreEqual(null, category2.CategoryName);
-            Assert.AreEqual(null, category2.QuestionList);
+            //Assert.AreEqual(null, category2.CategoryName);
+            //Assert.AreEqual(null, category2.QuestionList);
         }
 
         [TestMethod]
@@ -151,7 +152,7 @@ namespace Jeopardy___Unit_Testing
             Category category2 = new Category(theCategoryName2, theQuestionList2);
             Assert.AreEqual("Animal", category2.CategoryName);
             Assert.AreEqual(theQuestionList2, category2.QuestionList);
-            Assert.AreEqual(3, category2.QuestionList.Count);
+            Assert.AreEqual(2, category2.QuestionList.Count);
             Assert.AreNotEqual(0, category2.QuestionList.Count);
             Assert.AreNotEqual(-1, category2.QuestionList.Count);
             Assert.AreNotEqual(-2, category2.QuestionList.Count);
@@ -196,16 +197,16 @@ namespace Jeopardy___Unit_Testing
             Assert.AreNotEqual(null, category);
             category = null;
             Assert.AreEqual(null, category);
-            Assert.AreEqual(null, category.CategoryName);
-            Assert.AreEqual(null, category.QuestionList);
+            //Assert.AreEqual(null, category.CategoryName);
+            //Assert.AreEqual(null, category.QuestionList);
             Assert.AreNotEqual(null, category2); //category2 shouldn't be null (only the 1st Category object is set to null)
 
             //Testing reassigning the 2nd Category object to nothing (null)
             Assert.AreNotEqual(null, category2);
             category2 = null;
             Assert.AreEqual(null, category2);
-            Assert.AreEqual(null, category2.CategoryName);
-            Assert.AreEqual(null, category2.QuestionList);
+            //Assert.AreEqual(null, category2.CategoryName);
+            //Assert.AreEqual(null, category2.QuestionList);
         }
 
         [TestMethod]

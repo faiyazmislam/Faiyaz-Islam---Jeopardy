@@ -16,7 +16,7 @@ namespace Jeopardy___Unit_Testing
             Assert.IsNotNull(question);
             Assert.AreEqual(null, question.Query);
             Assert.AreEqual(null, question.Answer);
-            Assert.AreEqual(null, question.PointValue);
+            Assert.AreEqual(0, question.PointValue);
 
             //Testing Question object with data
             String theQuery = "Who are you?";
@@ -36,16 +36,16 @@ namespace Jeopardy___Unit_Testing
             Assert.IsNotNull(question2);
             Assert.AreEqual(null, question2.Query);
             Assert.AreEqual(null, question2.Answer);
-            Assert.AreEqual(null, question2.PointValue);
+            Assert.AreEqual(0, question2.PointValue);
 
             //Testing Question object with data - Part 2
             String theQuery2 = "Who is he?";
             String theAnswer2 = "He's Yu";
             int thePoint2 = 200;
 
-            question.Query = theQuery2;
-            question.Answer = theAnswer2;
-            question.PointValue = thePoint2;
+            question2.Query = theQuery2;
+            question2.Answer = theAnswer2;
+            question2.PointValue = thePoint2;
 
             Assert.AreEqual("Who is he?", question2.Query);
             Assert.AreEqual("He's Yu", question2.Answer);
@@ -75,7 +75,7 @@ namespace Jeopardy___Unit_Testing
             question.Answer = "She is Yu.";
             question.PointValue = 300;
             Assert.AreEqual("Who is she?", question.Query);
-            Assert.AreEqual("She is Yu", question.Answer);
+            Assert.AreEqual("She is Yu.", question.Answer);
             Assert.AreEqual(300, question.PointValue);
             Assert.AreNotEqual("Who is he?", question.Query);   //shouldn't = to previous data
             Assert.AreNotEqual("He's Yu", question.Answer);     //shouldn't = to previous data
@@ -83,7 +83,7 @@ namespace Jeopardy___Unit_Testing
 
             //2nd Question object's data should also be updated with new data since question = question2
             Assert.AreEqual("Who is she?", question2.Query);
-            Assert.AreEqual("She is Yu", question2.Answer);
+            Assert.AreEqual("She is Yu.", question2.Answer);
             Assert.AreEqual(300, question2.PointValue);
             Assert.AreNotEqual("Who is he?", question2.Query);   //shouldn't = to previous data
             Assert.AreNotEqual("He's Yu", question2.Answer);     //shouldn't = to previous data
@@ -93,9 +93,9 @@ namespace Jeopardy___Unit_Testing
             Assert.AreNotEqual(null, question);
             question = null;
             Assert.AreEqual(null, question);
-            Assert.AreEqual(null, question.Query);
-            Assert.AreEqual(null, question.Answer);
-            Assert.AreEqual(null, question.PointValue);
+            //Assert.AreEqual(null, question.Query);
+            //Assert.AreEqual(null, question.Answer);
+            //Assert.AreEqual(null, question.PointValue);
             Assert.AreNotEqual(null, question2); //question2 shouldn't be null (only the 1st Question object is set to null)
 
             //Testing reassigning the 2nd Question object to a new default empty Question object 
@@ -104,7 +104,7 @@ namespace Jeopardy___Unit_Testing
             Assert.AreNotEqual(null, question2);
             Assert.AreEqual(null, question2.Query);
             Assert.AreEqual(null, question2.Answer);
-            Assert.AreEqual(null, question2.PointValue);
+            Assert.AreEqual(0, question2.PointValue);
             Assert.AreNotEqual("Who is she?", question2.Query);
             Assert.AreNotEqual("She is Yu", question2.Answer);
             Assert.AreNotEqual(300, question2.PointValue);
@@ -181,7 +181,7 @@ namespace Jeopardy___Unit_Testing
 
             //Test - Assigning 1st Question object to a new Question object with same parameter format
             question = new Question("Who is Hooter?", 400, "Hooter is an owl.");
-            Assert.AreEqual("Who is Hoooter?", question.Query);
+            Assert.AreEqual("Who is Hooter?", question.Query);
             Assert.AreEqual("Hooter is an owl.", question.Answer);
             Assert.AreEqual(400, question.PointValue);
             Assert.AreNotEqual("Who is she?", question.Query);
@@ -192,16 +192,16 @@ namespace Jeopardy___Unit_Testing
             Assert.AreNotEqual(null, question);
             question = null;
             Assert.AreEqual(null, question);
-            Assert.AreEqual(null, question.Query);
-            Assert.AreEqual(null, question.Answer);
-            Assert.AreEqual(null, question.PointValue);
+            //Assert.AreEqual(null, question.Query);
+            //Assert.AreEqual(null, question.Answer);
+            //Assert.AreEqual(null, question.PointValue);
 
             Assert.AreNotEqual(null, question2); //question2 shouldn't be null (only the 1st Question object is set to null)
             question2 = null;
             Assert.AreEqual(null, question2);
-            Assert.AreEqual(null, question2.Query);
-            Assert.AreEqual(null, question2.Answer);
-            Assert.AreEqual(null, question2.PointValue);
+            //Assert.AreEqual(null, question2.Query);
+            //Assert.AreEqual(null, question2.Answer);
+            //Assert.AreEqual(null, question2.PointValue);
         }
     }
 }

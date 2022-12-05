@@ -45,7 +45,7 @@ namespace Jeopardy___Unit_Testing
             Assert.AreEqual(3, gameBoard.PlayerList.Count); //after change
             Assert.AreEqual("Chris", gameBoard.PlayerList.ElementAt(2).Name);
 
-            Assert.AreEqual(null, gameBoard.AvailableQuestions); //before change
+            Assert.AreEqual(0, gameBoard.AvailableQuestions); //before change
             gameBoard.AvailableQuestions = 30;
             Assert.AreEqual(30, gameBoard.AvailableQuestions); //after change
 
@@ -62,15 +62,20 @@ namespace Jeopardy___Unit_Testing
 
             //Testing null
             gameBoard = null;
-            Assert.AreEqual(null, gameBoard.CurrentPlayer);
+            Assert.AreEqual(null, gameBoard);
         }
 
         [TestMethod]
         public void TestSetAvailableQuestions()
         {
             CategoryList categoryList = new CategoryList();
-            GameBoard gameBoard = new GameBoard(categoryList, new List<Player>());
-            Assert.AreEqual(null, gameBoard.AvailableQuestions); //before change
+            List<Player> players = new List<Player>();
+            Player player1 = new Player(1, "Jenny");
+            Player player2 = new Player(2, "Faiyaz");
+            players.Add(player1);
+            players.Add(player2);
+            GameBoard gameBoard = new GameBoard(categoryList, players);
+            Assert.AreEqual(0, gameBoard.AvailableQuestions); //before change
 
             //test 0 and positive #
             for (int i = 0; i < 30; i++)
@@ -109,7 +114,13 @@ namespace Jeopardy___Unit_Testing
         [TestMethod]
         public void TestCheckAnswer()
         {
-            GameBoard gameBoard = new GameBoard(new CategoryList(), new List<Player>());
+            CategoryList categoryList = new CategoryList();
+            List<Player> players = new List<Player>();
+            Player player1 = new Player(1, "Jenny");
+            Player player2 = new Player(2, "Faiyaz");
+            players.Add(player1);
+            players.Add(player2);
+            GameBoard gameBoard = new GameBoard(categoryList, players;
             gameBoard.CurrentPlayerAnswer = "What is anything?";
             gameBoard.SelectedQuestion = new Question("Opposite of something", 100, "What is nothing?");
 
@@ -177,7 +188,12 @@ namespace Jeopardy___Unit_Testing
         [TestMethod]
         public void TestDecreaseAvailableQuestions()
         {
-            GameBoard gameBoard = new GameBoard(new CategoryList(), new List<Player>());
+            List<Player> players = new List<Player>();
+            Player player1 = new Player(1, "Jenny");
+            Player player2 = new Player(2, "Faiyaz");
+            players.Add(player1);
+            players.Add(player2);
+            GameBoard gameBoard = new GameBoard(new CategoryList(), players);
             gameBoard.SetAvailableQuestions(70);
             Assert.AreEqual(70, gameBoard.AvailableQuestions);
 
@@ -197,7 +213,12 @@ namespace Jeopardy___Unit_Testing
         [TestMethod]
         public void TestCheckGameStatus()
         {
-            GameBoard gameBoard = new GameBoard(new CategoryList(), new List<Player>());
+            List<Player> players = new List<Player>();
+            Player player1 = new Player(1, "Jenny");
+            Player player2 = new Player(2, "Faiyaz");
+            players.Add(player1);
+            players.Add(player2);
+            GameBoard gameBoard = new GameBoard(new CategoryList(), players);
             gameBoard.SetAvailableQuestions(3);
 
             Assert.AreEqual(3, gameBoard.AvailableQuestions);

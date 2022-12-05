@@ -79,10 +79,10 @@ namespace Jeopardy___Unit_Testing
             thePlayer.ChosenCategory = "Temple";
             thePlayer.ChosenPoint = 500;
             thePlayer.Answer = "Owl";
-            Assert.AreEqual(700, player1.PlayerScore);
-            Assert.AreEqual("Temple", player1.ChosenCategory);
-            Assert.AreEqual(500, player1.ChosenPoint);
-            Assert.AreEqual("Owl", player1.Answer);
+            Assert.AreEqual(700, thePlayer.PlayerScore);
+            Assert.AreEqual("Temple", thePlayer.ChosenCategory);
+            Assert.AreEqual(500, thePlayer.ChosenPoint);
+            Assert.AreEqual("Owl", thePlayer.Answer);
 
             //Test 2 Player objects
             Assert.AreNotSame(player1, thePlayer);
