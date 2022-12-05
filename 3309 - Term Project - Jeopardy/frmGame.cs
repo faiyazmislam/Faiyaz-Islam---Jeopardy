@@ -102,6 +102,7 @@ namespace _3309___Term_Project___Jeopardy
             //if they are wrong (Note: they can enter 'nothing' for answer, but it'll be considered as wrong)
             else
             {
+                MessageBox.Show("Answer was: " + currentGameBoard.SelectedQuestion.Answer);
                 //gameboard checks if there are questions left
                 if (currentGameBoard.CheckGameStatus())
                 {
@@ -120,9 +121,8 @@ namespace _3309___Term_Project___Jeopardy
                     winners = currentGameBoard.FindWinner();
 
                     frmWinner winnersForm = new frmWinner(this);
-                    winnersForm.ShowDialog();
-
                     this.Hide();
+                    winnersForm.ShowDialog();
                     this.Close();
                 }
             }

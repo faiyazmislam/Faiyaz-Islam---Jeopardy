@@ -38,9 +38,27 @@ namespace _3309___Term_Project___Jeopardy
                 }
                 else
                 {
-                    Player player = new Player(int.Parse(mskId.Text), txtPlayerName.Text);
-                    playerList.Add(player);
-                    MessageBox.Show("Player: " + player.Name + " ( " + player.Id + " ) has been added to the game.");
+                    bool duplicated = false;
+
+                    //loop through the list of players to see if any other player has the same ID
+                    foreach(Player p in playerList)
+                    {
+                        //check for duplicate players
+                        if(p.Id == int.Parse(mskId.Text))
+                        {
+                            duplicated = true;
+                            MessageBox.Show("There is a player with the same ID. Please choose another one");
+                            break;
+                        }
+                    }
+
+                    //can add player if ID does not already exist
+                    if (!duplicated)
+                    {
+                        Player player = new Player(int.Parse(mskId.Text), txtPlayerName.Text);
+                        playerList.Add(player);
+                        MessageBox.Show("Player: " + player.Name + " ( " + player.Id + " ) has been added to the game.");
+                    }
                 }
             }
         }
@@ -61,6 +79,7 @@ namespace _3309___Term_Project___Jeopardy
             }
         }
         
+        //frm extracts data from the database and adds them to the category list for the gameboard to be initialized with
         private void frmStarter_Load(object sender, EventArgs e)
         {
             string strSQL = "SELECT * FROM JeopardyQuestions";
@@ -169,6 +188,7 @@ namespace _3309___Term_Project___Jeopardy
         }
 
 
+        //when player wants to play, the rules, the controls to add players, and the button to start will appear
         private void btnPlay_Click(object sender, EventArgs e)
         {
             btnStart.Visible = true;

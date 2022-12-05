@@ -129,33 +129,38 @@ namespace Jeopardy___Unit_Testing
             Assert.AreEqual(false, result);
 
             //test - player's answer is correct (exactly the same as question's answer)
-            result = gameBoard.CheckAnswer();
             gameBoard.CurrentPlayerAnswer = "What is nothing?";
+            result = gameBoard.CheckAnswer();
             Assert.AreEqual(true, result);
 
             //test - player's answer is correct (not exactly the same as question's answer)
             //lowercase vs. uppercase
-            result = gameBoard.CheckAnswer();
             gameBoard.CurrentPlayerAnswer = "what is Nothing?";
+            result = gameBoard.CheckAnswer();
             Assert.AreEqual(true, result);
 
             //test - player's answer is wrong (user forgot a "?")
-            result = gameBoard.CheckAnswer();
             gameBoard.CurrentPlayerAnswer = "What is nothing";
+            result = gameBoard.CheckAnswer();
             Assert.AreEqual(false, result);
 
             //test - player's answer is wrong (user's answer is in non-answer form)
-            result = gameBoard.CheckAnswer();
             gameBoard.CurrentPlayerAnswer = "nothing";
+            result = gameBoard.CheckAnswer();
             Assert.AreEqual(false, result);
         }
 
         [TestMethod]
         public void TestCalculateScore()
         {
-            GameBoard gameBoard = new GameBoard(new CategoryList(), new List<Player>());
+            List<Player> players = new List<Player>();
+            players.Add(new Player(1, "Jenny"));
+            players.Add(new Player(2, "Faiyaz"));
+            players.Add(new Player(3, "Chris"));
+            GameBoard gameBoard = new GameBoard(new CategoryList(), players);
 
-            //..................
+
+            
         }
 
         [TestMethod]
