@@ -128,57 +128,53 @@ namespace _3309___Term_Project___Jeopardy
        //     }
 
 
-            if (currentGameBoard.CheckGameStatus()) //while not all availble questions are answered
+            //code i added - below (original code above)
+            currentGameBoard.CurrentPlayerAnswer = txtPlayerResponse.Text; 
+
+            bool result = currentGameBoard.CheckAnswer();
+
+            //faiyaz, i changed the calculateScore() in gameBoard.cs
+            currentGameBoard.CurrentPlayer.PlayerScore = currentGameBoard.CalculateScore(currentGameBoard.SelectedQuestion.PointValue);
+
+            int playerScore = currentGameBoard.CurrentPlayer.PlayerScore;
+
+            lblResult.Text = "Result: \n" + result + "\nPlayer: " + currentGameBoard.CurrentPlayer.Name + " - Total Score: " + playerScore;
+
+            DisplayPlayers(currentGameBoard.PlayerList);
+
+            //if player gets the answer right, then they have another turn
+            if (result)
             {
-                currentGameBoard.CurrentPlayerAnswer = txtPlayerResponse.Text; 
-
-                bool result = currentGameBoard.CheckAnswer();
-
-                //faiyaz, i changed the calculateScore() in gameBoard.cs
-                currentGameBoard.CurrentPlayer.PlayerScore = currentGameBoard.CalculateScore(currentGameBoard.SelectedQuestion.PointValue);
-
-                int playerScore = currentGameBoard.CurrentPlayer.PlayerScore;
-
+                grbCategories.Enabled = true;
+                txtPlayerResponse.Enabled = false;
+                btnSubmit.Enabled = false;
                 lblResult.Text = "Result: \n" + result + "\nPlayer: " + currentGameBoard.CurrentPlayer.Name + " - Total Score: " + playerScore;
-
-                DisplayPlayers(currentGameBoard.PlayerList);
-
-                //if player gets the answer right, then they have another turn
-                if (result)
-                {
-                    grbCategories.Enabled = true;
-                    txtPlayerResponse.Enabled = false;
-                    btnSubmit.Enabled = false;
-                    lblResult.Text = "Result: \n" + result + "\nPlayer: " + currentGameBoard.CurrentPlayer.Name + " - Total Score: " + playerScore;
-                    txtPlayerResponse.Text = "";
-                    txtQuestion.Text = "";
-                }
-                //if they are wrong (Note: they can enter 'nothing' for answer, but it'll be considered as wrong)
-                else
-                {
-                    currentGameBoard.NextPlayer();
-                    txtPlayerResponse.Enabled = false;
-                    btnSubmit.Enabled = false;
-                    grbCategories.Enabled = true;
-                    txtPlayerResponse.Text = "";
-                    txtQuestion.Text = "";
-                    txtbxCurrentPlayer.Text = currentGameBoard.CurrentPlayer.Name + " " + currentGameBoard.CurrentPlayer.Id;
-                }
+                txtPlayerResponse.Text = "";
+                txtQuestion.Text = "";
             }
+            //if they are wrong (Note: they can enter 'nothing' for answer, but it'll be considered as wrong)
             else
             {
-                    //if no more questions, the winner is chosen
-                    winners = currentGameBoard.FindWinner();
-
-                    frmWinner winnersForm = new frmWinner(this);
-                    this.Hide();
-                    winnersForm.ShowDialog();
-                    this.Close();
+                currentGameBoard.NextPlayer();
+                txtPlayerResponse.Enabled = false;
+                btnSubmit.Enabled = false;
+                grbCategories.Enabled = true;
+                txtPlayerResponse.Text = "";
+                txtQuestion.Text = "";
+                txtbxCurrentPlayer.Text = currentGameBoard.CurrentPlayer.Name + " " + currentGameBoard.CurrentPlayer.Id;
             }
 
+            if (!currentGameBoard.CheckGameStatus()) //while not all availble questions are answered
+            {
+                //if no more questions, the winner is chosen
+                winners = currentGameBoard.FindWinner();
 
+                frmWinner winnersForm = new frmWinner(this);
+                this.Hide();
+                winnersForm.ShowDialog();
+                this.Close();
+            }
         }
-
 
         //the code for each button
         private void btnMovies100_Click(object sender, EventArgs e)
